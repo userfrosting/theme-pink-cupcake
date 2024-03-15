@@ -1,58 +1,61 @@
 {
-  "name": "@userfrosting/theme-pinkcupcake",
-  "version": "0.0.0",
-  "type": "module",
-  "description": "Pink Cupcake Theme for UserFrosting",
-  "funding": "https://opencollective.com/userfrosting",
-  "license": "MIT",
-  "author": "Louis Charette (https://bbqsoftwares.com/)",
-  "contributors": [
-    "Alexander Weissman (https://alexanderweissman.com/)",
-    "Louis Charette (https://bbqsoftwares.com/)"
-  ],
-  "keywords": [
-    "UserFrosting",
-    "UiKit",
-    "theme"
-  ],
-  "homepage": "https://github.com/userfrosting/theme-pinkcupcake#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/userfrosting/theme-pinkcupcake.git"
-  },
-  "bugs": {
-    "url": "https://github.com/userfrosting/UserFrosting/issues"
-  },
-  "main": "src/index.js",
-  "files": [
-    "src/"
-  ],
-  "dependencies": {
-    "@fontsource/montserrat": "^5.0.8",
-    "@fortawesome/fontawesome-svg-core": "^6.4.2",
-    "@fortawesome/free-brands-svg-icons": "^6.4.2",
-    "@fortawesome/free-regular-svg-icons": "^6.4.2",
-    "@fortawesome/free-solid-svg-icons": "^6.4.2",
-    "@fortawesome/vue-fontawesome": "^3.0.3",
-    "uikit": "^3.16.26",
-    "vue": "^3.4.21",
-    "vue-router": "^4.2.4"
-  },
-  "devDependencies": {
-    "@rushstack/eslint-patch": "^1.3.3",
-    "@vitejs/plugin-vue": "^5.0.4",
-    "@vue/eslint-config-prettier": "^8.0.0",
-    "eslint": "^8.49.0",
-    "eslint-plugin-vue": "^9.17.0",
-    "less": "^4.2.0",
-    "prettier": "^3.0.3",
-    "vite": "^5.1.5"
-  },
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
-  }
+    "name": "@userfrosting/theme-pinkcupcake",
+    "version": "0.0.0",
+    "type": "module",
+    "description": "Pink Cupcake Theme for UserFrosting",
+    "funding": "https://opencollective.com/userfrosting",
+    "license": "MIT",
+    "author": "Louis Charette (https://bbqsoftwares.com/)",
+    "contributors": [
+        "Alexander Weissman (https://alexanderweissman.com/)",
+        "Louis Charette (https://bbqsoftwares.com/)"
+    ],
+    "keywords": [
+        "UserFrosting",
+        "UiKit",
+        "theme"
+    ],
+    "homepage": "https://github.com/userfrosting/theme-pinkcupcake#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/userfrosting/theme-pinkcupcake.git"
+    },
+    "bugs": {
+        "url": "https://github.com/userfrosting/UserFrosting/issues"
+    },
+    "main": "src/index.js",
+    "files": [
+        "src/"
+    ],
+    "exports": {
+        ".": "./src/"
+    },
+    "dependencies": {
+        "@fontsource/montserrat": "^5.0.8",
+        "@fortawesome/fontawesome-svg-core": "^6.4.2",
+        "@fortawesome/free-brands-svg-icons": "^6.4.2",
+        "@fortawesome/free-regular-svg-icons": "^6.4.2",
+        "@fortawesome/free-solid-svg-icons": "^6.4.2",
+        "@fortawesome/vue-fontawesome": "^3.0.3",
+        "uikit": "^3.16.26",
+        "vue": "^3.4.21",
+        "vue-router": "^4.2.4"
+    },
+    "devDependencies": {
+        "@rushstack/eslint-patch": "^1.3.3",
+        "@vitejs/plugin-vue": "^5.0.4",
+        "@vue/eslint-config-prettier": "^8.0.0",
+        "eslint": "^8.49.0",
+        "eslint-plugin-vue": "^9.17.0",
+        "less": "^4.2.0",
+        "prettier": "^3.0.3",
+        "vite": "^5.1.5"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+        "format": "prettier --write src/"
+    }
 }
