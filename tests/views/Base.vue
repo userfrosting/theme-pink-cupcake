@@ -1,8 +1,5 @@
 <script setup>
-import BaseLayout from '@userfrosting/theme-pinkcupcake/layouts/Base.vue'
-import NavbarItem from '@userfrosting/theme-pinkcupcake/components/Navbar/Item.vue'
-import NavbarLink from '@userfrosting/theme-pinkcupcake/components/Navbar/Link.vue'
-import Dropdown from '@userfrosting/theme-pinkcupcake/components/Navbar/Dropdown.vue'
+import { BaseLayout, NavbarLink, NavbarItem, NavbarDropdown } from '@userfrosting/theme-pinkcupcake'
 import Lorem from '../components/Lorem.vue';
 </script>
 
@@ -12,11 +9,11 @@ import Lorem from '../components/Lorem.vue';
         <template #links>
             <NavbarLink url="/" label="Base Layout" active />
             <NavbarLink url="/dashboard" label="Dashboard" />
-            <Dropdown label="Foo">
+            <NavbarDropdown label="Foo">
                 <NavbarItem url="#" label="Active" active />
                 <NavbarItem url="#" label="Mint" />
                 <NavbarItem url="#" label="Item" />
-            </Dropdown>
+            </NavbarDropdown>
         </template>
         <Lorem />
     </BaseLayout>

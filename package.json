@@ -27,9 +27,6 @@
     "files": [
         "src/"
     ],
-    "exports": {
-        ".": "./src/"
-    },
     "dependencies": {
         "@fontsource/montserrat": "^5.0.8",
         "@fortawesome/fontawesome-svg-core": "^6.4.2",
@@ -37,7 +34,9 @@
         "@fortawesome/free-regular-svg-icons": "^6.4.2",
         "@fortawesome/free-solid-svg-icons": "^6.4.2",
         "@fortawesome/vue-fontawesome": "^3.0.3",
-        "uikit": "^3.16.26",
+        "uikit": "^3.16.26"
+    },
+    "peerDependencies": {
         "vue": "^3.4.21",
         "vue-router": "^4.2.4"
     },
@@ -49,7 +48,9 @@
         "eslint-plugin-vue": "^9.17.0",
         "less": "^4.2.0",
         "prettier": "^3.0.3",
-        "vite": "^5.1.5"
+        "vite": "^5.1.5",
+        "vue": "^3.4.21",
+        "vue-router": "^4.2.4"
     },
     "scripts": {
         "dev": "vite",
