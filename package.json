@@ -23,8 +23,17 @@
     "bugs": {
         "url": "https://github.com/userfrosting/UserFrosting/issues"
     },
-    "main": "src/index.js",
+    "main": "./dist/pinkcupcake.umd.js",
+    "module": "./dist/pinkcupcake.js",
+    "exports": {
+        ".": {
+            "import": "./dist/pinkcupcake.js",
+            "require": "./dist/pinkcupcake.umd.js"
+        },
+        "./style.css": "./dist/style.css"
+    },
     "files": [
+        "dist/",
         "src/"
     ],
     "dependencies": {
@@ -49,6 +58,7 @@
         "less": "^4.2.0",
         "prettier": "^3.0.3",
         "vite": "^5.1.5",
+        "vite-plugin-dts": "^3.7.3",
         "vue": "^3.4.21",
         "vue-router": "^4.2.4"
     },

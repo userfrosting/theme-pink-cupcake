@@ -1,5 +1,5 @@
 <script setup>
-import { DashboardLayout, NavbarLink, NavbarItem, NavbarDropdown } from '@userfrosting/theme-pinkcupcake'
+import { DashboardLayout, NavbarLink, NavbarItem, NavbarDropdown } from 'PinkCupcake'
 import Lorem from '../components/Lorem.vue';
 </script>
 
