@@ -23,12 +23,12 @@
     "bugs": {
         "url": "https://github.com/userfrosting/UserFrosting/issues"
     },
-    "main": "./dist/pinkcupcake.umd.js",
-    "module": "./dist/pinkcupcake.js",
+    "main": "./dist/theme-pinkcupcake.umd.js",
+    "module": "./dist/theme-pinkcupcake.js",
     "exports": {
         ".": {
-            "import": "./dist/pinkcupcake.js",
-            "require": "./dist/pinkcupcake.umd.js"
+            "import": "./dist/theme-pinkcupcake.js",
+            "require": "./dist/theme-pinkcupcake.umd.js"
         },
         "./style.css": "./dist/style.css"
     },

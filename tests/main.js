@@ -4,7 +4,7 @@ import App from './App.vue'
 const app = createApp(App)
 
 /** Setup Theme */
-import PinkCupcake from 'PinkCupcake'
+import PinkCupcake from '@userfrosting/theme-pinkcupcake'
 app.use(PinkCupcake)
 
 /** Setup Router */

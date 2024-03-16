@@ -9,15 +9,14 @@ export default defineConfig({
     plugins: [vue(), dts()],
     resolve: {
         alias: {
-            //   '@': fileURLToPath(new URL('./tests', import.meta.url)),
-            PinkCupcake: fileURLToPath(new URL('./src', import.meta.url))
+            '@userfrosting/theme-pinkcupcake': fileURLToPath(new URL('./src', import.meta.url))
         }
     },
     build: {
         lib: {
             entry: resolve(__dirname, 'src/index.js'),
-            name: 'PinkCupcake',
-            fileName: 'pink-cupcake'
+            name: 'ThemePinkcupcake',
+            fileName: 'theme-pinkcupcake'
         },
         rollupOptions: {
             external: ['vue'],
