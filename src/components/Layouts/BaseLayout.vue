@@ -1,9 +1,5 @@
 <script setup>
-import UIkit from 'uikit'
-import Icons from 'uikit/dist/js/uikit-icons'
 import NavBar from '../NavBar/NavBar.vue'
-
-UIkit.use(Icons)
 </script>
 
 <template>
