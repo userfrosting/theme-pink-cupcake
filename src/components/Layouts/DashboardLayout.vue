@@ -21,10 +21,7 @@ UIkit.use(Icons)
     <SideBar />
     <div class="uf-main uk-section uk-section-default">
         <div class="uk-container">
-            <slot>
-                <RouterView />
-            </slot>
+            <slot></slot>
         </div>
     </div>
-</template>../components/TheNavBar
-../Navbar../SideBar
+</template>

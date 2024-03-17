@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "paths": {
-      "@/*": ["./tests/*"],
-      "@userfrosting/theme-pinkcupcake/*": ["./src/*"]
-    }
-  },
-  "exclude": ["node_modules", "dist"]
-}

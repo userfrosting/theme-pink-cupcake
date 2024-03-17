@@ -19,9 +19,7 @@ UIkit.use(Icons)
     </header>
     <div class="uf-main uk-section uk-section-default">
         <div class="uk-container">
-            <slot>
-                <RouterView />
-            </slot>
+            <slot></slot>
         </div>
     </div>
 </template>
