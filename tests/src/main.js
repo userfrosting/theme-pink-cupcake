@@ -7,6 +7,9 @@ const app = createApp(App)
 import PinkCupcake from '@userfrosting/theme-pinkcupcake'
 app.use(PinkCupcake)
 
+/* Import CSS */
+import '@userfrosting/theme-pinkcupcake/style.less'
+
 /** Setup Router */
 import router from './router'
 app.use(router)

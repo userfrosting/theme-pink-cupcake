@@ -1,22 +1,24 @@
 <script setup>
 import UIkit from 'uikit'
 import Icons from 'uikit/dist/js/uikit-icons'
-import Navbar from '../components/Navbar/Navbar.vue'
+import NavBar from '../NavBar/NavBar.vue'
+import SideBar from '../SideBar/SideBar.vue'
 
 UIkit.use(Icons)
 </script>
 
 <template>
     <header>
-        <Navbar>
+        <NavBar>
             <template #title>
                 <slot name="title"></slot>
             </template>
             <template #links>
                 <slot name="links"></slot>
             </template>
-        </Navbar>
+        </NavBar>
     </header>
+    <SideBar />
     <div class="uf-main uk-section uk-section-default">
         <div class="uk-container">
             <slot>
@@ -24,4 +26,5 @@ UIkit.use(Icons)
             </slot>
         </div>
     </div>
-</template>
+</template>../components/TheNavBar
+../Navbar../SideBar

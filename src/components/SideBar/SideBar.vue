@@ -72,11 +72,3 @@
         </div>
     </aside>
 </template>
-<!-- TODO -->
-<!-- Active sub-nav -->
-<!-- Make slot for nav -->
-<!-- Make small window -->
-<!-- Make mobile window -->
-<!-- Footer -->
-<!-- User Card -->
-<!-- Bring to demo, to keep nested test ? -->

@@ -5,7 +5,7 @@
                 <nav class="uk-navbar" uk-navbar>
                     <div class="uk-navbar-left">
                         <a href="/" class="uk-navbar-item uk-logo">
-                            <slot name="title">UserFrosting</slot>
+                            <slot name="title"></slot>
                         </a>
                     </div>
                     <div class="uk-navbar-right">
