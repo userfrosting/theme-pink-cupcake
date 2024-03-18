@@ -10,17 +10,19 @@
 @navbar-nav-gap: 0px;
 @navbar-nav-gap-m: 0px;
 @navbar-nav-item-padding-horizontal: 15px;
+@navbar-nav-item-hover-background-color: rgb(239, 139, 140);
+@navbar-navbar-nav-item-font: 'Montserrat', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
 // Custom hooks
 // ========================================================================
 // Custom hover color for nav items
 .hook-navbar-nav-item-hover() {
-    background-color: rgb(239, 139, 140);
+    background-color: @navbar-nav-item-hover-background-color;
 }
 
 // Custom font for nav items
 .hook-navbar-nav-item() {
-    font-family: 'Montserrat', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-family: @navbar-navbar-nav-item-font;
     font-weight: 400;
     text-transform: uppercase;
     font-size: 1rem;
@@ -29,7 +31,7 @@
 // Customize dropdown
 @navbar-dropdown-padding: 0px !important;
 .hook-navbar-dropdown-nav-item() {
-    font-family: 'Montserrat', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-family: @navbar-navbar-nav-item-font;
     font-weight: 400;
     text-transform: uppercase;
     font-size: 1rem;
