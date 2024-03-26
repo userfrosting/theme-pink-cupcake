@@ -1,27 +1,16 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-.DS_Store
-# dist
-dist-ssr
-coverage
-*.local
-
-# Editor directories and files
-.vscode/*
+# Ignores text editor metadata
+.vscode
 !.vscode/extensions.json
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
 
-*.tsbuildinfo
+# Ignores Mac metadata. You can configure this globally if you use a Mac: http://islegend.com/development/setting-global-gitignore-mac-windows/
+.DS_Store
+
+# Ignore developer resources
+_meta/
+
+# Ignore node modules
+node_modules/
+
+# Ignore compiled assets
+tests/assets
+dist/

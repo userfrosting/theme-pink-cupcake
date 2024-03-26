@@ -9,10 +9,6 @@ Frontend theme for [UserFrosting](https://www.userfrosting.com), built with [UiK
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
 ## Project Setup
 
 ```sh
@@ -29,6 +25,12 @@ npm run dev
 
 ```sh
 npm run build
+```
+
+### Preview production build
+
+```sh
+npm run preview
 ```
 
 ### Lint with [ESLint](https://eslint.org/)

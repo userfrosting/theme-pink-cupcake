@@ -1,6 +1,6 @@
+/** Create app with Main layout */
 import { createApp } from 'vue'
 import App from './App.vue'
-
 const app = createApp(App)
 
 /** Setup Theme */
