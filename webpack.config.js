@@ -1,13 +1,16 @@
 import Encore from '@symfony/webpack-encore'
 import webpack from 'webpack'
 
+import { createRequire } from 'node:module'
+const require = createRequire(import.meta.url)
+
 // Register dependent Sprinkles entries
 let entries = {
     main: './tests/src/main.js'
 }
 
 Encore.configureRuntimeEnvironment('dev')
-Encore.setOutputPath('tests/assets')
+Encore.setOutputPath('dist-webpack/assets')
     .setPublicPath('/assets/')
     .addEntries(entries)
     .splitEntryChunks()
@@ -18,6 +21,20 @@ Encore.setOutputPath('tests/assets')
     .enableVersioning(Encore.isProduction())
     .enableVueLoader(() => {}, {
         runtimeCompilerBuild: false
+    })
+    .configureDevServerOptions((options) => {
+        options = {
+            ...options,
+            // liveReload and static are used to reload the whole page
+            // when anything in templates changes
+            liveReload: true,
+            static: {
+                directory: path.resolve(__dirname, 'dist-webpack'),
+                publicPath: '/',
+                serveIndex: true,
+                watch: true
+            }
+        }
     })
     .enableLessLoader()
     .addPlugin(

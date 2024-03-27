@@ -13,6 +13,6 @@ export default defineConfig({
     },
     root: 'tests',
     build: {
-        outDir: '../dist'
+        outDir: '../dist-vite'
     }
 })

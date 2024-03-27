@@ -12,5 +12,7 @@ _meta/
 node_modules/
 
 # Ignore compiled assets
-tests/assets
 dist/
+dist-vite/
+dist-webpack/*
+!dist-webpack/index.html
