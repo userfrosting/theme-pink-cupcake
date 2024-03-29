@@ -1,6 +1,6 @@
 <script setup>
-import { DashboardLayout } from '@userfrosting/theme-pinkcupcake/Layouts'
-import { NavBarLink, NavBarItem, NavBarDropdown } from '@userfrosting/theme-pinkcupcake/NavBar'
+import { DashboardLayout } from '@userfrosting/theme-pink-cupcake/Layouts'
+import { NavBarLink, NavBarItem, NavBarDropdown } from '@userfrosting/theme-pink-cupcake/NavBar'
 import LoremIpsum from '../components/LoremIpsum.vue';
 </script>
 

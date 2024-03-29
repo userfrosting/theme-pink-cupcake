@@ -1,5 +1,5 @@
 {
-    "name": "@userfrosting/theme-pinkcupcake",
+    "name": "@userfrosting/theme-pink-cupcake",
     "version": "0.0.0",
     "type": "module",
     "description": "Pink Cupcake Theme for UserFrosting",
@@ -15,10 +15,10 @@
         "UiKit",
         "theme"
     ],
-    "homepage": "https://github.com/userfrosting/theme-pinkcupcake#readme",
+    "homepage": "https://github.com/userfrosting/theme-pink-cupcake#readme",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/userfrosting/theme-pinkcupcake.git"
+        "url": "git+https://github.com/userfrosting/theme-pink-cupcake.git"
     },
     "bugs": {
         "url": "https://github.com/userfrosting/UserFrosting/issues"
