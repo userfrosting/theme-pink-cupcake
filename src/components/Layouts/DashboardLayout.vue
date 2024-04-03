@@ -9,12 +9,12 @@ import SideBar from '../SideBar/SideBar.vue'
             <template #title>
                 <slot name="title"></slot>
             </template>
-            <template #links>
-                <slot name="links"></slot>
-            </template>
+            <slot name="navbar"></slot>
         </NavBar>
     </header>
-    <SideBar />
+    <SideBar>
+        <slot name="sidebar"></slot>
+    </SideBar>
     <div class="uf-main uk-section uk-section-default">
         <div class="uk-container">
             <slot></slot>

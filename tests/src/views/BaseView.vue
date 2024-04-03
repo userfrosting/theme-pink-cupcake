@@ -7,7 +7,7 @@ import LoremIpsum from '../components/LoremIpsum.vue';
 <template>
     <BaseLayout>
         <template #title>Pink Cupcake</template>
-        <template #links>
+        <template #navbar>
             <NavBarLink url="/" label="Base Layout" active />
             <NavBarLink url="/dashboard" label="Dashboard" />
             <NavBarDropdown label="Foo">

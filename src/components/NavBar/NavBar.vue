@@ -10,7 +10,7 @@
                     </div>
                     <div class="uk-navbar-right">
                         <ul class="uk-navbar-nav">
-                            <slot name="links"></slot>
+                            <slot></slot>
                         </ul>
                     </div>
                 </nav>

@@ -8,9 +8,7 @@ import NavBar from '../NavBar/NavBar.vue'
             <template #title>
                 <slot name="title"></slot>
             </template>
-            <template #links>
-                <slot name="links"></slot>
-            </template>
+            <slot name="navbar"></slot>
         </NavBar>
     </header>
     <div class="uf-main uk-section uk-section-default">
