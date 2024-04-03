@@ -6,11 +6,15 @@ defineProps({
     },
     label: {
         type: String,
-        required: true
+        default: ''
     },
     active: {
         type: Boolean,
         default: false
+    },
+    faIcon: {
+        type: String,
+        default: ''
     },
     icon: {
         type: String,
@@ -22,7 +26,8 @@ defineProps({
 <template>
     <li :class="{ 'uk-active': active }">
         <a :href="url">
-            <font-awesome-icon class="uk-margin-small-right" :icon="['far', icon]" />
+            <span v-if="icon" :data-uk-icon="icon" class="uk-margin-small-right"></span>
+            <font-awesome-icon v-if="faIcon" class="uk-margin-small-right" :icon="faIcon" />
             <slot>{{ label }}</slot>
         </a>
     </li>

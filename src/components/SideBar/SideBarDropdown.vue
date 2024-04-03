@@ -2,7 +2,11 @@
 defineProps({
     label: {
         type: String,
-        required: true
+        default: ''
+    },
+    faIcon: {
+        type: String,
+        default: ''
     },
     icon: {
         type: String,
@@ -18,7 +22,8 @@ defineProps({
 <template>
     <li class="uk-parent">
         <a href="#">
-            <font-awesome-icon class="uk-margin-small-right" :icon="['far', icon]" />
+            <span v-if="icon" :data-uk-icon="icon" class="uk-margin-small-right"></span>
+            <font-awesome-icon v-if="faIcon" class="uk-margin-small-right" :icon="faIcon" />
             <slot name="label">{{ label }}</slot>
             <span uk-nav-parent-icon v-if="!hideCaret"></span>
         </a>

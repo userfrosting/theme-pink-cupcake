@@ -19,14 +19,10 @@ import LoremIpsum from '../components/LoremIpsum.vue';
         </template>
         <template #sidebar>
             <SideBarLabel label="NAVIGATION" />
-            <SideBarItem url="#" icon="comments">Messages</SideBarItem>
-            <SideBarItem url="#" icon="user-group" active><span data-uk-icon="icon: users"
-                    class="uk-margin-small-right"></span> Friends</SideBarItem>
+            <SideBarItem url="#" faIcon="fa-regular fa-comments">Messages</SideBarItem>
+            <SideBarItem url="#" label="Friends" icon="users" active />
             <!-- Dropdown -->
-            <SideBarDropdown label="Templates" icon="palette">
-                <template #label>
-                    <font-awesome-icon class="uk-margin-small-right" :icon="['fas', 'palette']" /> Templates
-                </template>
+            <SideBarDropdown label="Templates" faIcon="palette">
                 <SideBarItem url="#" label="Article" active />
                 <SideBarItem url="#" label="Album" />
                 <SideBarItem url="#" label="Cover" />
@@ -36,11 +32,11 @@ import LoremIpsum from '../components/LoremIpsum.vue';
                 <SideBarItem url="#" label="Login" />
                 <SideBarItem url="#" label="Login - Dark" />
             </SideBarDropdown>
-            <SideBarItem url="#" label="Album" icon="images" />
-            <SideBarItem url="#" label="Featured Content" icon="flag" />
-            <SideBarItem url="#" label="Tips" icon="life-ring" />
+            <SideBarItem url="#" label="Album" faIcon="fa-regular fa-images" />
+            <SideBarItem url="#" label="Featured Content" faIcon="fa-regular fa-flag" />
+            <SideBarItem url="#" label="Tips" faIcon="fa-regular fa-life-ring" />
             <!-- Dropdown 2 -->
-            <SideBarDropdown label="Reports" icon="file-lines">
+            <SideBarDropdown label="Reports" faIcon="fa-regular fa-file-lines">
                 <SideBarItem url="#" label="Sub item" />
                 <SideBarItem url="#" label="Sub item" />
                 <SideBarDropdown label="Sub Nested" hideCaret>
