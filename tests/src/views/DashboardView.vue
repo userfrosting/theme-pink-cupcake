@@ -1,6 +1,6 @@
 <script setup>
 import { DashboardLayout } from '@userfrosting/theme-pink-cupcake/Layouts'
-import { NavBarLink, NavBarItem, NavBarDropdown } from '@userfrosting/theme-pink-cupcake/NavBar'
+import NavMenuMain from '../components/NavMenuMain.vue'
 import { SideBarLabel, SideBarItem, SideBarDropdown } from '@userfrosting/theme-pink-cupcake/SideBar'
 import LoremIpsum from '../components/LoremIpsum.vue';
 </script>
@@ -9,13 +9,7 @@ import LoremIpsum from '../components/LoremIpsum.vue';
     <DashboardLayout>
         <template #title>Pink Cupcake</template>
         <template #navbar>
-            <NavBarLink url="/" label="Base Layout" />
-            <NavBarLink url="/dashboard" label="Dashboard" active />
-            <NavBarDropdown label="Foo">
-                <NavBarItem url="#" label="Active" active />
-                <NavBarItem url="#" label="Mint" />
-                <NavBarItem url="#" label="Item" />
-            </NavBarDropdown>
+            <NavMenuMain active="dashboard" />
         </template>
         <template #sidebar>
             <SideBarLabel label="NAVIGATION" />
