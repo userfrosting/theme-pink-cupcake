@@ -1,12 +1,18 @@
 <script setup>
+import { RouterLink } from 'vue-router'
+
 defineProps({
-    url: {
+    to: {
         type: String,
-        required: true
+        default: ''
+    },
+    href: {
+        type: String,
+        default: ''
     },
     label: {
         type: String,
-        required: true
+        default: ''
     },
     active: {
         type: Boolean,
@@ -17,6 +23,11 @@ defineProps({
 
 <template>
     <li :class="{ 'uk-active': active }">
-        <a :href="url">{{ label }}</a>
+        <RouterLink v-if="to" :to="to">
+            <slot>{{ label }}</slot>
+        </RouterLink>
+        <a v-else :href="href">
+            <slot>{{ label }}</slot>
+        </a>
     </li>
 </template>

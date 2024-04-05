@@ -1,8 +1,12 @@
 <script setup>
 defineProps({
-    url: {
+    href: {
         type: String,
-        required: true
+        default: ''
+    },
+    to: {
+        type: String,
+        default: ''
     },
     label: {
         type: String,
@@ -25,7 +29,12 @@ defineProps({
 
 <template>
     <li :class="{ 'uk-active': active }">
-        <a :href="url">
+        <RouterLink v-if="to" :to="to">
+            <span v-if="icon" :data-uk-icon="icon" class="uk-margin-small-right"></span>
+            <font-awesome-icon v-if="faIcon" class="uk-margin-small-right" :icon="faIcon" />
+            <slot>{{ label }}</slot>
+        </RouterLink>
+        <a v-else :href="href">
             <span v-if="icon" :data-uk-icon="icon" class="uk-margin-small-right"></span>
             <font-awesome-icon v-if="faIcon" class="uk-margin-small-right" :icon="faIcon" />
             <slot>{{ label }}</slot>
