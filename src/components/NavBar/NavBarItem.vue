@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink } from 'vue-router'
+import { DynamicLink } from '../Content'
 
 defineProps({
     to: {
@@ -23,11 +23,8 @@ defineProps({
 
 <template>
     <li :class="{ 'uk-active': active }">
-        <RouterLink v-if="to" :to="to">
+        <DynamicLink :href="href" :to="to">
             <slot>{{ label }}</slot>
-        </RouterLink>
-        <a v-else :href="href">
-            <slot>{{ label }}</slot>
-        </a>
+        </DynamicLink>
     </li>
 </template>

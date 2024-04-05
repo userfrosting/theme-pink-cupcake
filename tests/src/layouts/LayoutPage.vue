@@ -1,14 +1,14 @@
 <script setup>
-import { BaseLayout } from '@userfrosting/theme-pink-cupcake/Layouts'
+import { MainContent } from '@userfrosting/theme-pink-cupcake/Content'
+import { NavBar } from '@userfrosting/theme-pink-cupcake/NavBar'
 import NavMenuMain from '../components/NavMenuMain.vue'
 </script>
 
 <template>
-    <BaseLayout>
-        <template #title>Pink Cupcake</template>
-        <template #navbar>
-            <NavMenuMain active="main" />
-        </template>
+    <NavBar title="Pink Cupcake">
+        <NavMenuMain active="main" />
+    </NavBar>
+    <MainContent>
         <slot></slot>
-    </BaseLayout>
+    </MainContent>
 </template>

@@ -1,4 +1,6 @@
 <script setup>
+import { DynamicLink } from '../Content'
+
 defineProps({
     href: {
         type: String,
@@ -29,15 +31,10 @@ defineProps({
 
 <template>
     <li :class="{ 'uk-active': active }">
-        <RouterLink v-if="to" :to="to">
+        <DynamicLink :href="href" :to="to">
             <span v-if="icon" :data-uk-icon="icon" class="uk-margin-small-right"></span>
             <font-awesome-icon v-if="faIcon" class="uk-margin-small-right" :icon="faIcon" />
             <slot>{{ label }}</slot>
-        </RouterLink>
-        <a v-else :href="href">
-            <span v-if="icon" :data-uk-icon="icon" class="uk-margin-small-right"></span>
-            <font-awesome-icon v-if="faIcon" class="uk-margin-small-right" :icon="faIcon" />
-            <slot>{{ label }}</slot>
-        </a>
+        </DynamicLink>
     </li>
 </template>
