@@ -1,5 +1,5 @@
 <script setup>
-import { NavBarItem, NavBarDropdown } from '@userfrosting/theme-pink-cupcake/NavBar'
+import { NavBarItem, NavBarDropdown, NavBarDropdownSeparator } from '@userfrosting/theme-pink-cupcake/NavBar'
 
 defineProps({
     active: {
@@ -16,6 +16,7 @@ defineProps({
     <NavBarDropdown label="Dropdown">
         <NavBarItem to="/" label="Active" active />
         <NavBarItem to="/" label="Inactive" />
+        <NavBarDropdownSeparator />
         <NavBarItem to="/dashboard" label="Dashboard" />
     </NavBarDropdown>
 </template>
