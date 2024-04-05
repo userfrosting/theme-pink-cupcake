@@ -3,7 +3,7 @@ import { RouterLink } from 'vue-router'
 
 defineProps({
     to: {
-        type: String,
+        type: [String, Object],
         default: ''
     },
     href: {

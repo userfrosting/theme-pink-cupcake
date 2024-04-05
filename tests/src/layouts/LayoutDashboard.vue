@@ -2,7 +2,6 @@
 import { DashboardLayout } from '@userfrosting/theme-pink-cupcake/Layouts'
 import { SideBarLabel, SideBarItem, SideBarDropdown } from '@userfrosting/theme-pink-cupcake/SideBar'
 import NavMenuMain from '../components/NavMenuMain.vue'
-import LoremIpsum from '../components/LoremIpsum.vue';
 </script>
 
 <template>
@@ -39,6 +38,6 @@ import LoremIpsum from '../components/LoremIpsum.vue';
                 </SideBarDropdown>
             </SideBarDropdown>
         </template>
-        <LoremIpsum />
+        <slot></slot>
     </DashboardLayout>
 </template>

@@ -1,5 +1,4 @@
 <template>
-    <h1>Lorem ipsum</h1>
     <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Sit amet luctus venenatis lectus magna. In hac habitasse platea dictumst quisque sagittis purus.

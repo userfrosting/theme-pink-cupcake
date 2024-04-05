@@ -10,12 +10,12 @@ defineProps({
 </script>
 
 <template>
-    <NavBarItem href="/"><font-awesome-icon icon="fa-solid fa-house" /></NavBarItem>
-    <NavBarItem to="/" label="Base Layout" :active="active == 'main'" />
-    <NavBarItem to="/dashboard" label="Dashboard" :active="active == 'dashboard'" />
-    <NavBarDropdown label="Foo">
-        <NavBarItem href="#" label="Active" active />
-        <NavBarItem href="#" label="Mint" />
-        <NavBarItem to="/dashboard" label="Item" />
+    <NavBarItem href="https://userfrosting.com"><font-awesome-icon icon="fa-solid fa-house" /></NavBarItem>
+    <NavBarItem :to="{ name: 'page.index' }" label="Page" :active="active == 'main'" />
+    <NavBarItem :to="{ name: 'dashboard.index' }" label="Dashboard" :active="active == 'dashboard'" />
+    <NavBarDropdown label="Dropdown">
+        <NavBarItem to="/" label="Active" active />
+        <NavBarItem to="/" label="Inactive" />
+        <NavBarItem to="/dashboard" label="Dashboard" />
     </NavBarDropdown>
 </template>
