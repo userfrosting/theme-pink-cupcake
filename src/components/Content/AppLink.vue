@@ -3,9 +3,9 @@ import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 
 const props = defineProps({
-    href: {
+    to: {
         type: [String, Object],
-        default: ''
+        default: '#'
     },
     label: {
         type: String,
@@ -14,15 +14,15 @@ const props = defineProps({
 })
 
 const isExternalLink = computed(() => {
-    return typeof props.href === 'string' && props.href.startsWith('http')
+    return typeof props.to === 'string' && (props.to.startsWith('http') || props.to.startsWith('#'))
 })
 </script>
 
 <template>
-    <a v-if="isExternalLink" :href="href" target="_blank">
+    <a v-if="isExternalLink" :href="to" target="_blank">
         <slot>{{ label }}</slot>
     </a>
-    <RouterLink v-else :to="href">
+    <RouterLink v-else :to="to">
         <slot>{{ label }}</slot>
     </RouterLink>
 </template>

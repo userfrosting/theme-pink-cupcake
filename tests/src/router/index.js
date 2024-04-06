@@ -10,13 +10,29 @@ const router = createRouter({
         },
         {
             path: '/dashboard',
-            name: 'dashboard.index',
-            component: () => import('../views/DashboardIndex.vue')
-        },
-        {
-            path: '/dashboard/table',
-            name: 'dashboard.table',
-            component: () => import('../views/DashboardTable.vue')
+            children: [
+                {
+                    path: '',
+                    name: 'dashboard.index',
+                    component: () => import('../views/DashboardIndex.vue')
+                },
+                {
+                    path: 'table',
+                    name: 'dashboard.table',
+                    component: () => import('../views/DashboardTable.vue')
+                },
+                {
+                    path: 'template',
+                    name: 'dashboard.template',
+                    children: [
+                        {
+                            path: 'test',
+                            name: 'dashboard.template.test',
+                            component: () => import('../views/DashboardTemplateTest.vue')
+                        }
+                    ]
+                }
+            ]
         }
     ]
 })

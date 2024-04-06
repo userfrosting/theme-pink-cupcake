@@ -6,16 +6,17 @@ import NavMenuMain from '../components/NavMenuMain.vue'
 </script>
 
 <template>
-    <NavBar title="Pink Cupcake" href="/dashboard">
+    <NavBar title="Pink Cupcake" to="/">
         <NavMenuMain />
     </NavBar>
     <SideBar>
         <SideBarLabel label="NAVIGATION" />
-        <SideBarItem href="/" faIcon="fa-regular fa-comments">Messages</SideBarItem>
-        <SideBarItem label="Friends" icon="users" active />
+        <SideBarItem :to="{ name: 'dashboard.index' }" faIcon="gauge">Dashboard</SideBarItem>
+        <SideBarItem :to="{ name: 'dashboard.table' }" faIcon="table" label="Table" />
         <!-- Dropdown -->
-        <SideBarDropdown label="Templates" faIcon="palette">
-            <SideBarItem label="Article" active />
+        <SideBarDropdown :to="{ name: 'dashboard.template' }" label="Templates" faIcon="palette">
+            <SideBarItem :to="{ name: 'dashboard.template.test' }" label="Test" />
+            <SideBarItem label="Article" />
             <SideBarItem label="Album" />
             <SideBarItem label="Cover" />
             <SideBarItem label="Cards" />
@@ -28,7 +29,7 @@ import NavMenuMain from '../components/NavMenuMain.vue'
         <SideBarItem label="Featured Content" faIcon="fa-regular fa-flag" />
         <SideBarItem label="Tips" faIcon="fa-regular fa-life-ring" />
         <!-- Dropdown 2 -->
-        <SideBarDropdown label="Reports" faIcon="fa-regular fa-file-lines">
+        <SideBarDropdown to="/" label="Reports" faIcon="fa-regular fa-file-lines">
             <SideBarItem label="Sub item" />
             <SideBarItem label="Sub item" />
             <SideBarDropdown label="Sub Nested" hideCaret>

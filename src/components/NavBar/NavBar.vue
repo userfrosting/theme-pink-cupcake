@@ -2,7 +2,7 @@
 import { AppLink } from '../Content'
 
 defineProps({
-    href: {
+    to: {
         type: [String, Object],
         default: '/'
     },
@@ -20,7 +20,7 @@ defineProps({
                 <div class="uk-container uk-container-expand">
                     <nav class="uk-navbar" uk-navbar>
                         <div class="uk-navbar-left">
-                            <AppLink :href="href" class="uk-navbar-item uk-logo">
+                            <AppLink :to="to" class="uk-navbar-item uk-logo">
                                 <slot name="title">{{ title }}</slot>
                             </AppLink>
                         </div>

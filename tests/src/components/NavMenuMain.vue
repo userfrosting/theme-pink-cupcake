@@ -3,13 +3,14 @@ import { NavBarItem, NavBarDropdown, NavBarDropdownSeparator } from '@userfrosti
 </script>
 
 <template>
-    <NavBarItem href="https://userfrosting.com"><font-awesome-icon icon="fa-solid fa-house" /></NavBarItem>
-    <NavBarItem :href="{ name: 'page.index' }" label="Page" />
-    <NavBarItem :href="{ name: 'dashboard.index' }" label="Dashboard" />
+    <NavBarItem to="https://userfrosting.com"><font-awesome-icon icon="fa-solid fa-house" /></NavBarItem>
+    <NavBarItem :to="{ name: 'page.index' }" label="Page" />
+    <NavBarItem :to="{ name: 'dashboard.index' }" label="Dashboard" />
     <NavBarDropdown label="Dropdown">
-        <NavBarItem label="Active" active />
-        <NavBarItem label="Inactive" />
+        <NavBarItem label="Label" />
+        <NavBarItem label="Label" />
         <NavBarDropdownSeparator />
-        <NavBarItem href="/dashboard" label="Dashboard" />
+        <NavBarItem to="/" label="Page" />
+        <NavBarItem to="/dashboard" label="Dashboard" />
     </NavBarDropdown>
 </template>
