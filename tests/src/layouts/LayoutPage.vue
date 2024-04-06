@@ -6,7 +6,7 @@ import NavMenuMain from '../components/NavMenuMain.vue'
 
 <template>
     <NavBar title="Pink Cupcake">
-        <NavMenuMain active="main" />
+        <NavMenuMain />
     </NavBar>
     <MainContent>
         <slot></slot>

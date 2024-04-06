@@ -21,7 +21,7 @@ defineProps({
 
 <template>
     <li class="uk-parent">
-        <a href="#">
+        <a>
             <span v-if="icon" :data-uk-icon="icon" class="uk-margin-small-right"></span>
             <font-awesome-icon v-if="faIcon" class="uk-margin-small-right" :icon="faIcon" />
             <slot name="label">{{ label }}</slot>

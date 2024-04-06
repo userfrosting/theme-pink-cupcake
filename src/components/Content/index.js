@@ -1,5 +1,5 @@
 // Export components
 import MainContent from './MainContent.vue'
-import DynamicLink from './DynamicLink.vue'
+import AppLink from './AppLink.vue'
 
-export { MainContent, DynamicLink }
+export { MainContent, AppLink }

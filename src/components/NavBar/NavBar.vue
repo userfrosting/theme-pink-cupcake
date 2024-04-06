@@ -1,14 +1,10 @@
 <script setup>
-import { DynamicLink } from '../Content'
+import { AppLink } from '../Content'
 
 defineProps({
-    to: {
+    href: {
         type: [String, Object],
         default: '/'
-    },
-    href: {
-        type: String,
-        default: ''
     },
     title: {
         type: String,
@@ -24,9 +20,9 @@ defineProps({
                 <div class="uk-container uk-container-expand">
                     <nav class="uk-navbar" uk-navbar>
                         <div class="uk-navbar-left">
-                            <DynamicLink :href="href" :to="to" class="uk-navbar-item uk-logo">
+                            <AppLink :href="href" class="uk-navbar-item uk-logo">
                                 <slot name="title">{{ title }}</slot>
-                            </DynamicLink>
+                            </AppLink>
                         </div>
                         <div class="uk-navbar-right">
                             <ul class="uk-navbar-nav">

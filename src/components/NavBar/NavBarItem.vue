@@ -1,13 +1,9 @@
 <script setup>
-import { DynamicLink } from '../Content'
+import { AppLink } from '../Content'
 
 defineProps({
-    to: {
-        type: [String, Object],
-        default: ''
-    },
     href: {
-        type: String,
+        type: [String, Object],
         default: ''
     },
     label: {
@@ -23,8 +19,8 @@ defineProps({
 
 <template>
     <li :class="{ 'uk-active': active }">
-        <DynamicLink :href="href" :to="to">
+        <AppLink :href="href">
             <slot>{{ label }}</slot>
-        </DynamicLink>
+        </AppLink>
     </li>
 </template>
