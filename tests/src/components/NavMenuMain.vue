@@ -1,5 +1,12 @@
 <script setup>
-import { NavBarItem, NavBarDropdown, NavBarDropdownSeparator } from '@userfrosting/theme-pink-cupcake/NavBar'
+import { ref } from 'vue'
+import { NavBarItem, NavBarDropdown, NavBarDropdownSeparator, NavBarUserCard, NavBarUserCardButton } from '@userfrosting/theme-pink-cupcake/NavBar'
+
+const count = ref(0)
+
+function increment() {
+  count.value++
+}
 </script>
 
 <template>
@@ -13,4 +20,9 @@ import { NavBarItem, NavBarDropdown, NavBarDropdownSeparator } from '@userfrosti
         <NavBarItem to="/" label="Page" />
         <NavBarItem to="/dashboard" label="Dashboard" />
     </NavBarDropdown>
+    <NavBarUserCard username="John Doe" avatar="https://gravatar.com/avatar/?d=mm" meta="Administrator">
+        <NavBarUserCardButton label="External" to="https://userfrosting.com" />
+        <NavBarUserCardButton label="Internal" :to="{ name: 'page.index' }" />
+        <NavBarUserCardButton @click="increment()">Action : {{ count }}</NavBarUserCardButton>
+    </NavBarUserCard>
 </template>

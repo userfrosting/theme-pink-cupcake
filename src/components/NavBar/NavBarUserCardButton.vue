@@ -19,10 +19,14 @@ const isExternalLink = computed(() => {
 </script>
 
 <template>
-    <a v-if="isExternalLink" :href="to" target="_blank">
-        <slot>{{ label }}</slot>
-    </a>
-    <RouterLink v-else :to="to">
-        <slot>{{ label }}</slot>
-    </RouterLink>
+    <li v-if="isExternalLink">
+        <a class="uk-button uk-button-default uk-button-small uk-text-center" :href="to" target="_blank">
+            <slot>{{ label }}</slot>
+        </a>
+    </li>
+    <li v-else>
+        <RouterLink :to="to" class="uk-button uk-button-default uk-button-small uk-text-center">
+            <slot>{{ label }}</slot>
+        </RouterLink>
+    </li>
 </template>

@@ -10,7 +10,7 @@ import { RouterLink } from 'vue-router'
 const props = defineProps({
     to: {
         type: [String, Object],
-        default: '#'
+        default: ''
     },
     label: {
         type: String,
@@ -19,7 +19,7 @@ const props = defineProps({
 })
 
 const isExternalLink = computed(() => {
-    return typeof props.to === 'string' && (props.to.startsWith('http') || props.to.startsWith('#'))
+    return typeof props.to === 'string' && props.to.startsWith('http')
 })
 </script>
 
