@@ -20,7 +20,10 @@ const isExternalLink = computed(() => {
 
 <template>
     <li v-if="isExternalLink">
-        <a class="uk-button uk-button-default uk-button-small uk-text-center" :href="to" target="_blank">
+        <a
+            class="uk-button uk-button-default uk-button-small uk-text-center"
+            :href="to"
+            target="_blank">
             <slot>{{ label }}</slot>
         </a>
     </li>

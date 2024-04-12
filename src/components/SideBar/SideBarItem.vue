@@ -1,6 +1,6 @@
 <script setup>
 /**
- * Allow external + internal links in same component, plus add active class to 
+ * Allow external + internal links in same component, plus add active class to
  * li instead of a element
  * @see https://router.vuejs.org/guide/advanced/extending-router-link
  */

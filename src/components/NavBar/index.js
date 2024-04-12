@@ -5,4 +5,11 @@ import NavBarDropdownSeparator from './NavBarDropdownSeparator.vue'
 import NavBarUserCard from './NavBarUserCard.vue'
 import NavBarUserCardButton from './NavBarUserCardButton.vue'
 
-export { NavBarDropdown, NavBarItem, NavBar, NavBarDropdownSeparator, NavBarUserCard, NavBarUserCardButton }
+export {
+    NavBarDropdown,
+    NavBarItem,
+    NavBar,
+    NavBarDropdownSeparator,
+    NavBarUserCard,
+    NavBarUserCardButton
+}
