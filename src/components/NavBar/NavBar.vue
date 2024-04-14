@@ -1,5 +1,5 @@
 <script setup>
-import { AppLink } from '../Content'
+import AppLink from '../Content/AppLink.vue'
 
 defineProps({
     to: {
