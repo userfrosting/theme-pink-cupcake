@@ -25,7 +25,8 @@
     },
     "exports": {
         ".": "./src/index.js",
-        "./Components": "./src/components/index.js",
+        "./components": "./src/components/index.js",
+        "./plugins/*": "./src/plugins/*",
         "./*.less": "./src/less/*.less",
         "./*": "./src/components/*.vue"
     },
