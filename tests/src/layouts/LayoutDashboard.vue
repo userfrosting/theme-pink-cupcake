@@ -1,44 +1,41 @@
 <script setup>
-import { MainContent } from '@userfrosting/theme-pink-cupcake/Content'
-import { NavBar } from '@userfrosting/theme-pink-cupcake/NavBar'
-import { SideBar, SideBarLabel, SideBarItem, SideBarDropdown } from '@userfrosting/theme-pink-cupcake/SideBar'
 import NavMenuMain from '../components/NavMenuMain.vue'
 </script>
 
 <template>
-    <NavBar title="Pink Cupcake" to="/">
+    <UFNavBar title="Pink Cupcake" to="/">
         <NavMenuMain />
-    </NavBar>
-    <SideBar>
-        <SideBarLabel label="NAVIGATION" />
-        <SideBarItem :to="{ name: 'dashboard.index' }" faIcon="gauge">Dashboard</SideBarItem>
-        <SideBarItem :to="{ name: 'dashboard.table' }" faIcon="table" label="Table" />
+    </UFNavBar>
+    <UFSideBar>
+        <UFSideBarLabel label="NAVIGATION" />
+        <UFSideBarItem :to="{ name: 'dashboard.index' }" faIcon="gauge">Dashboard</UFSideBarItem>
+        <UFSideBarItem :to="{ name: 'dashboard.table' }" faIcon="table" label="Table" />
         <!-- Dropdown -->
-        <SideBarDropdown :to="{ name: 'dashboard.template' }" label="Templates" faIcon="palette">
-            <SideBarItem :to="{ name: 'dashboard.template.test' }" label="Test" />
-            <SideBarItem label="Article" />
-            <SideBarItem label="Album" />
-            <SideBarItem label="Cover" />
-            <SideBarItem label="Cards" />
-            <SideBarItem label="News Blog" />
-            <SideBarItem label="Price" />
-            <SideBarItem label="Login" />
-            <SideBarItem label="Login - Dark" />
-        </SideBarDropdown>
-        <SideBarItem label="Album" faIcon="fa-regular fa-images" />
-        <SideBarItem label="Featured Content" faIcon="fa-regular fa-flag" />
-        <SideBarItem label="Tips" faIcon="fa-regular fa-life-ring" />
+        <UFSideBarDropdown :to="{ name: 'dashboard.template' }" label="Templates" faIcon="palette">
+            <UFSideBarItem :to="{ name: 'dashboard.template.test' }" label="Test" />
+            <UFSideBarItem label="Article" />
+            <UFSideBarItem label="Album" />
+            <UFSideBarItem label="Cover" />
+            <UFSideBarItem label="Cards" />
+            <UFSideBarItem label="News Blog" />
+            <UFSideBarItem label="Price" />
+            <UFSideBarItem label="Login" />
+            <UFSideBarItem label="Login - Dark" />
+        </UFSideBarDropdown>
+        <UFSideBarItem label="Album" faIcon="fa-regular fa-images" />
+        <UFSideBarItem label="Featured Content" faIcon="fa-regular fa-flag" />
+        <UFSideBarItem label="Tips" faIcon="fa-regular fa-life-ring" />
         <!-- Dropdown 2 -->
-        <SideBarDropdown to="/" label="Reports" faIcon="fa-regular fa-file-lines">
-            <SideBarItem label="Sub item" />
-            <SideBarItem label="Sub item" />
-            <SideBarDropdown label="Sub Nested" hideCaret>
-                <SideBarItem label="Sub sub item" />
-                <SideBarItem label="Sub sub item" />
-            </SideBarDropdown>
-        </SideBarDropdown>
-    </SideBar>
-    <MainContent>
+        <UFSideBarDropdown to="/" label="Reports" faIcon="fa-regular fa-file-lines">
+            <UFSideBarItem label="Sub item" />
+            <UFSideBarItem label="Sub item" />
+            <UFSideBarDropdown label="Sub Nested" hideCaret>
+                <UFSideBarItem label="Sub sub item" />
+                <UFSideBarItem label="Sub sub item" />
+            </UFSideBarDropdown>
+        </UFSideBarDropdown>
+    </UFSideBar>
+    <UFMainContent>
         <slot></slot>
-    </MainContent>
+    </UFMainContent>
 </template>

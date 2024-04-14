@@ -1,14 +1,13 @@
 <script setup>
-import { MainContent } from '@userfrosting/theme-pink-cupcake/Content'
-import { NavBar } from '@userfrosting/theme-pink-cupcake/NavBar'
 import NavMenuMain from '../components/NavMenuMain.vue'
+import NavBar from '@userfrosting/theme-pink-cupcake/NavBar/NavBar'
 </script>
 
 <template>
     <NavBar title="Pink Cupcake">
         <NavMenuMain />
     </NavBar>
-    <MainContent>
+    <UFMainContent>
         <slot></slot>
-    </MainContent>
+    </UFMainContent>
 </template>

@@ -12,4 +12,8 @@ app.use(PinkCupcake)
 import router from './router'
 app.use(router)
 
+/** Register components */
+import { registerComponents } from '@userfrosting/theme-pink-cupcake/Components'
+await registerComponents(app);
+
 app.mount('#app')
