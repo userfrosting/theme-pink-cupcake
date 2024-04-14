@@ -8,16 +8,17 @@
  */
 const importComponents = import.meta.glob('../components/**/*.vue')
 
-export const registerComponents = async (app, prefix = 'UF') => {
+export const registerComponents = (app, prefix = 'UF') => {
     for (const fileName of Object.keys(importComponents)) {
-        const componentConfig = await importComponents[fileName]()
-        const componentName =
-            prefix +
-            fileName
-                .split('/')
-                .pop()
-                ?.replace(/\.\w+$/, '')
+        importComponents[fileName]().then((componentConfig) => {
+            const componentName =
+                prefix +
+                fileName
+                    .split('/')
+                    .pop()
+                    ?.replace(/\.\w+$/, '')
 
-        app.component(componentName, componentConfig?.default)
+            app.component(componentName, componentConfig?.default)
+        })
     }
 }
