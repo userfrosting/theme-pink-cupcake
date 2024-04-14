@@ -1,29 +1,7 @@
 /**
- * Automatically register every component globally
- * @see
- *  - https://vuejs.org/guide/components/registration
- *  - https://dev.to/jirehnimes/how-to-register-global-components-in-vue-3-dynamically-in-2023-1d50
- *
- * TODO : Test out a way to improve tree shaking
+ * Register every component globally
+ * See : https://vuejs.org/guide/components/registration
  */
-// TODO : Glob doesn't work with webpack
-// "Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)"
-// const importComponents = import.meta.glob('../components/**/*.vue')
-
-/*export const registerComponents = (app, prefix = 'UF') => {
-    for (const fileName of Object.keys(importComponents)) {
-        importComponents[fileName]().then((componentConfig) => {
-            const componentName =
-                prefix +
-                fileName
-                    .split('/')
-                    .pop()
-                    ?.replace(/\.\w+$/, '')
-
-            app.component(componentName, componentConfig?.default)
-        })
-    }
-}*/
 
 import AppLink from './Content/AppLink.vue'
 import MainContent from './Content/MainContent.vue'
@@ -53,17 +31,20 @@ export {
     SideBarLabel
 }
 
-export const registerComponents = (app, prefix = 'UF') => {
-    app.component(prefix + 'UFAppLink', AppLink)
-        .component(prefix + 'MainContent', MainContent)
-        .component(prefix + 'NavBar', NavBar)
-        .component(prefix + 'NavBarDropdown', NavBarDropdown)
-        .component(prefix + 'NavBarDropdownSeparator', NavBarDropdownSeparator)
-        .component(prefix + 'NavBarItem', NavBarItem)
-        .component(prefix + 'NavBarUserCard', NavBarUserCard)
-        .component(prefix + 'NavBarUserCardButton', NavBarUserCardButton)
-        .component(prefix + 'SideBar', SideBar)
-        .component(prefix + 'SideBarDropdown', SideBarDropdown)
-        .component(prefix + 'SideBarItem', SideBarItem)
-        .component(prefix + 'SideBarLabel', SideBarLabel)
+export default {
+    install: (app, options) => {
+        const prefix = options && options.prefix ? options.prefix : 'UF'
+        app.component(prefix + 'UFAppLink', AppLink)
+            .component(prefix + 'MainContent', MainContent)
+            .component(prefix + 'NavBar', NavBar)
+            .component(prefix + 'NavBarDropdown', NavBarDropdown)
+            .component(prefix + 'NavBarDropdownSeparator', NavBarDropdownSeparator)
+            .component(prefix + 'NavBarItem', NavBarItem)
+            .component(prefix + 'NavBarUserCard', NavBarUserCard)
+            .component(prefix + 'NavBarUserCardButton', NavBarUserCardButton)
+            .component(prefix + 'SideBar', SideBar)
+            .component(prefix + 'SideBarDropdown', SideBarDropdown)
+            .component(prefix + 'SideBarItem', SideBarItem)
+            .component(prefix + 'SideBarLabel', SideBarLabel)
+    }
 }

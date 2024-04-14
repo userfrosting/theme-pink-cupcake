@@ -1,9 +1,11 @@
+import PinkCupcakeComponents from './components'
 import FontAwesome from './plugins/font-awesome'
 // import Pinia from './plugins/pinia'
 
 /* Install plugins */
 export default {
     install: (app) => {
+        app.use(PinkCupcakeComponents)
         app.use(FontAwesome)
         // app.use(Pinia)
     }
