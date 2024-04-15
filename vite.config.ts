@@ -13,6 +13,14 @@ export default defineConfig({
     },
     root: 'tests',
     build: {
-        outDir: '../dist-vite'
+        outDir: './dist-vite'
+    },
+    // Add UIKit alias : https://stackoverflow.com/a/75264118/445757
+    resolve: {
+        alias: {
+            '../../images/backgrounds': 'uikit/src/images/backgrounds',
+            '../../images/components': 'uikit/src/images/components',
+            '../../images/icons': 'uikit/src/images/icons'
+        }
     }
 })
