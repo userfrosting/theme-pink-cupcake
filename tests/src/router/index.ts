@@ -22,6 +22,11 @@ const router = createRouter({
                     component: () => import('../views/DashboardTable.vue')
                 },
                 {
+                    path: 'alerts',
+                    name: 'dashboard.alerts',
+                    component: () => import('../views/DashboardAlerts.vue')
+                },
+                {
                     path: 'template',
                     name: 'dashboard.template',
                     children: [

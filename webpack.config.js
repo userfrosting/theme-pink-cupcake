@@ -3,7 +3,7 @@ import webpack from 'webpack'
 
 // Register dependent Sprinkles entries
 let entries = {
-    main: './tests/src/main.js'
+    main: './tests/src/main.ts'
 }
 
 Encore.configureRuntimeEnvironment('dev')
@@ -19,6 +19,7 @@ Encore.setOutputPath('dist-webpack/assets')
     .enableVueLoader(() => {}, {
         runtimeCompilerBuild: false
     })
+    .enableTypeScriptLoader()
     .enableLessLoader()
     .addPlugin(
         new webpack.DefinePlugin({

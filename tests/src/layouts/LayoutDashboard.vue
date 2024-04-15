@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import NavMenuMain from '../components/NavMenuMain.vue'
 </script>
 
@@ -10,6 +10,10 @@ import NavMenuMain from '../components/NavMenuMain.vue'
         <UFSideBarLabel label="NAVIGATION" />
         <UFSideBarItem :to="{ name: 'dashboard.index' }" faIcon="gauge">Dashboard</UFSideBarItem>
         <UFSideBarItem :to="{ name: 'dashboard.table' }" faIcon="table" label="Table" />
+        <UFSideBarItem
+            :to="{ name: 'dashboard.alerts' }"
+            faIcon="triangle-exclamation"
+            label="Alerts" />
         <!-- Dropdown -->
         <UFSideBarDropdown :to="{ name: 'dashboard.template' }" label="Templates" faIcon="palette">
             <UFSideBarItem :to="{ name: 'dashboard.template.test' }" label="Test" />
@@ -22,9 +26,6 @@ import NavMenuMain from '../components/NavMenuMain.vue'
             <UFSideBarItem label="Login" />
             <UFSideBarItem label="Login - Dark" />
         </UFSideBarDropdown>
-        <UFSideBarItem label="Album" faIcon="fa-regular fa-images" />
-        <UFSideBarItem label="Featured Content" faIcon="fa-regular fa-flag" />
-        <UFSideBarItem label="Tips" faIcon="fa-regular fa-life-ring" />
         <!-- Dropdown 2 -->
         <UFSideBarDropdown to="/" label="Reports" faIcon="fa-regular fa-file-lines">
             <UFSideBarItem label="Sub item" />

@@ -1,11 +1,13 @@
-<script setup>
+<script setup lang="ts">
 import LayoutDashboard from '../layouts/LayoutDashboard.vue'
 </script>
 
 <template>
     <LayoutDashboard>
         <table class="uk-table">
-            <caption>Table Caption</caption>
+            <caption>
+                Table Caption
+            </caption>
             <thead>
                 <tr>
                     <th>Table Heading</th>

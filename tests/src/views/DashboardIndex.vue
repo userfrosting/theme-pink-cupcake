@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import LayoutDashboard from '../layouts/LayoutDashboard.vue'
 import LoremIpsum from '../components/LoremIpsum.vue'
 </script>
