@@ -23,6 +23,7 @@
     "bugs": {
         "url": "https://github.com/userfrosting/UserFrosting/issues"
     },
+    "types": "./src/index.d.ts",
     "exports": {
         ".": "./src/index.js",
         "./components": "./src/components/index.js",
