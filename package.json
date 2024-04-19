@@ -25,6 +25,7 @@
     },
     "exports": {
         ".": "./src/index.js",
+        "./types": "./src/types.ts",
         "./components": "./src/components/index.js",
         "./plugins/*": "./src/plugins/*",
         "./*.less": "./src/less/*.less",

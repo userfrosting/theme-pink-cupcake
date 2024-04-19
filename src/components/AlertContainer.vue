@@ -1,16 +1,27 @@
 <script setup lang="ts">
+import { AlertStyle } from '../types'
+
 interface Alert {
-    title: string
-    description: string
+    title?: string
+    description?: string
+    style?: AlertStyle
+    closeBtn?: boolean
 }
 
-defineProps<Alert>()
+withDefaults(defineProps<Alert>(), {
+    title: '',
+    description: '',
+    style: AlertStyle.Primary,
+    closeBtn: false
+})
 </script>
 
 <template>
-    <div class="uk-alert-danger" uk-alert>
-        <a class="uk-alert-close" uk-close></a>
-        <h3>{{ title }}</h3>
-        <p>{{ description }}</p>
+    <div :class="style" uk-alert>
+        <a v-if="closeBtn" class="uk-alert-close" uk-close @click="$emit('close')"></a>
+        <h3 v-if="title">{{ title }}</h3>
+        <p>
+            <slot>{{ description }}</slot>
+        </p>
     </div>
 </template>
