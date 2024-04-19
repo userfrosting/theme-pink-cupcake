@@ -48,34 +48,6 @@
             "options": {},
             "command": "npm run format",
             "problemMatcher": []
-        },
-        {
-            "label": "webpack",
-            "type": "shell",
-            "options": {},
-            "command": "npm run webpack",
-            "problemMatcher": []
-        },
-        {
-            "label": "webpack:serve",
-            "type": "shell",
-            "options": {},
-            "command": "npm run webpack:serve",
-            "problemMatcher": []
-        },
-        {
-            "label": "webpack:watch",
-            "type": "shell",
-            "options": {},
-            "command": "npm run webpack:watch",
-            "problemMatcher": []
-        },
-        {
-            "label": "webpack:build",
-            "type": "shell",
-            "options": {},
-            "command": "npm run webpack:build",
-            "problemMatcher": []
         }
     ]
 }

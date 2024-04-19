@@ -9,6 +9,3 @@ node_modules/
 
 # Ignore compiled assets
 dist/
-dist-vite/
-dist-webpack/*
-!dist-webpack/index.html

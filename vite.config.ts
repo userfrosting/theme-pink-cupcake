@@ -13,7 +13,7 @@ export default defineConfig({
     },
     root: 'tests',
     build: {
-        outDir: './dist-vite'
+        outDir: './dist'
     },
     // Add UIKit alias : https://stackoverflow.com/a/75264118/445757
     resolve: {
