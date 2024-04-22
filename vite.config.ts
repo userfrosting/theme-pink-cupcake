@@ -1,12 +1,13 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import dts from 'vite-plugin-dts'
 
 // https://vitejs.dev/config/
 // https://stackoverflow.com/a/74397545/445757
 export default defineConfig(({ mode }) => {
     if (mode === 'release') {
         return {
-            plugins: [vue()],
+            plugins: [vue(), dts()],
             build: {
                 outDir: './dist',
                 lib: {
