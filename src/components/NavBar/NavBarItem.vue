@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 /**
  * Allow external + internal links in same component, plus add active class to
  * li instead of a element
@@ -7,15 +7,14 @@
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 
-const props = defineProps({
-    to: {
-        type: [String, Object],
-        default: ''
-    },
-    label: {
-        type: String,
-        default: ''
-    }
+export interface Props {
+  to?: string | object
+  label?: string
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  to: '',
+  label: ''
 })
 
 const isExternalLink = computed(() => {

@@ -14,6 +14,20 @@ withDefaults(defineProps<Alert>(), {
     style: AlertStyle.Primary,
     closeBtn: false
 })
+
+// withDefaults(defineProps<{
+//     alert: Alert
+// }>(), {
+//     alert: () => 
+//     {
+//         return {
+//             title: '',
+//             description: '',
+//             style: AlertStyle.Primary,
+//             closeBtn: false,
+//         }
+//     },
+// })
 </script>
 
 <template>

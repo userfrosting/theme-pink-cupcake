@@ -1,17 +1,14 @@
-<script setup>
-defineProps({
-    username: {
-        type: String,
-        default: ''
-    },
-    avatar: {
-        type: String,
-        default: ''
-    },
-    meta: {
-        type: String,
-        default: ''
-    }
+<script setup lang="ts">
+export interface Props {
+  username?: string
+  avatar?: string
+  meta?: string
+}
+
+withDefaults(defineProps<Props>(), {
+  username: '',
+  avatar: '',
+  meta: ''
 })
 </script>
 

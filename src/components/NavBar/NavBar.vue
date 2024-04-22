@@ -1,15 +1,14 @@
-<script setup>
+<script setup lang="ts">
 import AppLink from '../Content/AppLink.vue'
 
-defineProps({
-    to: {
-        type: [String, Object],
-        default: '/'
-    },
-    title: {
-        type: String,
-        default: ''
-    }
+export interface Props {
+  to?: string | object
+  title?: string
+}
+
+withDefaults(defineProps<Props>(), {
+  to: '',
+  title: ''
 })
 </script>
 

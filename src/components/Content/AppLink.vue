@@ -1,20 +1,19 @@
-<script setup>
+<script setup lang="ts">
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 
-const props = defineProps({
-    to: {
-        type: [String, Object],
-        default: ''
-    },
-    label: {
-        type: String,
-        default: ''
-    }
+export interface Props {
+  to?: string | object
+  label?: string
+}
+
+const link = withDefaults(defineProps<Props>(), {
+  to: '',
+  label: ''
 })
 
 const isExternalLink = computed(() => {
-    return typeof props.to === 'string' && props.to.startsWith('http')
+    return typeof link.to === 'string' && link.to.startsWith('http')
 })
 </script>
 

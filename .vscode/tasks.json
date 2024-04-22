@@ -11,15 +11,22 @@
             "problemMatcher": []
         },
         {
-            "label": "dev",
+            "label": "release",
             "type": "shell",
             "options": {},
-            "command": "npm run dev",
+            "command": "npm run release-only",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "dev",
+            "type": "shell",
+            "options": {},
+            "command": "npm run dev",
+            "problemMatcher": []
         },
         {
             "label": "build",

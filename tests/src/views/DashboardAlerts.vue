@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import LayoutDashboard from '../layouts/LayoutDashboard.vue'
-import AlertContainer from '@userfrosting/theme-pink-cupcake/AlertContainer'
 import { AlertStyle } from '@userfrosting/theme-pink-cupcake/types'
+import { AlertContainer } from '@userfrosting/theme-pink-cupcake/components'
 
 function displayAlert() {
     alert('The alert will be closed')
@@ -34,5 +34,7 @@ function displayAlert() {
             :style="AlertStyle.Danger"
             close-btn
             @close="displayAlert()" />
+        <hr />
+        <UFAlertContainer title="UFAlertContainer" description="This alert is created using the global component registration" />
     </LayoutDashboard>
 </template>

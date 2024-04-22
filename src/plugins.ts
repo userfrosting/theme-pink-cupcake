@@ -1,15 +1,8 @@
+import type { App } from 'vue';
+
+// Import sub-plugins
 import PinkCupcakeComponents from './components'
 import FontAwesome from './plugins/font-awesome'
-// import Pinia from './plugins/pinia'
-
-/* Install plugins */
-export default {
-    install: (app) => {
-        app.use(PinkCupcakeComponents)
-        app.use(FontAwesome)
-        // app.use(Pinia)
-    }
-}
 
 // Init UIkit
 import UIkit from 'uikit'
@@ -19,3 +12,11 @@ UIkit.use(Icons)
 // Import custom fonts
 import '@fontsource/montserrat'
 import '@fontsource/montserrat/700.css'
+
+/* Install plugins */
+export default {
+    install: (app: App) => {
+        app.use(PinkCupcakeComponents)
+        app.use(FontAwesome)
+    }
+}

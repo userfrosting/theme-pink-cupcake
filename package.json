@@ -23,16 +23,30 @@
     "bugs": {
         "url": "https://github.com/userfrosting/UserFrosting/issues"
     },
+    "main": "./dist/plugin.umd.cjs",
+    "module": "./dist/plugins.js",
+    "types": "./dist/plugins.d.ts",
     "exports": {
-        ".": "./src/index.js",
-        "./types": "./src/types.ts",
-        "./components": "./src/components/index.js",
-        "./plugins/*": "./src/plugins/*",
-        "./*.less": "./src/less/*.less",
-        "./*": "./src/components/*.vue"
+        ".": {
+            "import": "./dist/plugins.js",
+            "require": "./dist/plugins.umd.cjs",
+            "types": "./dist/plugins.d.ts"
+        },
+        "./types": {
+            "import": "./dist/types.js",
+            "require": "./dist/types.cjs",
+            "types": "./dist/types.d.ts"
+        },
+        "./components": {
+            "import": "./dist/components.js",
+            "require": "./dist/components.cjs",
+            "types": "./dist/components.d.ts"
+        },
+        "./*": "./src/*"
     },
     "files": [
-        "src/"
+        "src/",
+        "dist/"
     ],
     "dependencies": {
         "@fontsource/montserrat": "^5.0.8",
@@ -51,6 +65,7 @@
         "@rushstack/eslint-patch": "^1.8.0",
         "@tsconfig/node20": "^20.1.4",
         "@types/node": "^20.12.5",
+        "@types/uikit": "^3.14.5",
         "@vitejs/plugin-vue": "^5.0.4",
         "@vue/eslint-config-prettier": "^9.0.0",
         "@vue/eslint-config-typescript": "^13.0.0",
@@ -61,6 +76,7 @@
         "npm-run-all2": "^6.1.2",
         "prettier": "^3.2.5",
         "vite": "^5.2.8",
+        "vite-plugin-dts": "^3.8.3",
         "vue": "^3.4.21",
         "vue-router": "^4.2.4",
         "vue-tsc": "^2.0.11"
@@ -68,8 +84,10 @@
     "scripts": {
         "dev": "vite",
         "build": "run-p type-check \"build-only {@}\" --",
+        "release": "run-p type-check \"release-only {@}\" --",
         "preview": "vite preview",
         "build-only": "vite build",
+        "release-only": "vite build --mode release",
         "type-check": "vue-tsc --build --force",
         "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
         "format": "prettier --write src/ tests/"

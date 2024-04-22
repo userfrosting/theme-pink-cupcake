@@ -1,9 +1,10 @@
-<script setup>
-defineProps({
-    label: {
-        type: String,
-        default: ''
-    }
+<script setup lang="ts">
+export interface Props {
+  label?: string
+}
+
+withDefaults(defineProps<Props>(), {
+  label: ''
 })
 </script>
 

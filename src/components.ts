@@ -2,21 +2,24 @@
  * Register every component globally
  * See : https://vuejs.org/guide/components/registration
  */
+import type { App } from 'vue';
 
-import AppLink from './Content/AppLink.vue'
-import MainContent from './Content/MainContent.vue'
-import NavBar from './NavBar/NavBar.vue'
-import NavBarDropdown from './NavBar/NavBarDropdown.vue'
-import NavBarDropdownSeparator from './NavBar/NavBarDropdownSeparator.vue'
-import NavBarItem from './NavBar/NavBarItem.vue'
-import NavBarUserCard from './NavBar/NavBarUserCard.vue'
-import NavBarUserCardButton from './NavBar/NavBarUserCardButton.vue'
-import SideBar from './SideBar/SideBar.vue'
-import SideBarDropdown from './SideBar/SideBarDropdown.vue'
-import SideBarItem from './SideBar/SideBarItem.vue'
-import SideBarLabel from './SideBar/SideBarLabel.vue'
+import AlertContainer from './components/AlertContainer.vue'
+import AppLink from './components/Content/AppLink.vue'
+import MainContent from './components/Content/MainContent.vue'
+import NavBar from './components/NavBar/NavBar.vue'
+import NavBarDropdown from './components/NavBar/NavBarDropdown.vue'
+import NavBarDropdownSeparator from './components/NavBar/NavBarDropdownSeparator.vue'
+import NavBarItem from './components/NavBar/NavBarItem.vue'
+import NavBarUserCard from './components/NavBar/NavBarUserCard.vue'
+import NavBarUserCardButton from './components/NavBar/NavBarUserCardButton.vue'
+import SideBar from './components/SideBar/SideBar.vue'
+import SideBarDropdown from './components/SideBar/SideBarDropdown.vue'
+import SideBarItem from './components/SideBar/SideBarItem.vue'
+import SideBarLabel from './components/SideBar/SideBarLabel.vue'
 
 export {
+    AlertContainer,
     AppLink,
     MainContent,
     NavBar,
@@ -32,9 +35,10 @@ export {
 }
 
 export default {
-    install: (app, options) => {
+    install: (app: App, options?: { prefix: string; }) => {
         const prefix = options && options.prefix ? options.prefix : 'UF'
-        app.component(prefix + 'UFAppLink', AppLink)
+        app.component(prefix + 'AlertContainer', AlertContainer)
+            .component(prefix + 'AppLink', AppLink)
             .component(prefix + 'MainContent', MainContent)
             .component(prefix + 'NavBar', NavBar)
             .component(prefix + 'NavBarDropdown', NavBarDropdown)

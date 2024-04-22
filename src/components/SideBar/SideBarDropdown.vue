@@ -1,27 +1,20 @@
-<script setup>
+<script setup lang="ts">
 import { RouterLink } from 'vue-router'
 
-defineProps({
-    to: {
-        type: [String, Object],
-        default: ''
-    },
-    label: {
-        type: String,
-        default: ''
-    },
-    faIcon: {
-        type: String,
-        default: ''
-    },
-    icon: {
-        type: String,
-        default: ''
-    },
-    hideCaret: {
-        type: Boolean,
-        default: false
-    }
+export interface Props {
+  to?: string | object
+  label?: string
+  faIcon?: string
+  icon?: string
+  hideCaret?: boolean
+}
+
+withDefaults(defineProps<Props>(), {
+  to: '',
+  label: '',
+  faIcon: '',
+  icon: '',
+  hideCaret: false
 })
 </script>
 

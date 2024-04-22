@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});var a=(r=>(r.Primary="uk-alert-primary",r.Success="uk-alert-success",r.Warning="uk-alert-warning",r.Danger="uk-alert-danger",r))(a||{});exports.AlertStyle=a;
