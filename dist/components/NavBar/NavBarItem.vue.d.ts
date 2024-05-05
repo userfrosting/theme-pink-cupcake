@@ -2,17 +2,14 @@ declare const _default: __VLS_WithTemplateSlots<import('vue').DefineComponent<__
     to: string;
     label: string;
 }>, {
-    to: string;
     label: string;
 }>, {}, unknown, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<import('vue').ExtractPropTypes<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<{
     to: string;
     label: string;
 }>, {
-    to: string;
     label: string;
 }>>>, {
     label: string;
-    to: string;
 }, {}>, {
     default?(_: {}): any;
 }>;

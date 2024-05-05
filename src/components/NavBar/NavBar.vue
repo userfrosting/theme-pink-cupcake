@@ -20,7 +20,7 @@ withDefaults(
                 <div class="uk-container uk-container-expand">
                     <nav class="uk-navbar" uk-navbar>
                         <div class="uk-navbar-left">
-                            <AppLink :to="to" class="uk-navbar-item uk-logo">
+                            <AppLink :to="to" class="uk-navbar-item uk-logo" label="">
                                 <slot name="title">{{ title }}</slot>
                             </AppLink>
                         </div>

@@ -5,7 +5,6 @@ declare const _default: __VLS_WithTemplateSlots<import('vue').DefineComponent<__
     icon: string;
     hideCaret: boolean;
 }>, {
-    to: string;
     label: string;
     faIcon: string;
     icon: string;
@@ -17,14 +16,12 @@ declare const _default: __VLS_WithTemplateSlots<import('vue').DefineComponent<__
     icon: string;
     hideCaret: boolean;
 }>, {
-    to: string;
     label: string;
     faIcon: string;
     icon: string;
     hideCaret: boolean;
 }>>>, {
     label: string;
-    to: string;
     faIcon: string;
     icon: string;
     hideCaret: boolean;

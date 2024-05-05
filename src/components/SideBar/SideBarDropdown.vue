@@ -10,7 +10,6 @@ withDefaults(
         hideCaret: boolean
     }>(),
     {
-        to: '',
         label: '',
         faIcon: '',
         icon: '',
@@ -20,7 +19,6 @@ withDefaults(
 </script>
 
 <template>
-    <!-- @vue-ignore -->
     <RouterLink v-bind="$props" custom v-slot="{ isActive }">
         <li class="uk-parent" :class="{ 'uk-open': isActive }">
             <a v-bind="$attrs">

@@ -15,8 +15,8 @@ function increment() {
     <UFNavBarItem :to="{ name: 'page.index' }" label="Page" />
     <UFNavBarItem :to="{ name: 'dashboard.index' }" label="Dashboard" />
     <UFNavBarDropdown label="Dropdown">
-        <NavBarItem label="Label" />
-        <UFNavBarItem label="Label" />
+        <NavBarItem to='' label="Label" />
+        <UFNavBarItem to='' label="Label" />
         <UFNavBarDropdownSeparator />
         <UFNavBarItem to="/" label="Page" />
         <UFNavBarItem to="/dashboard" label="Dashboard" />

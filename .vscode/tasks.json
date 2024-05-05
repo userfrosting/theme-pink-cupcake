@@ -41,6 +41,13 @@
             "options": {},
             "command": "npm run format",
             "problemMatcher": []
+        },
+        {
+            "label": "Type check",
+            "type": "shell",
+            "options": {},
+            "command": "npx vue-tsc",
+            "problemMatcher": []
         }
     ]
 }

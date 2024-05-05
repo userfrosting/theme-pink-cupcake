@@ -13,7 +13,6 @@ const props = withDefaults(
         label: string
     }>(),
     {
-        to: '',
         label: ''
     }
 )
@@ -29,7 +28,6 @@ const isExternalLink = computed(() => {
             <slot>{{ label }}</slot>
         </a>
     </li>
-    <!-- @vue-ignore -->
     <RouterLink v-else v-bind="$props" custom v-slot="{ isActive, href, navigate }">
         <li :class="{ 'uk-active': isActive }">
             <a v-bind="$attrs" :href="href" @click="navigate">

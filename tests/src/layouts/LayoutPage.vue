@@ -5,7 +5,7 @@ import { MainContent } from '@userfrosting/theme-pink-cupcake/components' // Tes
 </script>
 
 <template>
-    <NavBar title="Pink Cupcake">
+    <NavBar title="Pink Cupcake" to="/">
         <NavMenuMain />
     </NavBar>
     <MainContent>

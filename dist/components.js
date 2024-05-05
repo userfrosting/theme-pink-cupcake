@@ -87,7 +87,8 @@ const M = /* @__PURE__ */ g(P, [["render", z]]), R = { "uk-sticky": "sel-target:
               s("div", j, [
                 C(w, {
                   to: e.to,
-                  class: "uk-navbar-item uk-logo"
+                  class: "uk-navbar-item uk-logo",
+                  label: ""
                 }, {
                   default: f(() => [
                     l(e.$slots, "title", {}, () => [
@@ -139,7 +140,7 @@ function x(n, e) {
 const ee = /* @__PURE__ */ g(Y, [["render", x]]), te = { key: 0 }, ae = ["href"], oe = ["href", "onClick"], se = /* @__PURE__ */ d({
   __name: "NavBarItem",
   props: {
-    to: { default: "" },
+    to: {},
     label: { default: "" }
   },
   setup(n) {
@@ -264,7 +265,7 @@ const ge = /* @__PURE__ */ g(ve, [["render", ye]]), Ce = ["data-uk-icon"], Ne = 
 }, we = { class: "uk-nav-sub" }, Se = /* @__PURE__ */ d({
   __name: "SideBarDropdown",
   props: {
-    to: { default: "" },
+    to: {},
     label: { default: "" },
     faIcon: { default: "" },
     icon: { default: "" },
@@ -306,7 +307,7 @@ const ge = /* @__PURE__ */ g(ve, [["render", ye]]), Ce = ["data-uk-icon"], Ne = 
 }), Ie = { key: 0 }, Le = ["href"], De = ["data-uk-icon"], Ae = ["href", "onClick"], Ue = ["data-uk-icon"], Ee = /* @__PURE__ */ d({
   __name: "SideBarItem",
   props: {
-    to: { default: "" },
+    to: {},
     label: { default: "" },
     faIcon: { default: "" },
     icon: { default: "" }

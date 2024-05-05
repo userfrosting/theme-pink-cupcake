@@ -15,7 +15,6 @@ const props = withDefaults(
         icon: string
     }>(),
     {
-        to: '',
         label: '',
         faIcon: '',
         icon: ''
@@ -35,7 +34,6 @@ const isExternalLink = computed(() => {
             <slot>{{ label }}</slot>
         </a>
     </li>
-    <!-- @vue-ignore -->
     <RouterLink v-else v-bind="$props" custom v-slot="{ isExactActive, href, navigate }">
         <li :class="{ 'uk-active': isExactActive }">
             <a v-bind="$attrs" :href="href" @click="navigate">
