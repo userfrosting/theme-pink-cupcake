@@ -11,17 +11,6 @@
             "problemMatcher": []
         },
         {
-            "label": "release",
-            "type": "shell",
-            "options": {},
-            "command": "npm run release-only",
-            "problemMatcher": [],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        },
-        {
             "label": "dev",
             "type": "shell",
             "options": {},
@@ -33,14 +22,11 @@
             "type": "shell",
             "options": {},
             "command": "npm run build",
-            "problemMatcher": []
-        },
-        {
-            "label": "preview",
-            "type": "shell",
-            "options": {},
-            "command": "npm run preview",
-            "problemMatcher": []
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         },
         {
             "label": "lint",

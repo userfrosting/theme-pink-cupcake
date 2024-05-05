@@ -2,15 +2,16 @@
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 
-export interface Props {
-  to?: string | object
-  label?: string
-}
-
-const link = withDefaults(defineProps<Props>(), {
-  to: '',
-  label: ''
-})
+const link = withDefaults(
+    defineProps<{
+        to: string
+        label: string
+    }>(),
+    {
+        to: '',
+        label: ''
+    }
+)
 
 const isExternalLink = computed(() => {
     return typeof link.to === 'string' && link.to.startsWith('http')

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import NavBarItem from '@userfrosting/theme-pink-cupcake/components/NavBar/NavBarItem.vue'
 import { ref } from 'vue'
 const count = ref(0)
 
@@ -14,7 +15,7 @@ function increment() {
     <UFNavBarItem :to="{ name: 'page.index' }" label="Page" />
     <UFNavBarItem :to="{ name: 'dashboard.index' }" label="Dashboard" />
     <UFNavBarDropdown label="Dropdown">
-        <UFNavBarItem label="Label" />
+        <NavBarItem label="Label" />
         <UFNavBarItem label="Label" />
         <UFNavBarDropdownSeparator />
         <UFNavBarItem to="/" label="Page" />

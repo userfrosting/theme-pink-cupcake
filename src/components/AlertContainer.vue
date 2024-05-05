@@ -18,7 +18,7 @@ withDefaults(defineProps<Alert>(), {
 // withDefaults(defineProps<{
 //     alert: Alert
 // }>(), {
-//     alert: () => 
+//     alert: () =>
 //     {
 //         return {
 //             title: '',

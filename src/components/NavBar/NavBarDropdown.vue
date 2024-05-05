@@ -1,10 +1,10 @@
 <script setup lang="ts">
 export interface Props {
-  label?: string
+    label?: string
 }
 
 withDefaults(defineProps<Props>(), {
-  label: ''
+    label: ''
 })
 </script>
 

@@ -1,4 +1,4 @@
-import type { App } from 'vue';
+import type { App } from 'vue'
 
 // Import sub-plugins
 import PinkCupcakeComponents from './components'

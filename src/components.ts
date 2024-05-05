@@ -2,7 +2,7 @@
  * Register every component globally
  * See : https://vuejs.org/guide/components/registration
  */
-import type { App } from 'vue';
+import type { App } from 'vue'
 
 import AlertContainer from './components/AlertContainer.vue'
 import AppLink from './components/Content/AppLink.vue'
@@ -35,7 +35,7 @@ export {
 }
 
 export default {
-    install: (app: App, options?: { prefix: string; }) => {
+    install: (app: App, options?: { prefix: string }) => {
         const prefix = options && options.prefix ? options.prefix : 'UF'
         app.component(prefix + 'AlertContainer', AlertContainer)
             .component(prefix + 'AppLink', AppLink)

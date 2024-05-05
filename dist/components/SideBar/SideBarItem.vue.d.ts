@@ -1,22 +1,26 @@
-export interface Props {
-    to?: string | object;
-    label?: string;
-    faIcon?: string;
-    icon?: string;
-}
-declare const _default: __VLS_WithTemplateSlots<import('vue').DefineComponent<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<Props>, {
+declare const _default: __VLS_WithTemplateSlots<import('vue').DefineComponent<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<{
     to: string;
     label: string;
     faIcon: string;
     icon: string;
-}>, {}, unknown, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<import('vue').ExtractPropTypes<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<Props>, {
+}>, {
+    to: string;
+    label: string;
+    faIcon: string;
+    icon: string;
+}>, {}, unknown, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<import('vue').ExtractPropTypes<__VLS_WithDefaults<__VLS_TypePropsToRuntimeProps<{
+    to: string;
+    label: string;
+    faIcon: string;
+    icon: string;
+}>, {
     to: string;
     label: string;
     faIcon: string;
     icon: string;
 }>>>, {
     label: string;
-    to: string | object;
+    to: string;
     faIcon: string;
     icon: string;
 }, {}>, {

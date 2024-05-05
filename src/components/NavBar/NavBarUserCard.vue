@@ -1,14 +1,14 @@
 <script setup lang="ts">
 export interface Props {
-  username?: string
-  avatar?: string
-  meta?: string
+    username?: string
+    avatar?: string
+    meta?: string
 }
 
 withDefaults(defineProps<Props>(), {
-  username: '',
-  avatar: '',
-  meta: ''
+    username: '',
+    avatar: '',
+    meta: ''
 })
 </script>
 

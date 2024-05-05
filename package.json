@@ -83,12 +83,7 @@
     },
     "scripts": {
         "dev": "vite",
-        "build": "run-p type-check \"build-only {@}\" --",
-        "release": "run-p type-check \"release-only {@}\" --",
-        "preview": "vite preview",
-        "build-only": "vite build",
-        "release-only": "vite build --mode release",
-        "type-check": "vue-tsc --build --force",
+        "build": "vue-tsc && vite build",
         "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
         "format": "prettier --write src/ tests/"
     }

@@ -7,19 +7,20 @@
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 
-export interface Props {
-  to?: string | object
-  label?: string
-  faIcon?: string
-  icon?: string
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  to: '',
-  label: '',
-  faIcon: '',
-  icon: ''
-})
+const props = withDefaults(
+    defineProps<{
+        to: string
+        label: string
+        faIcon: string
+        icon: string
+    }>(),
+    {
+        to: '',
+        label: '',
+        faIcon: '',
+        icon: ''
+    }
+)
 
 const isExternalLink = computed(() => {
     return typeof props.to === 'string' && props.to.startsWith('http')
@@ -34,6 +35,7 @@ const isExternalLink = computed(() => {
             <slot>{{ label }}</slot>
         </a>
     </li>
+    <!-- @vue-ignore -->
     <RouterLink v-else v-bind="$props" custom v-slot="{ isExactActive, href, navigate }">
         <li :class="{ 'uk-active': isExactActive }">
             <a v-bind="$attrs" :href="href" @click="navigate">

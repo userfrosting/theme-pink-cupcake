@@ -35,6 +35,8 @@ function displayAlert() {
             close-btn
             @close="displayAlert()" />
         <hr />
-        <UFAlertContainer title="UFAlertContainer" description="This alert is created using the global component registration" />
+        <UFAlertContainer
+            title="UFAlertContainer"
+            description="This alert is created using the global component registration" />
     </LayoutDashboard>
 </template>
