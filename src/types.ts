@@ -1,6 +1,15 @@
+// TODO : These interfaces/types should be moved to a common UF package, like core.
+
+export interface AlertInterface {
+    title?: string
+    description?: string
+    style?: AlertStyle | keyof typeof AlertStyle
+    closeBtn?: boolean
+}
+
 export enum AlertStyle {
-    Primary = 'uk-alert-primary',
-    Success = 'uk-alert-success',
-    Warning = 'uk-alert-warning',
-    Danger = 'uk-alert-danger'
+    Primary = 'Primary',
+    Success = 'Success',
+    Warning = 'Warning',
+    Danger = 'Danger'
 }

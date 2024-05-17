@@ -1,41 +1,52 @@
 <script setup lang="ts">
-import { AlertStyle } from '../types'
+import { computed } from 'vue'
+import { type AlertInterface, AlertStyle } from '../types'
 
-interface Alert {
-    title?: string
-    description?: string
-    style?: AlertStyle
-    closeBtn?: boolean
-}
+/**
+ * N.B.: This component uses a complex prop type instead of individual props 
+ * because the common use case for it is to display an alert from an API. 
+ * Using a single object makes it easier to pass data from the API.
+ * 
+ * @see https://vuejs.org/guide/typescript/composition-api#complex-prop-types
+ */
+ const props = defineProps<{
+  alert: AlertInterface
+}>()
 
-withDefaults(defineProps<Alert>(), {
-    title: '',
-    description: '',
-    style: AlertStyle.Primary,
-    closeBtn: false
+/**
+ * Defines style class to use
+ */
+const alertClass = computed(() => {
+    switch (props.alert.style) {
+        case AlertStyle.Success: {
+            return 'uk-alert-success';
+        }
+        case AlertStyle.Warning: {
+            return 'uk-alert-warning';
+        }
+        case AlertStyle.Danger: {
+            return 'uk-alert-danger';
+        }
+        case AlertStyle.Primary:
+        default: {
+            return 'uk-alert-primary';
+        }
+    }
 })
 
-// withDefaults(defineProps<{
-//     alert: Alert
-// }>(), {
-//     alert: () =>
-//     {
-//         return {
-//             title: '',
-//             description: '',
-//             style: AlertStyle.Primary,
-//             closeBtn: false,
-//         }
-//     },
-// })
+/**
+ * TODO : Closing an alert using the button will remove the HTML from the DOM. 
+ * This means the component can't be reused with a different variable. If used 
+ * in a collection of alerts, it won't be removed from the collection. 
+ */
 </script>
 
 <template>
-    <div :class="style" uk-alert>
-        <a v-if="closeBtn" class="uk-alert-close" uk-close @click="$emit('close')"></a>
-        <h3 v-if="title">{{ title }}</h3>
+    <div :class="alertClass" class="uk-alert" uk-alert>
+        <a v-if="alert.closeBtn" class="uk-alert-close" uk-close @click="$emit('close')"></a>
+        <h3 v-if="alert.title">{{ alert.title }}</h3>
         <p>
-            <slot>{{ description }}</slot>
+            <slot>{{ alert.description }}</slot>
         </p>
     </div>
 </template>

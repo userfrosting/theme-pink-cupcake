@@ -1,6 +1,12 @@
+export interface AlertInterface {
+    title?: string;
+    description?: string;
+    style?: AlertStyle | keyof typeof AlertStyle;
+    closeBtn?: boolean;
+}
 export declare enum AlertStyle {
-    Primary = "uk-alert-primary",
-    Success = "uk-alert-success",
-    Warning = "uk-alert-warning",
-    Danger = "uk-alert-danger"
+    Primary = "Primary",
+    Success = "Success",
+    Warning = "Warning",
+    Danger = "Danger"
 }
