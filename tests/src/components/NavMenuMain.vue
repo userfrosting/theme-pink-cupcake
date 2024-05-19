@@ -15,7 +15,7 @@ function increment() {
     <UFNavBarItem :to="{ name: 'page.index' }" label="Page" />
     <UFNavBarItem :to="{ name: 'dashboard.index' }" label="Dashboard" />
     <UFNavBarDropdown label="Dropdown">
-        <NavBarItem to='' label="Label" />
+        <NavBarItem to='' label="Label" /> <!-- Example of NOT using the global component -->
         <UFNavBarItem to='' label="Label" />
         <UFNavBarDropdownSeparator />
         <UFNavBarItem to="/" label="Page" />

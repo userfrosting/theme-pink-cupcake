@@ -126,6 +126,6 @@ function dismissAlert() {
 
         <h2>Global Component</h2>
         <UFAlertContainer
-            :alert="{ title: 'UFAlertContainer', description: 'This alert is created using the global component registration' } as AlertInterface" />
+            :alert="{ title: 'UFAlertContainer', description: 'This alert is created using the global component registration' }" />
     </LayoutDashboard>
 </template>

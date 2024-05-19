@@ -15,8 +15,23 @@ import { default as SideBarLabel } from './components/SideBar/SideBarLabel.vue';
 
 export { AlertContainer, AppLink, MainContent, NavBar, NavBarDropdown, NavBarDropdownSeparator, NavBarItem, NavBarUserCard, NavBarUserCardButton, SideBar, SideBarDropdown, SideBarItem, SideBarLabel };
 declare const _default: {
-    install: (app: App, options?: {
-        prefix: string;
-    }) => void;
+    install: (app: App) => void;
 };
 export default _default;
+declare module 'vue' {
+    interface GlobalComponents {
+        'UFAlertContainer': typeof AlertContainer;
+        'AppLink': typeof AppLink;
+        'MainContent': typeof MainContent;
+        'NavBar': typeof NavBar;
+        'NavBarDropdown': typeof NavBarDropdown;
+        'NavBarDropdownSeparator': typeof NavBarDropdownSeparator;
+        'NavBarItem': typeof NavBarItem;
+        'NavBarUserCard': typeof NavBarUserCard;
+        'NavBarUserCardButton': typeof NavBarUserCardButton;
+        'SideBar': typeof SideBar;
+        'SideBarDropdown': typeof SideBarDropdown;
+        'SideBarItem': typeof SideBarItem;
+        'SideBarLabel': typeof SideBarLabel;
+    }
+}

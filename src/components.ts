@@ -35,20 +35,37 @@ export {
 }
 
 export default {
-    install: (app: App, options?: { prefix: string }) => {
-        const prefix = options && options.prefix ? options.prefix : 'UF'
-        app.component(prefix + 'AlertContainer', AlertContainer)
-            .component(prefix + 'AppLink', AppLink)
-            .component(prefix + 'MainContent', MainContent)
-            .component(prefix + 'NavBar', NavBar)
-            .component(prefix + 'NavBarDropdown', NavBarDropdown)
-            .component(prefix + 'NavBarDropdownSeparator', NavBarDropdownSeparator)
-            .component(prefix + 'NavBarItem', NavBarItem)
-            .component(prefix + 'NavBarUserCard', NavBarUserCard)
-            .component(prefix + 'NavBarUserCardButton', NavBarUserCardButton)
-            .component(prefix + 'SideBar', SideBar)
-            .component(prefix + 'SideBarDropdown', SideBarDropdown)
-            .component(prefix + 'SideBarItem', SideBarItem)
-            .component(prefix + 'SideBarLabel', SideBarLabel)
+    install: (app: App) => {
+        app.component('UFAlertContainer', AlertContainer)
+            .component('UFAppLink', AppLink)
+            .component('UFMainContent', MainContent)
+            .component('UFNavBar', NavBar)
+            .component('UFNavBarDropdown', NavBarDropdown)
+            .component('UFNavBarDropdownSeparator', NavBarDropdownSeparator)
+            .component('UFNavBarItem', NavBarItem)
+            .component('UFNavBarUserCard', NavBarUserCard)
+            .component('UFNavBarUserCardButton', NavBarUserCardButton)
+            .component('UFSideBar', SideBar)
+            .component('UFSideBarDropdown', SideBarDropdown)
+            .component('UFSideBarItem', SideBarItem)
+            .component('UFSideBarLabel', SideBarLabel)
+    }
+}
+
+declare module 'vue' {
+    export interface GlobalComponents {
+        'UFAlertContainer': typeof AlertContainer,
+        'AppLink': typeof AppLink,
+        'MainContent': typeof MainContent,
+        'NavBar': typeof NavBar,
+        'NavBarDropdown': typeof NavBarDropdown,
+        'NavBarDropdownSeparator': typeof NavBarDropdownSeparator,
+        'NavBarItem': typeof NavBarItem,
+        'NavBarUserCard': typeof NavBarUserCard,
+        'NavBarUserCardButton': typeof NavBarUserCardButton,
+        'SideBar': typeof SideBar,
+        'SideBarDropdown': typeof SideBarDropdown,
+        'SideBarItem': typeof SideBarItem,
+        'SideBarLabel': typeof SideBarLabel,
     }
 }
