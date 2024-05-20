@@ -8,6 +8,7 @@ import AlertContainer from './components/AlertContainer.vue'
 import AppLink from './components/Content/AppLink.vue'
 import CardBox from './components/Content/CardBox.vue'
 import MainContent from './components/Content/MainContent.vue'
+import FooterContent from './components/Content/FooterContent.vue'
 import NavBar from './components/NavBar/NavBar.vue'
 import NavBarDropdown from './components/NavBar/NavBarDropdown.vue'
 import NavBarDropdownSeparator from './components/NavBar/NavBarDropdownSeparator.vue'
@@ -24,6 +25,7 @@ export {
     AppLink,
     CardBox,
     MainContent,
+    FooterContent,
     NavBar,
     NavBarDropdown,
     NavBarDropdownSeparator,
@@ -42,6 +44,7 @@ export default {
             .component('UFAppLink', AppLink)
             .component('UFCardBox', CardBox)
             .component('UFMainContent', MainContent)
+            .component('UFFooterContent', FooterContent)
             .component('UFNavBar', NavBar)
             .component('UFNavBarDropdown', NavBarDropdown)
             .component('UFNavBarDropdownSeparator', NavBarDropdownSeparator)
@@ -61,6 +64,7 @@ declare module 'vue' {
         'UFAppLink': typeof AppLink,
         'UFCardBox': typeof CardBox,
         'UFMainContent': typeof MainContent,
+        'UFFooterContent': typeof FooterContent,
         'UFNavBar': typeof NavBar,
         'UFNavBarDropdown': typeof NavBarDropdown,
         'UFNavBarDropdownSeparator': typeof NavBarDropdownSeparator,

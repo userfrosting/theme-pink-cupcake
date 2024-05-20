@@ -1,4 +1,4 @@
-import { defineComponent as d, computed as h, openBlock as s, createElementBlock as o, normalizeClass as B, createCommentVNode as i, toDisplayString as u, createElementVNode as a, renderSlot as r, createTextVNode as c, createBlock as _, unref as v, withCtx as k, createVNode as w, mergeProps as m, resolveComponent as N, normalizeProps as F, guardReactiveProps as I } from "vue";
+import { defineComponent as d, computed as h, openBlock as s, createElementBlock as o, normalizeClass as g, createCommentVNode as c, toDisplayString as u, createElementVNode as a, renderSlot as r, createTextVNode as i, createBlock as p, unref as v, withCtx as k, createVNode as w, mergeProps as m, resolveComponent as N, normalizeProps as F, guardReactiveProps as I } from "vue";
 import { AlertStyle as b } from "./types.js";
 import { RouterLink as $ } from "vue-router";
 const L = { key: 1 }, D = /* @__PURE__ */ d({
@@ -20,20 +20,20 @@ const L = { key: 1 }, D = /* @__PURE__ */ d({
           return "uk-alert-primary";
       }
     });
-    return (t, p) => (s(), o("div", {
-      class: B([l.value, "uk-alert"]),
+    return (t, _) => (s(), o("div", {
+      class: g([l.value, "uk-alert"]),
       "uk-alert": ""
     }, [
       t.alert.closeBtn ? (s(), o("a", {
         key: 0,
         class: "uk-alert-close",
         "uk-close": "",
-        onClick: p[0] || (p[0] = (f) => t.$emit("close"))
-      })) : i("", !0),
-      t.alert.title ? (s(), o("h3", L, u(t.alert.title), 1)) : i("", !0),
+        onClick: _[0] || (_[0] = (f) => t.$emit("close"))
+      })) : c("", !0),
+      t.alert.title ? (s(), o("h3", L, u(t.alert.title), 1)) : c("", !0),
       a("p", null, [
         r(t.$slots, "default", {}, () => [
-          c(u(t.alert.description), 1)
+          i(u(t.alert.description), 1)
         ])
       ])
     ], 2));
@@ -46,21 +46,21 @@ const L = { key: 1 }, D = /* @__PURE__ */ d({
   },
   setup(n) {
     const e = n, l = h(() => typeof e.to == "string" && e.to.startsWith("http"));
-    return (t, p) => l.value ? (s(), o("a", {
+    return (t, _) => l.value ? (s(), o("a", {
       key: 0,
       href: t.to,
       target: "_blank"
     }, [
       r(t.$slots, "default", {}, () => [
-        c(u(t.label), 1)
+        i(u(t.label), 1)
       ])
-    ], 8, A)) : (s(), _(v($), {
+    ], 8, A)) : (s(), p(v($), {
       key: 1,
       to: t.to
     }, {
       default: k(() => [
         r(t.$slots, "default", {}, () => [
-          c(u(t.label), 1)
+          i(u(t.label), 1)
         ])
       ]),
       _: 3
@@ -82,18 +82,21 @@ const L = { key: 1 }, D = /* @__PURE__ */ d({
             a("h4", null, u(n.title), 1)
           ])
         ])
-      ])) : i("", !0),
+      ])) : c("", !0),
       a("div", z, [
         r(e.$slots, "default")
       ])
     ]));
   }
-}), C = (n, e) => {
+}), B = (n, e) => {
   const l = n.__vccOpts || n;
-  for (const [t, p] of e)
-    l[t] = p;
+  for (const [t, _] of e)
+    l[t] = _;
   return l;
-}, R = {}, O = { class: "uf-main uk-section uk-section-default uk-section-muted" }, T = { class: "uk-container" };
+}, R = {}, O = {
+  class: "uf-main uk-section uk-section-default uk-section-muted",
+  "uk-height-viewport": "expand: true"
+}, T = { class: "uk-container" };
 function j(n, e) {
   return s(), o("div", O, [
     a("div", T, [
@@ -101,10 +104,19 @@ function j(n, e) {
     ])
   ]);
 }
-const q = /* @__PURE__ */ C(R, [["render", j]]), G = { "uk-sticky": "sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky" }, H = { class: "uk-navbar-container" }, J = { class: "uk-container uk-container-expand" }, K = {
+const q = /* @__PURE__ */ B(R, [["render", j]]), G = {}, H = { class: "uf-main uk-section uk-section-small uk-section-muted uk-text-center" }, J = /* @__PURE__ */ a("hr", null, null, -1), K = { class: "uk-text-small uk-text-center" };
+function Q(n, e) {
+  return s(), o("footer", H, [
+    J,
+    a("p", K, [
+      r(n.$slots, "default")
+    ])
+  ]);
+}
+const X = /* @__PURE__ */ B(G, [["render", Q]]), Y = { "uk-sticky": "sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky" }, Z = { class: "uk-navbar-container" }, x = { class: "uk-container uk-container-expand" }, ee = {
   class: "uk-navbar",
   "uk-navbar": ""
-}, Q = { class: "uk-navbar-left" }, X = { class: "uk-navbar-right" }, Y = { class: "uk-navbar-nav" }, Z = /* @__PURE__ */ d({
+}, te = { class: "uk-navbar-left" }, ae = { class: "uk-navbar-right" }, se = { class: "uk-navbar-nav" }, ne = /* @__PURE__ */ d({
   __name: "NavBar",
   props: {
     to: { default: "" },
@@ -112,11 +124,11 @@ const q = /* @__PURE__ */ C(R, [["render", j]]), G = { "uk-sticky": "sel-target:
   },
   setup(n) {
     return (e, l) => (s(), o("header", null, [
-      a("div", G, [
-        a("div", H, [
-          a("div", J, [
-            a("nav", K, [
-              a("div", Q, [
+      a("div", Y, [
+        a("div", Z, [
+          a("div", x, [
+            a("nav", ee, [
+              a("div", te, [
                 w(U, {
                   to: e.to,
                   class: "uk-navbar-item uk-logo",
@@ -124,14 +136,14 @@ const q = /* @__PURE__ */ C(R, [["render", j]]), G = { "uk-sticky": "sel-target:
                 }, {
                   default: k(() => [
                     r(e.$slots, "title", {}, () => [
-                      c(u(e.title), 1)
+                      i(u(e.title), 1)
                     ])
                   ]),
                   _: 3
                 }, 8, ["to"])
               ]),
-              a("div", X, [
-                a("ul", Y, [
+              a("div", ae, [
+                a("ul", se, [
                   r(e.$slots, "default")
                 ])
               ])
@@ -141,10 +153,10 @@ const q = /* @__PURE__ */ C(R, [["render", j]]), G = { "uk-sticky": "sel-target:
       ])
     ]));
   }
-}), x = /* @__PURE__ */ a("span", { "uk-navbar-parent-icon": "" }, null, -1), ee = {
+}), oe = /* @__PURE__ */ a("span", { "uk-navbar-parent-icon": "" }, null, -1), re = {
   class: "uk-navbar-dropdown",
   "uk-dropdown": "offset: 0"
-}, te = { class: "uk-nav uk-navbar-dropdown-nav" }, ae = /* @__PURE__ */ d({
+}, le = { class: "uk-nav uk-navbar-dropdown-nav" }, ue = /* @__PURE__ */ d({
   __name: "NavBarDropdown",
   props: {
     label: { default: "" }
@@ -153,23 +165,23 @@ const q = /* @__PURE__ */ C(R, [["render", j]]), G = { "uk-sticky": "sel-target:
     return (e, l) => (s(), o("li", null, [
       a("a", null, [
         r(e.$slots, "label", {}, () => [
-          c(u(e.label), 1)
+          i(u(e.label), 1)
         ]),
-        c(),
-        x
+        i(),
+        oe
       ]),
-      a("div", ee, [
-        a("ul", te, [
+      a("div", re, [
+        a("ul", le, [
           r(e.$slots, "default")
         ])
       ])
     ]));
   }
-}), se = {}, ne = { class: "uk-nav-divider" };
-function oe(n, e) {
-  return s(), o("li", ne);
+}), ce = {}, ie = { class: "uk-nav-divider" };
+function de(n, e) {
+  return s(), o("li", ie);
 }
-const re = /* @__PURE__ */ C(se, [["render", oe]]), le = { key: 0 }, ue = ["href"], ie = ["href", "onClick"], ce = /* @__PURE__ */ d({
+const _e = /* @__PURE__ */ B(ce, [["render", de]]), pe = { key: 0 }, ke = ["href"], fe = ["href", "onClick"], me = /* @__PURE__ */ d({
   __name: "NavBarItem",
   props: {
     to: {},
@@ -177,40 +189,40 @@ const re = /* @__PURE__ */ C(se, [["render", oe]]), le = { key: 0 }, ue = ["href
   },
   setup(n) {
     const e = n, l = h(() => typeof e.to == "string" && e.to.startsWith("http"));
-    return (t, p) => l.value ? (s(), o("li", le, [
+    return (t, _) => l.value ? (s(), o("li", pe, [
       a("a", {
         href: t.to,
         target: "_blank"
       }, [
         r(t.$slots, "default", {}, () => [
-          c(u(t.label), 1)
+          i(u(t.label), 1)
         ])
-      ], 8, ue)
-    ])) : (s(), _(v($), m({ key: 1 }, t.$props, { custom: "" }), {
-      default: k(({ isActive: f, href: g, navigate: y }) => [
+      ], 8, ke)
+    ])) : (s(), p(v($), m({ key: 1 }, t.$props, { custom: "" }), {
+      default: k(({ isActive: f, href: y, navigate: C }) => [
         a("li", {
-          class: B({ "uk-active": f })
+          class: g({ "uk-active": f })
         }, [
           a("a", m(t.$attrs, {
-            href: g,
-            onClick: y
+            href: y,
+            onClick: C
           }), [
             r(t.$slots, "default", {}, () => [
-              c(u(t.label), 1)
+              i(u(t.label), 1)
             ])
-          ], 16, ie)
+          ], 16, fe)
         ], 2)
       ]),
       _: 3
     }, 16));
   }
-}), de = { class: "uf-nav-user" }, pe = ["src"], _e = {
+}), he = { class: "uf-nav-user" }, ve = ["src"], $e = {
   class: "uk-navbar-dropdown",
   "uk-dropdown": "offset: 0"
-}, ke = { class: "uk-nav uk-navbar-dropdown-nav" }, fe = { class: "uk-card uk-card-body uk-text-center" }, me = ["src"], he = { key: 1 }, ve = {
+}, be = { class: "uk-nav uk-navbar-dropdown-nav" }, ge = { class: "uk-card uk-card-body uk-text-center" }, Be = ["src"], ye = { key: 1 }, Ce = {
   key: 2,
   class: "uk-text-meta"
-}, $e = /* @__PURE__ */ d({
+}, we = /* @__PURE__ */ d({
   __name: "NavBarUserCard",
   props: {
     username: { default: "" },
@@ -218,35 +230,35 @@ const re = /* @__PURE__ */ C(se, [["render", oe]]), le = { key: 0 }, ue = ["href
     meta: { default: "" }
   },
   setup(n) {
-    return (e, l) => (s(), o("li", de, [
+    return (e, l) => (s(), o("li", he, [
       a("a", null, [
-        c(u(e.username) + " ", 1),
+        i(u(e.username) + " ", 1),
         e.avatar ? (s(), o("img", {
           key: 0,
           src: e.avatar,
           alt: "avatar",
           class: "uk-border-circle"
-        }, null, 8, pe)) : i("", !0)
+        }, null, 8, ve)) : c("", !0)
       ]),
-      a("div", _e, [
-        a("ul", ke, [
-          a("div", fe, [
+      a("div", $e, [
+        a("ul", be, [
+          a("div", ge, [
             e.avatar ? (s(), o("img", {
               key: 0,
               src: e.avatar,
               alt: "avatar",
               class: "uk-border-circle",
               "uk-height-match": ""
-            }, null, 8, me)) : i("", !0),
-            e.username ? (s(), o("p", he, u(e.username), 1)) : i("", !0),
-            e.meta ? (s(), o("p", ve, "(" + u(e.meta) + ")", 1)) : i("", !0)
+            }, null, 8, Be)) : c("", !0),
+            e.username ? (s(), o("p", ye, u(e.username), 1)) : c("", !0),
+            e.meta ? (s(), o("p", Ce, "(" + u(e.meta) + ")", 1)) : c("", !0)
           ]),
           r(e.$slots, "default")
         ])
       ])
     ]));
   }
-}), be = { key: 0 }, Be = ["href"], ge = { key: 1 }, ye = /* @__PURE__ */ d({
+}), Ne = { key: 0 }, Ue = ["href"], Se = { key: 1 }, Fe = /* @__PURE__ */ d({
   __name: "NavBarUserCardButton",
   props: {
     to: { default: "" },
@@ -254,47 +266,47 @@ const re = /* @__PURE__ */ C(se, [["render", oe]]), le = { key: 0 }, ue = ["href
   },
   setup(n) {
     const e = n, l = h(() => typeof e.to == "string" && e.to.startsWith("http"));
-    return (t, p) => l.value ? (s(), o("li", be, [
+    return (t, _) => l.value ? (s(), o("li", Ne, [
       a("a", {
         class: "uk-button uk-button-default uk-button-small uk-text-center",
         href: t.to,
         target: "_blank"
       }, [
         r(t.$slots, "default", {}, () => [
-          c(u(t.label), 1)
+          i(u(t.label), 1)
         ])
-      ], 8, Be)
-    ])) : (s(), o("li", ge, [
+      ], 8, Ue)
+    ])) : (s(), o("li", Se, [
       w(v($), {
         to: t.to,
         class: "uk-button uk-button-default uk-button-small uk-text-center"
       }, {
         default: k(() => [
           r(t.$slots, "default", {}, () => [
-            c(u(t.label), 1)
+            i(u(t.label), 1)
           ])
         ]),
         _: 3
       }, 8, ["to"])
     ]));
   }
-}), Ce = {}, we = { class: "uf-sidebar-left uk-light uk-visible@m" }, Ne = { class: "left-nav-wrap" }, Ue = {
+}), Ie = {}, Le = { class: "uf-sidebar-left uk-light uk-visible@m" }, De = { class: "left-nav-wrap" }, Ae = {
   class: "uk-nav uk-nav-default",
   "data-uk-nav": ""
 };
-function Se(n, e) {
-  return s(), o("aside", we, [
-    a("div", Ne, [
-      a("ul", Ue, [
+function Ee(n, e) {
+  return s(), o("aside", Le, [
+    a("div", De, [
+      a("ul", Ae, [
         r(n.$slots, "default")
       ])
     ])
   ]);
 }
-const Fe = /* @__PURE__ */ C(Ce, [["render", Se]]), Ie = ["data-uk-icon"], Le = {
+const Pe = /* @__PURE__ */ B(Ie, [["render", Ee]]), We = ["data-uk-icon"], Ve = {
   key: 2,
   "uk-nav-parent-icon": ""
-}, De = { class: "uk-nav-sub" }, Ae = /* @__PURE__ */ d({
+}, ze = { class: "uk-nav-sub" }, Me = /* @__PURE__ */ d({
   __name: "SideBarDropdown",
   props: {
     to: {},
@@ -306,28 +318,28 @@ const Fe = /* @__PURE__ */ C(Ce, [["render", Se]]), Ie = ["data-uk-icon"], Le = 
   setup(n) {
     return (e, l) => {
       const t = N("font-awesome-icon");
-      return s(), _(v($), m(e.$props, { custom: "" }), {
-        default: k(({ isActive: p }) => [
+      return s(), p(v($), m(e.$props, { custom: "" }), {
+        default: k(({ isActive: _ }) => [
           a("li", {
-            class: B(["uk-parent", { "uk-open": p }])
+            class: g(["uk-parent", { "uk-open": _ }])
           }, [
             a("a", F(I(e.$attrs)), [
               e.icon ? (s(), o("span", {
                 key: 0,
                 "data-uk-icon": e.icon,
                 class: "uk-margin-small-right"
-              }, null, 8, Ie)) : i("", !0),
-              e.faIcon ? (s(), _(t, {
+              }, null, 8, We)) : c("", !0),
+              e.faIcon ? (s(), p(t, {
                 key: 1,
                 class: "uk-margin-small-right",
                 icon: e.faIcon
-              }, null, 8, ["icon"])) : i("", !0),
+              }, null, 8, ["icon"])) : c("", !0),
               r(e.$slots, "label", {}, () => [
-                c(u(e.label), 1)
+                i(u(e.label), 1)
               ]),
-              e.hideCaret ? i("", !0) : (s(), o("span", Le))
+              e.hideCaret ? c("", !0) : (s(), o("span", Ve))
             ], 16),
-            a("ul", De, [
+            a("ul", ze, [
               r(e.$slots, "default")
             ])
           ], 2)
@@ -336,7 +348,7 @@ const Fe = /* @__PURE__ */ C(Ce, [["render", Se]]), Ie = ["data-uk-icon"], Le = 
       }, 16);
     };
   }
-}), Ee = { key: 0 }, Pe = ["href"], We = ["data-uk-icon"], Ve = ["href", "onClick"], ze = ["data-uk-icon"], Me = /* @__PURE__ */ d({
+}), Re = { key: 0 }, Oe = ["href"], Te = ["data-uk-icon"], je = ["href", "onClick"], qe = ["data-uk-icon"], Ge = /* @__PURE__ */ d({
   __name: "SideBarItem",
   props: {
     to: {},
@@ -346,9 +358,9 @@ const Fe = /* @__PURE__ */ C(Ce, [["render", Se]]), Ie = ["data-uk-icon"], Le = 
   },
   setup(n) {
     const e = n, l = h(() => typeof e.to == "string" && e.to.startsWith("http"));
-    return (t, p) => {
+    return (t, _) => {
       const f = N("font-awesome-icon");
-      return l.value ? (s(), o("li", Ee, [
+      return l.value ? (s(), o("li", Re, [
         a("a", {
           href: t.to,
           target: "_blank"
@@ -357,72 +369,73 @@ const Fe = /* @__PURE__ */ C(Ce, [["render", Se]]), Ie = ["data-uk-icon"], Le = 
             key: 0,
             "data-uk-icon": t.icon,
             class: "uk-margin-small-right"
-          }, null, 8, We)) : i("", !0),
-          t.faIcon ? (s(), _(f, {
+          }, null, 8, Te)) : c("", !0),
+          t.faIcon ? (s(), p(f, {
             key: 1,
             class: "uk-margin-small-right",
             icon: t.faIcon
-          }, null, 8, ["icon"])) : i("", !0),
+          }, null, 8, ["icon"])) : c("", !0),
           r(t.$slots, "default", {}, () => [
-            c(u(t.label), 1)
+            i(u(t.label), 1)
           ])
-        ], 8, Pe)
-      ])) : (s(), _(v($), m({ key: 1 }, t.$props, { custom: "" }), {
-        default: k(({ isExactActive: g, href: y, navigate: S }) => [
+        ], 8, Oe)
+      ])) : (s(), p(v($), m({ key: 1 }, t.$props, { custom: "" }), {
+        default: k(({ isExactActive: y, href: C, navigate: S }) => [
           a("li", {
-            class: B({ "uk-active": g })
+            class: g({ "uk-active": y })
           }, [
             a("a", m(t.$attrs, {
-              href: y,
+              href: C,
               onClick: S
             }), [
               t.icon ? (s(), o("span", {
                 key: 0,
                 "data-uk-icon": t.icon,
                 class: "uk-margin-small-right"
-              }, null, 8, ze)) : i("", !0),
-              t.faIcon ? (s(), _(f, {
+              }, null, 8, qe)) : c("", !0),
+              t.faIcon ? (s(), p(f, {
                 key: 1,
                 class: "uk-margin-small-right",
                 icon: t.faIcon
-              }, null, 8, ["icon"])) : i("", !0),
+              }, null, 8, ["icon"])) : c("", !0),
               r(t.$slots, "default", {}, () => [
-                c(u(t.label), 1)
+                i(u(t.label), 1)
               ])
-            ], 16, Ve)
+            ], 16, je)
           ], 2)
         ]),
         _: 3
       }, 16));
     };
   }
-}), Re = { class: "uk-nav-header" }, Oe = /* @__PURE__ */ d({
+}), He = { class: "uk-nav-header" }, Je = /* @__PURE__ */ d({
   __name: "SideBarLabel",
   props: {
     label: {}
   },
   setup(n) {
-    return (e, l) => (s(), o("li", Re, u(e.label), 1));
+    return (e, l) => (s(), o("li", He, u(e.label), 1));
   }
-}), Ge = {
+}), Ye = {
   install: (n) => {
-    n.component("UFAlertContainer", D).component("UFAppLink", U).component("UFCardBox", M).component("UFMainContent", q).component("UFNavBar", Z).component("UFNavBarDropdown", ae).component("UFNavBarDropdownSeparator", re).component("UFNavBarItem", ce).component("UFNavBarUserCard", $e).component("UFNavBarUserCardButton", ye).component("UFSideBar", Fe).component("UFSideBarDropdown", Ae).component("UFSideBarItem", Me).component("UFSideBarLabel", Oe);
+    n.component("UFAlertContainer", D).component("UFAppLink", U).component("UFCardBox", M).component("UFMainContent", q).component("UFFooterContent", X).component("UFNavBar", ne).component("UFNavBarDropdown", ue).component("UFNavBarDropdownSeparator", _e).component("UFNavBarItem", me).component("UFNavBarUserCard", we).component("UFNavBarUserCardButton", Fe).component("UFSideBar", Pe).component("UFSideBarDropdown", Me).component("UFSideBarItem", Ge).component("UFSideBarLabel", Je);
   }
 };
 export {
   D as AlertContainer,
   U as AppLink,
   M as CardBox,
+  X as FooterContent,
   q as MainContent,
-  Z as NavBar,
-  ae as NavBarDropdown,
-  re as NavBarDropdownSeparator,
-  ce as NavBarItem,
-  $e as NavBarUserCard,
-  ye as NavBarUserCardButton,
-  Fe as SideBar,
-  Ae as SideBarDropdown,
-  Me as SideBarItem,
-  Oe as SideBarLabel,
-  Ge as default
+  ne as NavBar,
+  ue as NavBarDropdown,
+  _e as NavBarDropdownSeparator,
+  me as NavBarItem,
+  we as NavBarUserCard,
+  Fe as NavBarUserCardButton,
+  Pe as SideBar,
+  Me as SideBarDropdown,
+  Ge as SideBarItem,
+  Je as SideBarLabel,
+  Ye as default
 };
