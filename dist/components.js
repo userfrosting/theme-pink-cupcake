@@ -1,7 +1,7 @@
-import { defineComponent as p, computed as h, openBlock as a, createElementBlock as o, normalizeClass as B, createCommentVNode as c, toDisplayString as u, createElementVNode as s, renderSlot as r, createTextVNode as i, createBlock as k, unref as v, withCtx as _, createVNode as w, mergeProps as m, resolveComponent as N, normalizeProps as I, guardReactiveProps as F } from "vue";
+import { defineComponent as d, computed as h, openBlock as s, createElementBlock as o, normalizeClass as B, createCommentVNode as i, toDisplayString as u, createElementVNode as a, renderSlot as r, createTextVNode as c, createBlock as _, unref as v, withCtx as k, createVNode as w, mergeProps as m, resolveComponent as N, normalizeProps as F, guardReactiveProps as I } from "vue";
 import { AlertStyle as b } from "./types.js";
 import { RouterLink as $ } from "vue-router";
-const L = { key: 1 }, D = /* @__PURE__ */ p({
+const L = { key: 1 }, D = /* @__PURE__ */ d({
   __name: "AlertContainer",
   props: {
     alert: {}
@@ -20,25 +20,25 @@ const L = { key: 1 }, D = /* @__PURE__ */ p({
           return "uk-alert-primary";
       }
     });
-    return (t, d) => (a(), o("div", {
+    return (t, p) => (s(), o("div", {
       class: B([l.value, "uk-alert"]),
       "uk-alert": ""
     }, [
-      t.alert.closeBtn ? (a(), o("a", {
+      t.alert.closeBtn ? (s(), o("a", {
         key: 0,
         class: "uk-alert-close",
         "uk-close": "",
-        onClick: d[0] || (d[0] = (f) => t.$emit("close"))
-      })) : c("", !0),
-      t.alert.title ? (a(), o("h3", L, u(t.alert.title), 1)) : c("", !0),
-      s("p", null, [
+        onClick: p[0] || (p[0] = (f) => t.$emit("close"))
+      })) : i("", !0),
+      t.alert.title ? (s(), o("h3", L, u(t.alert.title), 1)) : i("", !0),
+      a("p", null, [
         r(t.$slots, "default", {}, () => [
-          i(u(t.alert.description), 1)
+          c(u(t.alert.description), 1)
         ])
       ])
     ], 2));
   }
-}), A = ["href"], U = /* @__PURE__ */ p({
+}), A = ["href"], U = /* @__PURE__ */ d({
   __name: "AppLink",
   props: {
     to: { default: "" },
@@ -46,70 +46,92 @@ const L = { key: 1 }, D = /* @__PURE__ */ p({
   },
   setup(n) {
     const e = n, l = h(() => typeof e.to == "string" && e.to.startsWith("http"));
-    return (t, d) => l.value ? (a(), o("a", {
+    return (t, p) => l.value ? (s(), o("a", {
       key: 0,
       href: t.to,
       target: "_blank"
     }, [
       r(t.$slots, "default", {}, () => [
-        i(u(t.label), 1)
+        c(u(t.label), 1)
       ])
-    ], 8, A)) : (a(), k(v($), {
+    ], 8, A)) : (s(), _(v($), {
       key: 1,
       to: t.to
     }, {
-      default: _(() => [
+      default: k(() => [
         r(t.$slots, "default", {}, () => [
-          i(u(t.label), 1)
+          c(u(t.label), 1)
         ])
       ]),
       _: 3
     }, 8, ["to"]));
   }
+}), E = { class: "uk-card uk-card-default uk-card-small" }, P = {
+  key: 0,
+  class: "uk-card-header"
+}, W = { class: "uk-grid uk-grid-small" }, V = { class: "uk-width-auto" }, z = { class: "uk-card-body" }, M = /* @__PURE__ */ d({
+  __name: "CardBox",
+  props: {
+    title: String
+  },
+  setup(n) {
+    return (e, l) => (s(), o("div", E, [
+      n.title ? (s(), o("div", P, [
+        a("div", W, [
+          a("div", V, [
+            a("h4", null, u(n.title), 1)
+          ])
+        ])
+      ])) : i("", !0),
+      a("div", z, [
+        r(e.$slots, "default")
+      ])
+    ]));
+  }
 }), C = (n, e) => {
   const l = n.__vccOpts || n;
-  for (const [t, d] of e)
-    l[t] = d;
+  for (const [t, p] of e)
+    l[t] = p;
   return l;
-}, E = {}, P = { class: "uf-main uk-section uk-section-default uk-section-muted" }, W = { class: "uk-container" };
-function V(n, e) {
-  return a(), o("div", P, [
-    s("div", W, [
+}, R = {}, O = { class: "uf-main uk-section uk-section-default uk-section-muted" }, T = { class: "uk-container" };
+function j(n, e) {
+  return s(), o("div", O, [
+    a("div", T, [
       r(n.$slots, "default")
     ])
   ]);
 }
-const z = /* @__PURE__ */ C(E, [["render", V]]), M = { "uk-sticky": "sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky" }, R = { class: "uk-navbar-container" }, O = { class: "uk-container uk-container-expand" }, T = {
+const q = /* @__PURE__ */ C(R, [["render", j]]), G = { "uk-sticky": "sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky" }, H = { class: "uk-navbar-container" }, J = { class: "uk-container uk-container-expand" }, K = {
   class: "uk-navbar",
   "uk-navbar": ""
-}, j = { class: "uk-navbar-left" }, q = { class: "uk-navbar-right" }, G = { class: "uk-navbar-nav" }, H = /* @__PURE__ */ p({
+}, Q = { class: "uk-navbar-left" }, X = { class: "uk-navbar-right" }, Y = { class: "uk-navbar-nav" }, Z = /* @__PURE__ */ d({
   __name: "NavBar",
   props: {
     to: { default: "" },
     title: { default: "" }
   },
   setup(n) {
-    return (e, l) => (a(), o("header", null, [
-      s("div", M, [
-        s("div", R, [
-          s("div", O, [
-            s("nav", T, [
-              s("div", j, [
+    return (e, l) => (s(), o("header", null, [
+      a("div", G, [
+        a("div", H, [
+          a("div", J, [
+            a("nav", K, [
+              a("div", Q, [
                 w(U, {
                   to: e.to,
                   class: "uk-navbar-item uk-logo",
                   label: ""
                 }, {
-                  default: _(() => [
+                  default: k(() => [
                     r(e.$slots, "title", {}, () => [
-                      i(u(e.title), 1)
+                      c(u(e.title), 1)
                     ])
                   ]),
                   _: 3
                 }, 8, ["to"])
               ]),
-              s("div", q, [
-                s("ul", G, [
+              a("div", X, [
+                a("ul", Y, [
                   r(e.$slots, "default")
                 ])
               ])
@@ -119,35 +141,35 @@ const z = /* @__PURE__ */ C(E, [["render", V]]), M = { "uk-sticky": "sel-target:
       ])
     ]));
   }
-}), J = /* @__PURE__ */ s("span", { "uk-navbar-parent-icon": "" }, null, -1), K = {
+}), x = /* @__PURE__ */ a("span", { "uk-navbar-parent-icon": "" }, null, -1), ee = {
   class: "uk-navbar-dropdown",
   "uk-dropdown": "offset: 0"
-}, Q = { class: "uk-nav uk-navbar-dropdown-nav" }, X = /* @__PURE__ */ p({
+}, te = { class: "uk-nav uk-navbar-dropdown-nav" }, ae = /* @__PURE__ */ d({
   __name: "NavBarDropdown",
   props: {
     label: { default: "" }
   },
   setup(n) {
-    return (e, l) => (a(), o("li", null, [
-      s("a", null, [
+    return (e, l) => (s(), o("li", null, [
+      a("a", null, [
         r(e.$slots, "label", {}, () => [
-          i(u(e.label), 1)
+          c(u(e.label), 1)
         ]),
-        i(),
-        J
+        c(),
+        x
       ]),
-      s("div", K, [
-        s("ul", Q, [
+      a("div", ee, [
+        a("ul", te, [
           r(e.$slots, "default")
         ])
       ])
     ]));
   }
-}), Y = {}, Z = { class: "uk-nav-divider" };
-function x(n, e) {
-  return a(), o("li", Z);
+}), se = {}, ne = { class: "uk-nav-divider" };
+function oe(n, e) {
+  return s(), o("li", ne);
 }
-const ee = /* @__PURE__ */ C(Y, [["render", x]]), te = { key: 0 }, ae = ["href"], se = ["href", "onClick"], ne = /* @__PURE__ */ p({
+const re = /* @__PURE__ */ C(se, [["render", oe]]), le = { key: 0 }, ue = ["href"], ie = ["href", "onClick"], ce = /* @__PURE__ */ d({
   __name: "NavBarItem",
   props: {
     to: {},
@@ -155,40 +177,40 @@ const ee = /* @__PURE__ */ C(Y, [["render", x]]), te = { key: 0 }, ae = ["href"]
   },
   setup(n) {
     const e = n, l = h(() => typeof e.to == "string" && e.to.startsWith("http"));
-    return (t, d) => l.value ? (a(), o("li", te, [
-      s("a", {
+    return (t, p) => l.value ? (s(), o("li", le, [
+      a("a", {
         href: t.to,
         target: "_blank"
       }, [
         r(t.$slots, "default", {}, () => [
-          i(u(t.label), 1)
+          c(u(t.label), 1)
         ])
-      ], 8, ae)
-    ])) : (a(), k(v($), m({ key: 1 }, t.$props, { custom: "" }), {
-      default: _(({ isActive: f, href: g, navigate: y }) => [
-        s("li", {
+      ], 8, ue)
+    ])) : (s(), _(v($), m({ key: 1 }, t.$props, { custom: "" }), {
+      default: k(({ isActive: f, href: g, navigate: y }) => [
+        a("li", {
           class: B({ "uk-active": f })
         }, [
-          s("a", m(t.$attrs, {
+          a("a", m(t.$attrs, {
             href: g,
             onClick: y
           }), [
             r(t.$slots, "default", {}, () => [
-              i(u(t.label), 1)
+              c(u(t.label), 1)
             ])
-          ], 16, se)
+          ], 16, ie)
         ], 2)
       ]),
       _: 3
     }, 16));
   }
-}), oe = { class: "uf-nav-user" }, re = ["src"], le = {
+}), de = { class: "uf-nav-user" }, pe = ["src"], _e = {
   class: "uk-navbar-dropdown",
   "uk-dropdown": "offset: 0"
-}, ue = { class: "uk-nav uk-navbar-dropdown-nav" }, ie = { class: "uk-card uk-card-body uk-text-center" }, ce = ["src"], de = { key: 1 }, pe = {
+}, ke = { class: "uk-nav uk-navbar-dropdown-nav" }, fe = { class: "uk-card uk-card-body uk-text-center" }, me = ["src"], he = { key: 1 }, ve = {
   key: 2,
   class: "uk-text-meta"
-}, ke = /* @__PURE__ */ p({
+}, $e = /* @__PURE__ */ d({
   __name: "NavBarUserCard",
   props: {
     username: { default: "" },
@@ -196,35 +218,35 @@ const ee = /* @__PURE__ */ C(Y, [["render", x]]), te = { key: 0 }, ae = ["href"]
     meta: { default: "" }
   },
   setup(n) {
-    return (e, l) => (a(), o("li", oe, [
-      s("a", null, [
-        i(u(e.username) + " ", 1),
-        e.avatar ? (a(), o("img", {
+    return (e, l) => (s(), o("li", de, [
+      a("a", null, [
+        c(u(e.username) + " ", 1),
+        e.avatar ? (s(), o("img", {
           key: 0,
           src: e.avatar,
           alt: "avatar",
           class: "uk-border-circle"
-        }, null, 8, re)) : c("", !0)
+        }, null, 8, pe)) : i("", !0)
       ]),
-      s("div", le, [
-        s("ul", ue, [
-          s("div", ie, [
-            e.avatar ? (a(), o("img", {
+      a("div", _e, [
+        a("ul", ke, [
+          a("div", fe, [
+            e.avatar ? (s(), o("img", {
               key: 0,
               src: e.avatar,
               alt: "avatar",
               class: "uk-border-circle",
               "uk-height-match": ""
-            }, null, 8, ce)) : c("", !0),
-            e.username ? (a(), o("p", de, u(e.username), 1)) : c("", !0),
-            e.meta ? (a(), o("p", pe, "(" + u(e.meta) + ")", 1)) : c("", !0)
+            }, null, 8, me)) : i("", !0),
+            e.username ? (s(), o("p", he, u(e.username), 1)) : i("", !0),
+            e.meta ? (s(), o("p", ve, "(" + u(e.meta) + ")", 1)) : i("", !0)
           ]),
           r(e.$slots, "default")
         ])
       ])
     ]));
   }
-}), _e = { key: 0 }, fe = ["href"], me = { key: 1 }, he = /* @__PURE__ */ p({
+}), be = { key: 0 }, Be = ["href"], ge = { key: 1 }, ye = /* @__PURE__ */ d({
   __name: "NavBarUserCardButton",
   props: {
     to: { default: "" },
@@ -232,47 +254,47 @@ const ee = /* @__PURE__ */ C(Y, [["render", x]]), te = { key: 0 }, ae = ["href"]
   },
   setup(n) {
     const e = n, l = h(() => typeof e.to == "string" && e.to.startsWith("http"));
-    return (t, d) => l.value ? (a(), o("li", _e, [
-      s("a", {
+    return (t, p) => l.value ? (s(), o("li", be, [
+      a("a", {
         class: "uk-button uk-button-default uk-button-small uk-text-center",
         href: t.to,
         target: "_blank"
       }, [
         r(t.$slots, "default", {}, () => [
-          i(u(t.label), 1)
+          c(u(t.label), 1)
         ])
-      ], 8, fe)
-    ])) : (a(), o("li", me, [
+      ], 8, Be)
+    ])) : (s(), o("li", ge, [
       w(v($), {
         to: t.to,
         class: "uk-button uk-button-default uk-button-small uk-text-center"
       }, {
-        default: _(() => [
+        default: k(() => [
           r(t.$slots, "default", {}, () => [
-            i(u(t.label), 1)
+            c(u(t.label), 1)
           ])
         ]),
         _: 3
       }, 8, ["to"])
     ]));
   }
-}), ve = {}, $e = { class: "uf-sidebar-left uk-light uk-visible@m" }, be = { class: "left-nav-wrap" }, Be = {
+}), Ce = {}, we = { class: "uf-sidebar-left uk-light uk-visible@m" }, Ne = { class: "left-nav-wrap" }, Ue = {
   class: "uk-nav uk-nav-default",
   "data-uk-nav": ""
 };
-function ge(n, e) {
-  return a(), o("aside", $e, [
-    s("div", be, [
-      s("ul", Be, [
+function Se(n, e) {
+  return s(), o("aside", we, [
+    a("div", Ne, [
+      a("ul", Ue, [
         r(n.$slots, "default")
       ])
     ])
   ]);
 }
-const ye = /* @__PURE__ */ C(ve, [["render", ge]]), Ce = ["data-uk-icon"], we = {
+const Fe = /* @__PURE__ */ C(Ce, [["render", Se]]), Ie = ["data-uk-icon"], Le = {
   key: 2,
   "uk-nav-parent-icon": ""
-}, Ne = { class: "uk-nav-sub" }, Ue = /* @__PURE__ */ p({
+}, De = { class: "uk-nav-sub" }, Ae = /* @__PURE__ */ d({
   __name: "SideBarDropdown",
   props: {
     to: {},
@@ -284,28 +306,28 @@ const ye = /* @__PURE__ */ C(ve, [["render", ge]]), Ce = ["data-uk-icon"], we = 
   setup(n) {
     return (e, l) => {
       const t = N("font-awesome-icon");
-      return a(), k(v($), m(e.$props, { custom: "" }), {
-        default: _(({ isActive: d }) => [
-          s("li", {
-            class: B(["uk-parent", { "uk-open": d }])
+      return s(), _(v($), m(e.$props, { custom: "" }), {
+        default: k(({ isActive: p }) => [
+          a("li", {
+            class: B(["uk-parent", { "uk-open": p }])
           }, [
-            s("a", I(F(e.$attrs)), [
-              e.icon ? (a(), o("span", {
+            a("a", F(I(e.$attrs)), [
+              e.icon ? (s(), o("span", {
                 key: 0,
                 "data-uk-icon": e.icon,
                 class: "uk-margin-small-right"
-              }, null, 8, Ce)) : c("", !0),
-              e.faIcon ? (a(), k(t, {
+              }, null, 8, Ie)) : i("", !0),
+              e.faIcon ? (s(), _(t, {
                 key: 1,
                 class: "uk-margin-small-right",
                 icon: e.faIcon
-              }, null, 8, ["icon"])) : c("", !0),
+              }, null, 8, ["icon"])) : i("", !0),
               r(e.$slots, "label", {}, () => [
-                i(u(e.label), 1)
+                c(u(e.label), 1)
               ]),
-              e.hideCaret ? c("", !0) : (a(), o("span", we))
+              e.hideCaret ? i("", !0) : (s(), o("span", Le))
             ], 16),
-            s("ul", Ne, [
+            a("ul", De, [
               r(e.$slots, "default")
             ])
           ], 2)
@@ -314,7 +336,7 @@ const ye = /* @__PURE__ */ C(ve, [["render", ge]]), Ce = ["data-uk-icon"], we = 
       }, 16);
     };
   }
-}), Se = { key: 0 }, Ie = ["href"], Fe = ["data-uk-icon"], Le = ["href", "onClick"], De = ["data-uk-icon"], Ae = /* @__PURE__ */ p({
+}), Ee = { key: 0 }, Pe = ["href"], We = ["data-uk-icon"], Ve = ["href", "onClick"], ze = ["data-uk-icon"], Me = /* @__PURE__ */ d({
   __name: "SideBarItem",
   props: {
     to: {},
@@ -324,82 +346,83 @@ const ye = /* @__PURE__ */ C(ve, [["render", ge]]), Ce = ["data-uk-icon"], we = 
   },
   setup(n) {
     const e = n, l = h(() => typeof e.to == "string" && e.to.startsWith("http"));
-    return (t, d) => {
+    return (t, p) => {
       const f = N("font-awesome-icon");
-      return l.value ? (a(), o("li", Se, [
-        s("a", {
+      return l.value ? (s(), o("li", Ee, [
+        a("a", {
           href: t.to,
           target: "_blank"
         }, [
-          t.icon ? (a(), o("span", {
+          t.icon ? (s(), o("span", {
             key: 0,
             "data-uk-icon": t.icon,
             class: "uk-margin-small-right"
-          }, null, 8, Fe)) : c("", !0),
-          t.faIcon ? (a(), k(f, {
+          }, null, 8, We)) : i("", !0),
+          t.faIcon ? (s(), _(f, {
             key: 1,
             class: "uk-margin-small-right",
             icon: t.faIcon
-          }, null, 8, ["icon"])) : c("", !0),
+          }, null, 8, ["icon"])) : i("", !0),
           r(t.$slots, "default", {}, () => [
-            i(u(t.label), 1)
+            c(u(t.label), 1)
           ])
-        ], 8, Ie)
-      ])) : (a(), k(v($), m({ key: 1 }, t.$props, { custom: "" }), {
-        default: _(({ isExactActive: g, href: y, navigate: S }) => [
-          s("li", {
+        ], 8, Pe)
+      ])) : (s(), _(v($), m({ key: 1 }, t.$props, { custom: "" }), {
+        default: k(({ isExactActive: g, href: y, navigate: S }) => [
+          a("li", {
             class: B({ "uk-active": g })
           }, [
-            s("a", m(t.$attrs, {
+            a("a", m(t.$attrs, {
               href: y,
               onClick: S
             }), [
-              t.icon ? (a(), o("span", {
+              t.icon ? (s(), o("span", {
                 key: 0,
                 "data-uk-icon": t.icon,
                 class: "uk-margin-small-right"
-              }, null, 8, De)) : c("", !0),
-              t.faIcon ? (a(), k(f, {
+              }, null, 8, ze)) : i("", !0),
+              t.faIcon ? (s(), _(f, {
                 key: 1,
                 class: "uk-margin-small-right",
                 icon: t.faIcon
-              }, null, 8, ["icon"])) : c("", !0),
+              }, null, 8, ["icon"])) : i("", !0),
               r(t.$slots, "default", {}, () => [
-                i(u(t.label), 1)
+                c(u(t.label), 1)
               ])
-            ], 16, Le)
+            ], 16, Ve)
           ], 2)
         ]),
         _: 3
       }, 16));
     };
   }
-}), Ee = { class: "uk-nav-header" }, Pe = /* @__PURE__ */ p({
+}), Re = { class: "uk-nav-header" }, Oe = /* @__PURE__ */ d({
   __name: "SideBarLabel",
   props: {
     label: {}
   },
   setup(n) {
-    return (e, l) => (a(), o("li", Ee, u(e.label), 1));
+    return (e, l) => (s(), o("li", Re, u(e.label), 1));
   }
-}), Me = {
+}), Ge = {
   install: (n) => {
-    n.component("UFAlertContainer", D).component("UFAppLink", U).component("UFMainContent", z).component("UFNavBar", H).component("UFNavBarDropdown", X).component("UFNavBarDropdownSeparator", ee).component("UFNavBarItem", ne).component("UFNavBarUserCard", ke).component("UFNavBarUserCardButton", he).component("UFSideBar", ye).component("UFSideBarDropdown", Ue).component("UFSideBarItem", Ae).component("UFSideBarLabel", Pe);
+    n.component("UFAlertContainer", D).component("UFAppLink", U).component("UFCardBox", M).component("UFMainContent", q).component("UFNavBar", Z).component("UFNavBarDropdown", ae).component("UFNavBarDropdownSeparator", re).component("UFNavBarItem", ce).component("UFNavBarUserCard", $e).component("UFNavBarUserCardButton", ye).component("UFSideBar", Fe).component("UFSideBarDropdown", Ae).component("UFSideBarItem", Me).component("UFSideBarLabel", Oe);
   }
 };
 export {
   D as AlertContainer,
   U as AppLink,
-  z as MainContent,
-  H as NavBar,
-  X as NavBarDropdown,
-  ee as NavBarDropdownSeparator,
-  ne as NavBarItem,
-  ke as NavBarUserCard,
-  he as NavBarUserCardButton,
-  ye as SideBar,
-  Ue as SideBarDropdown,
-  Ae as SideBarItem,
-  Pe as SideBarLabel,
-  Me as default
+  M as CardBox,
+  q as MainContent,
+  Z as NavBar,
+  ae as NavBarDropdown,
+  re as NavBarDropdownSeparator,
+  ce as NavBarItem,
+  $e as NavBarUserCard,
+  ye as NavBarUserCardButton,
+  Fe as SideBar,
+  Ae as SideBarDropdown,
+  Me as SideBarItem,
+  Oe as SideBarLabel,
+  Ge as default
 };
