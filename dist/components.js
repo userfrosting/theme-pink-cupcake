@@ -71,7 +71,7 @@ const L = { key: 1 }, D = /* @__PURE__ */ p({
   for (const [t, d] of e)
     l[t] = d;
   return l;
-}, E = {}, P = { class: "uf-main uk-section uk-section-default" }, W = { class: "uk-container" };
+}, E = {}, P = { class: "uf-main uk-section uk-section-default uk-section-muted" }, W = { class: "uk-container" };
 function V(n, e) {
   return a(), o("div", P, [
     s("div", W, [
