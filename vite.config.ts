@@ -6,13 +6,6 @@ import dts from 'vite-plugin-dts'
 // https://stackoverflow.com/a/74397545/445757
 export default defineConfig({
     plugins: [vue(), dts()],
-    server: {
-        fs: {
-            // Allow serving files from one level up to the project root.
-            // Required for local testing, not required in normal project.
-            allow: ['..']
-        }
-    },
     build: {
         outDir: './dist',
         lib: {

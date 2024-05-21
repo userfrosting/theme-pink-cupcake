@@ -3,14 +3,14 @@ import { computed } from 'vue'
 import { type AlertInterface, AlertStyle } from '../types'
 
 /**
- * N.B.: This component uses a complex prop type instead of individual props 
- * because the common use case for it is to display an alert from an API. 
+ * N.B.: This component uses a complex prop type instead of individual props
+ * because the common use case for it is to display an alert from an API.
  * Using a single object makes it easier to pass data from the API.
- * 
+ *
  * @see https://vuejs.org/guide/typescript/composition-api#complex-prop-types
  */
- const props = defineProps<{
-  alert: AlertInterface
+const props = defineProps<{
+    alert: AlertInterface
 }>()
 
 /**
@@ -19,25 +19,25 @@ import { type AlertInterface, AlertStyle } from '../types'
 const alertClass = computed(() => {
     switch (props.alert.style) {
         case AlertStyle.Success: {
-            return 'uk-alert-success';
+            return 'uk-alert-success'
         }
         case AlertStyle.Warning: {
-            return 'uk-alert-warning';
+            return 'uk-alert-warning'
         }
         case AlertStyle.Danger: {
-            return 'uk-alert-danger';
+            return 'uk-alert-danger'
         }
         case AlertStyle.Primary:
         default: {
-            return 'uk-alert-primary';
+            return 'uk-alert-primary'
         }
     }
 })
 
 /**
- * TODO : Closing an alert using the button will remove the HTML from the DOM. 
- * This means the component can't be reused with a different variable. If used 
- * in a collection of alerts, it won't be removed from the collection. 
+ * TODO : Closing an alert using the button will remove the HTML from the DOM.
+ * This means the component can't be reused with a different variable. If used
+ * in a collection of alerts, it won't be removed from the collection.
  */
 </script>
 

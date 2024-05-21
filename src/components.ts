@@ -60,20 +60,20 @@ export default {
 
 declare module 'vue' {
     export interface GlobalComponents {
-        'UFAlertContainer': typeof AlertContainer,
-        'UFAppLink': typeof AppLink,
-        'UFCardBox': typeof CardBox,
-        'UFMainContent': typeof MainContent,
-        'UFFooterContent': typeof FooterContent,
-        'UFNavBar': typeof NavBar,
-        'UFNavBarDropdown': typeof NavBarDropdown,
-        'UFNavBarDropdownSeparator': typeof NavBarDropdownSeparator,
-        'UFNavBarItem': typeof NavBarItem,
-        'UFNavBarUserCard': typeof NavBarUserCard,
-        'UFNavBarUserCardButton': typeof NavBarUserCardButton,
-        'UFSideBar': typeof SideBar,
-        'UFSideBarDropdown': typeof SideBarDropdown,
-        'UFSideBarItem': typeof SideBarItem,
-        'UFSideBarLabel': typeof SideBarLabel,
+        UFAlertContainer: typeof AlertContainer
+        UFAppLink: typeof AppLink
+        UFCardBox: typeof CardBox
+        UFMainContent: typeof MainContent
+        UFFooterContent: typeof FooterContent
+        UFNavBar: typeof NavBar
+        UFNavBarDropdown: typeof NavBarDropdown
+        UFNavBarDropdownSeparator: typeof NavBarDropdownSeparator
+        UFNavBarItem: typeof NavBarItem
+        UFNavBarUserCard: typeof NavBarUserCard
+        UFNavBarUserCardButton: typeof NavBarUserCardButton
+        UFSideBar: typeof SideBar
+        UFSideBarDropdown: typeof SideBarDropdown
+        UFSideBarItem: typeof SideBarItem
+        UFSideBarLabel: typeof SideBarLabel
     }
 }

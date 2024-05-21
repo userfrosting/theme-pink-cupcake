@@ -5,66 +5,32 @@ Frontend theme for [UserFrosting](https://www.userfrosting.com), built with [UiK
 > [!WARNING]  
 > This is still a work in progress
 
+For an example/test of the implementation, see : 
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## Project Setup - Vite
+## Install dependencies
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
+## Compile
 
 ```sh
 npm run build
-```
-
-### Preview production build
-
-Make sure to run "build" before.
-
-```sh
-npm run preview
-```
-
-## Project Setup - Webpack
-
-```sh
-npm install
-```
-
-### Compile for Development
-
-```sh
-npm run webpack
-```
-
-### Preview build
-
-Make sure to run "webpack" before.
-
-```sh
-npm run webpack:serve
-```
-
-Access at [http://127.0.0.1:8080](http://127.0.0.1:8080)
-
-### Compile and Minify for Production
-
-```sh
-npm run webpack:build
 ```
 
 ## Lint with [ESLint](https://eslint.org/)
 
 ```sh
 npm run lint
+```
+
+## Format with [Prettier](https://prettier.io)
+
+```sh
+npm run format
 ```
