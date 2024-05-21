@@ -8,4 +8,4 @@ _meta/
 node_modules/
 
 # Ignore compiled assets
-# dist/
+dist/
