@@ -5,7 +5,7 @@ Frontend theme for [UserFrosting](https://www.userfrosting.com), built with [UiK
 > [!WARNING]  
 > This is still a work in progress
 
-For an example/test of the implementation, see : 
+For an example/test of the implementation, see : [Theme Pink Cupcake Example](https://github.com/userfrosting/theme-pink-cupcake-example)
 
 ## Recommended IDE Setup
 
