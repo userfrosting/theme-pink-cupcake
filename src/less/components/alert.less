@@ -1,0 +1,71 @@
+// Variables
+// ========================================================================
+@alert-primary-background: #E7F2FA; 
+@alert-success-background: #E6F9E6;
+@alert-warning-background: #FFF2DB;
+@alert-danger-background:  #FAE2E2;
+
+// Custom title bar backgrounds
+@alert-primary-title-background: #6AB0DE;
+@alert-success-title-background: #77C577;
+@alert-warning-title-background: #F0B37E;
+@alert-danger-title-background: #DF6F6C;
+
+// Custom title style
+@alert-title-color: #FFFFFF;
+@alert-title-height: 34px;
+
+// Remove the main div padding
+@alert-padding: 0px;
+@alert-padding-right: 0px;
+
+// Add custom padding to the 'p' content
+@alert-content-padding-vertical: 5px;
+@alert-content-padding-horizontal: 15px;
+
+// Custom alert close to match title || content
+@alert-close-right: @alert-content-padding-horizontal - 5px;
+@alert-close-top: 10px; // (@alert-title-height - 14px) / 2
+
+// Custom hooks
+// ========================================================================
+// Use default font color for close button
+.hook-alert-close() {
+    color: @base-body-color;
+    font-weight: bold;
+}
+.hook-alert-close-hover() {
+    color: @base-body-color;
+}
+
+// Custom styles
+// ========================================================================
+// Custom style to the 'p' element + remove 'p' inherited margin
+.uk-alert p {
+    padding: @alert-content-padding-vertical @alert-content-padding-horizontal;
+    color: @base-body-color;
+    margin-top: 0px;
+}
+
+// Custom style to the 'h3' element + remove 'h3' inherited margin
+.uk-alert h3 {
+    font-size: @base-body-font-size;
+    color: @alert-title-color;
+    line-height: @alert-title-height;
+    padding-left: @alert-content-padding-horizontal;
+    margin-bottom: 0px;
+}
+
+// Apply custom title bar background
+.uk-alert-primary h3 {
+    background-color: @alert-primary-title-background;
+}
+.uk-alert-success h3 {
+    background-color: @alert-success-title-background;
+}
+.uk-alert-warning h3 {
+    background-color: @alert-warning-title-background;
+}
+.uk-alert-danger h3 {
+    background-color: @alert-danger-title-background;
+}
