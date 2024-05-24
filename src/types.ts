@@ -5,6 +5,7 @@ export interface AlertInterface {
     description?: string
     style?: AlertStyle | keyof typeof AlertStyle
     closeBtn?: boolean
+    hideIcon?: boolean
 }
 
 export enum AlertStyle {

@@ -34,6 +34,24 @@ const alertClass = computed(() => {
     }
 })
 
+const iconClass = computed(() => {
+    switch (props.alert.style) {
+        case AlertStyle.Success: {
+            return 'fa-solid fa-circle-check'
+        }
+        case AlertStyle.Warning: {
+            return 'fa-solid fa-circle-exclamation'
+        }
+        case AlertStyle.Danger: {
+            return 'fa-solid fa-triangle-exclamation'
+        }
+        case AlertStyle.Primary:
+        default: {
+            return 'fa-solid fa-circle-info'
+        }
+    }
+})
+
 /**
  * TODO : Closing an alert using the button will remove the HTML from the DOM.
  * This means the component can't be reused with a different variable. If used
@@ -44,7 +62,10 @@ const alertClass = computed(() => {
 <template>
     <div :class="alertClass" class="uk-alert" uk-alert>
         <a v-if="alert.closeBtn" class="uk-alert-close" uk-close @click="$emit('close')"></a>
-        <h3 v-if="alert.title">{{ alert.title }}</h3>
+        <h3 v-if="alert.title">
+            <font-awesome-icon v-if="!alert.hideIcon" :icon="iconClass" class="uk-icon" />
+            {{ alert.title }}
+        </h3>
         <p>
             <slot>{{ alert.description }}</slot>
         </p>
