@@ -66,8 +66,9 @@ const iconClass = computed(() => {
             <font-awesome-icon v-if="!alert.hideIcon" :icon="iconClass" class="uk-icon" />
             {{ alert.title }}
         </h3>
-        <p>
-            <slot>{{ alert.description }}</slot>
+        <p v-if="$slots.default">
+            <slot></slot>
         </p>
+        <p v-else-if="alert.description" v-html="alert.description"></p>
     </div>
 </template>
