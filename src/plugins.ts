@@ -9,10 +9,6 @@ import UIkit from 'uikit'
 import Icons from 'uikit/dist/js/uikit-icons'
 UIkit.use(Icons)
 
-// Import custom fonts
-import '@fontsource/montserrat'
-import '@fontsource/montserrat/700.css'
-
 /* Install plugins */
 export default {
     install: (app: App) => {
