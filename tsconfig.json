@@ -12,7 +12,7 @@
         "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
         "baseUrl": ".",
         "rootDir": "src",
-        "types": ["vitest/globals"]
+        "allowJs": true
     },
     "references": [
         {

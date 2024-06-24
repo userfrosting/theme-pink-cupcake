@@ -22,6 +22,20 @@
             }
         },
         {
+            "label": "test",
+            "type": "shell",
+            "options": {},
+            "command": "npm run test",
+            "problemMatcher": [],
+        },
+        {
+            "label": "coverage",
+            "type": "shell",
+            "options": {},
+            "command": "npm run coverage",
+            "problemMatcher": []
+        },
+        {
             "label": "lint",
             "type": "shell",
             "options": {},
