@@ -20,7 +20,7 @@ test('Label as prop', () => {
     // Arrange
     const wrapper = mount(MainContent, {
         props: {
-            label: 'This is the Label as prop',
+            label: 'This is the Label as prop'
         },
         slots: {
             default: 'This is the slot content'
