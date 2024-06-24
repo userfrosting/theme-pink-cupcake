@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
@@ -33,5 +34,11 @@ export default defineConfig({
             '../../images/components': 'uikit/src/images/components',
             '../../images/icons': 'uikit/src/images/icons'
         }
+    },
+    test: {
+        coverage: {
+            reportsDirectory: './_meta/_coverage'
+        },
+        environment: 'happy-dom'
     }
 })
