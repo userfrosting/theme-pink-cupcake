@@ -10,11 +10,11 @@ withDefaults(defineProps<Props>(), {
 
 <template>
     <li>
-        <a>
+        <a data-test="label">
             <slot name="label">{{ label }}</slot> <span uk-navbar-parent-icon></span>
         </a>
         <div class="uk-navbar-dropdown" uk-dropdown="offset: 0">
-            <ul class="uk-nav uk-navbar-dropdown-nav">
+            <ul class="uk-nav uk-navbar-dropdown-nav" data-test="slot">
                 <slot></slot>
             </ul>
         </div>

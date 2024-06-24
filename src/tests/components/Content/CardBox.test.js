@@ -17,3 +17,12 @@ test('Basic test', () => {
     expect(wrapper.get('[data-test="title"]').text()).toMatch('Hello world')
     expect(wrapper.get('[data-test="slot"]').text()).toMatch('This is the slot content')
 })
+
+test('Test with no prop and slot', () => {
+    // Arrange
+    const wrapper = mount(CardBox)
+
+    // Assert
+    expect(wrapper.find('[data-test="title"]').exists()).toBe(false)
+    expect(wrapper.get('[data-test="slot"]').text()).toMatch('')
+})
