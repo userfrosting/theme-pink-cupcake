@@ -19,4 +19,4 @@ jobs:
               uses: creyD/prettier_action@v4.3
               with:
                   dry: True
-                  prettier_options: src/
+                  prettier_options: --write src/

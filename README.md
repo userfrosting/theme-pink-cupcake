@@ -2,8 +2,9 @@
 
 [![Version](https://img.shields.io/npm/v/%40userfrosting%2Ftheme-pink-cupcake)](https://www.npmjs.com/package/@userfrosting/theme-pink-cupcake)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
-[![Build](https://img.shields.io/github/actions/workflow/status/userfrosting/theme-pink-cupcake/Build.yml?branch=main&logo=github)](https://github.com/userfrosting/theme-pink-cupcake/actions)
+[![Build](https://img.shields.io/github/actions/workflow/status/userfrosting/theme-pink-cupcake/Build.yml?branch=main&logo=github)](https://github.com/userfrosting/theme-pink-cupcake/actions/workflows/Build.yml)
 [![Codecov](https://codecov.io/gh/userfrosting/theme-pink-cupcake/branch/main/graph/badge.svg)](https://app.codecov.io/gh/userfrosting/theme-pink-cupcake/branch/main)
+[![Style](https://img.shields.io/github/actions/workflow/status/userfrosting/theme-pink-cupcake/Style.yml?branch=main&logo=github&label=Style)](https://github.com/userfrosting/theme-pink-cupcake/actions/workflows/Style.yml)
 [![Donate](https://img.shields.io/badge/Open_Collective-Donate-blue?logo=Open%20Collective)](https://opencollective.com/userfrosting#backer)
 [![Donate](https://img.shields.io/badge/Ko--fi-Donate-blue?logo=ko-fi&logoColor=white)](https://ko-fi.com/lcharette)
 
