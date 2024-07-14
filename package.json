@@ -23,13 +23,13 @@
     "bugs": {
         "url": "https://github.com/userfrosting/UserFrosting/issues"
     },
-    "main": "./dist/plugin.umd.cjs",
+    "main": "./dist/plugin.cjs",
     "module": "./dist/plugins.js",
     "types": "./dist/plugins.d.ts",
     "exports": {
         ".": {
             "import": "./dist/plugins.js",
-            "require": "./dist/plugins.umd.cjs",
+            "require": "./dist/plugins.cjs",
             "types": "./dist/plugins.d.ts"
         },
         "./types": {
@@ -59,7 +59,8 @@
     },
     "peerDependencies": {
         "vue": "^3.4.21",
-        "vue-router": "^4.2.4"
+        "vue-router": "^4.2.4",
+        "@userfrosting/sprinkle-account": "git+https://github.com/userfrosting/sprinkle-account.git#6.0"
     },
     "devDependencies": {
         "@rushstack/eslint-patch": "^1.8.0",
