@@ -13,7 +13,7 @@ withDefaults(defineProps<Props>(), {
         <a data-test="label">
             <slot name="label">{{ label }}</slot> <span uk-navbar-parent-icon></span>
         </a>
-        <div class="uk-navbar-dropdown" uk-dropdown="offset: 0">
+        <div class="uk-navbar-dropdown" uk-dropdown="offset: 0px">
             <ul class="uk-nav uk-navbar-dropdown-nav" data-test="slot">
                 <slot></slot>
             </ul>

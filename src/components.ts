@@ -9,7 +9,6 @@ import AppLink from './components/Content/AppLink.vue'
 import CardBox from './components/Content/CardBox.vue'
 import MainContent from './components/Content/MainContent.vue'
 import FooterContent from './components/Content/FooterContent.vue'
-import FormLogin from './components/Forms/FormLogin.vue'
 import NavBar from './components/NavBar/NavBar.vue'
 import NavBarDropdown from './components/NavBar/NavBarDropdown.vue'
 import NavBarDropdownSeparator from './components/NavBar/NavBarDropdownSeparator.vue'
@@ -29,7 +28,6 @@ export {
     CardBox,
     MainContent,
     FooterContent,
-    FormLogin,
     NavBar,
     NavBarDropdown,
     NavBarDropdownSeparator,
@@ -51,7 +49,6 @@ export default {
             .component('UFCardBox', CardBox)
             .component('UFMainContent', MainContent)
             .component('UFFooterContent', FooterContent)
-            .component('UFFormLogin', FormLogin)
             .component('UFNavBar', NavBar)
             .component('UFNavBarDropdown', NavBarDropdown)
             .component('UFNavBarDropdownSeparator', NavBarDropdownSeparator)
@@ -74,7 +71,6 @@ declare module 'vue' {
         UFCardBox: typeof CardBox
         UFMainContent: typeof MainContent
         UFFooterContent: typeof FooterContent
-        UFFormLogin: typeof FormLogin
         UFNavBar: typeof NavBar
         UFNavBarDropdown: typeof NavBarDropdown
         UFNavBarDropdownSeparator: typeof NavBarDropdownSeparator
