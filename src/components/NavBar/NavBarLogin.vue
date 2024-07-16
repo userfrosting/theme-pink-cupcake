@@ -44,12 +44,12 @@ const auth = useAuthStore()
                     <a>Forgot your password?</a>
                 </div>
                 <div class="uk-text-center">
-                    <a
+                    <button
                         class="uk-button uk-button-primary"
                         @click="auth.login(form)"
                         :disabled="auth.loading">
                         Login
-                    </a>
+                    </button>
                 </div>
             </fieldset>
         </form>
