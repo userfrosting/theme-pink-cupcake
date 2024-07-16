@@ -11,7 +11,7 @@ import FormLogin from '../components/Forms/FormLogin.vue'
                 <div class="uk-text-center">
                     <p>You don't have an account yet?</p>
                     <button class="uk-button uk-button-default">
-                        Register
+                        <font-awesome-icon :icon="['fas', 'user-plus']" /> Register
                     </button>
                 </div>
             </UFCardBox>
