@@ -1,15 +1,49 @@
 <script setup lang="ts">
-import type { LoginForm } from '@userfrosting/sprinkle-account/types'
+import { watch } from 'vue'
+import { useRouter } from 'vue-router'
+import { ref } from 'vue'
+import type { AlertInterface, LoginForm } from '@userfrosting/sprinkle-account/types'
 import { useAuthStore } from '@userfrosting/sprinkle-account/stores'
-import AlertContainer from '../components/AlertContainer.vue'
 
-// Form variables
+// Variables
+const loading = ref(false)
+const error = ref<AlertInterface | null>()
 let form: LoginForm = {
     user_name: '',
     password: ''
 }
 
+// Stores
 const auth = useAuthStore()
+const router = useRouter()
+
+// Watch for redirect
+// TODO : Replace route guard with initial state check
+// TODO : Should be moved to a composable or auth store, as this will be useful in other places,
+// TODO : Should also use query redirect (to redirect where we were before login)
+// @see : https://vue-auth3.js.org/guide/auth-meta.html#advanced-redirects
+watch(
+    () => auth.isAuthenticated,
+    (isAuthenticated) => {
+        if (isAuthenticated === true) {
+            let redirectTo = router.currentRoute.value.meta.redirectAfterLogin ?? '/'
+            router.push(redirectTo)
+        }
+    }
+)
+
+// Form action
+function sendLogin() {
+    loading.value = true
+    error.value = null
+    auth.login(form)
+        .catch((err) => {
+            error.value = err
+        })
+        .finally(() => {
+            loading.value = false
+        })
+}
 </script>
 
 <template>
@@ -17,9 +51,9 @@ const auth = useAuthStore()
         <div class="uk-width-1-1@s uk-width-3-5@l uk-width-1-3@xl">
             <UFCardBox>
                 <h3 class="uk-card-title">Login</h3>
-                <form>
+                <form v-on:submit.prevent="sendLogin()">
                     <fieldset class="uk-fieldset">
-                        <AlertContainer v-if="auth.error" :alert="auth.error" />
+                        <UFAlertContainer v-if="error" :alert="error" />
                         <div class="uk-margin">
                             <div class="uk-inline">
                                 <span class="uk-form-icon" uk-icon="icon: user"></span>
@@ -44,10 +78,7 @@ const auth = useAuthStore()
                         </div>
                         <p><a>Forgot your password?</a></p>
                         <div class="uk-text-center">
-                            <button
-                                class="uk-button uk-button-primary"
-                                @click="auth.login(form)"
-                                :disabled="auth.loading">
+                            <button class="uk-button uk-button-primary" :disabled="loading">
                                 Login
                             </button>
                         </div>
