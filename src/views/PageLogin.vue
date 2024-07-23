@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { watch } from 'vue'
+import { watch, ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { ref } from 'vue'
+import UIkit from 'uikit'
 import type { AlertInterface, LoginForm } from '@userfrosting/sprinkle-account/types'
 import { useAuthStore } from '@userfrosting/sprinkle-account/stores'
 
@@ -37,6 +37,14 @@ function sendLogin() {
     loading.value = true
     error.value = null
     auth.login(form)
+        .then((user) => {
+            UIkit.notification({
+                message: 'Welcome back ' + user?.full_name + '!',
+                status: 'success',
+                pos: 'bottom-right',
+                timeout: 4000
+            })
+        })
         .catch((err) => {
             error.value = err
         })
