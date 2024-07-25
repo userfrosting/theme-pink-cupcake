@@ -1,23 +1,49 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+import UIkit from 'uikit'
 import NavBarDropdown from './NavBarDropdown.vue'
-import type { LoginForm } from '@userfrosting/sprinkle-account/types'
+import type { AlertInterface, LoginForm } from '@userfrosting/sprinkle-account/types'
 import { useAuthStore } from '@userfrosting/sprinkle-account/stores'
 import AlertContainer from '../AlertContainer.vue'
 
-// Form variables
+// Variables
+const loading = ref(false)
+const error = ref<AlertInterface | null>()
 let form: LoginForm = {
     user_name: '',
     password: ''
 }
 
+// Stores
 const auth = useAuthStore()
+
+// Form action
+function sendLogin() {
+    loading.value = true
+    error.value = null
+    auth.login(form)
+        .then((user) => {
+            UIkit.notification({
+                message: 'Welcome back ' + user?.full_name + '!',
+                status: 'success',
+                pos: 'bottom-right',
+                timeout: 4000
+            })
+        })
+        .catch((err) => {
+            error.value = err
+        })
+        .finally(() => {
+            loading.value = false
+        })
+}
 </script>
 
 <template>
     <NavBarDropdown label="Login" class="uf-nav-login uk-text-center">
-        <form>
+        <form v-on:submit.prevent="sendLogin()">
             <fieldset class="uk-fieldset">
-                <AlertContainer v-if="auth.error" :alert="auth.error" />
+                <UFAlertContainer v-if="error" :alert="error" />
                 <div class="uk-margin-small">
                     <div class="uk-inline">
                         <span class="uk-form-icon" uk-icon="icon: user"></span>
@@ -44,10 +70,7 @@ const auth = useAuthStore()
                     <a>Forgot your password?</a>
                 </div>
                 <div class="uk-text-center">
-                    <button
-                        class="uk-button uk-button-primary"
-                        @click="auth.login(form)"
-                        :disabled="auth.loading">
+                    <button class="uk-button uk-button-primary" :disabled="loading">
                         Login
                     </button>
                 </div>
