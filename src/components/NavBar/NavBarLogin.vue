@@ -70,9 +70,7 @@ function sendLogin() {
                     <a>Forgot your password?</a>
                 </div>
                 <div class="uk-text-center">
-                    <button class="uk-button uk-button-primary" :disabled="loading">
-                        Login
-                    </button>
+                    <button class="uk-button uk-button-primary" :disabled="loading">Login</button>
                 </div>
             </fieldset>
         </form>
