@@ -42,10 +42,10 @@ function sendLogin() {
         <fieldset class="uk-fieldset">
             <UFAlertContainer v-if="error" :alert="error" />
             <div class="uk-margin">
-                <div class="uk-inline">
+                <div class="uk-inline uk-width-1-1">
                     <span class="uk-form-icon" uk-icon="icon: user"></span>
                     <input
-                        class="uk-input uk-form-width-large"
+                        class="uk-input"
                         type="text"
                         placeholder="Username"
                         aria-label="Username"
@@ -53,10 +53,10 @@ function sendLogin() {
                 </div>
             </div>
             <div class="uk-margin">
-                <div class="uk-inline">
+                <div class="uk-inline uk-width-1-1">
                     <span class="uk-form-icon" uk-icon="icon: lock"></span>
                     <input
-                        class="uk-input uk-form-width-large"
+                        class="uk-input"
                         type="password"
                         placeholder="Password"
                         aria-label="Password"
