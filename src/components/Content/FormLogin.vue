@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import UIkit from 'uikit'
-import type { AlertInterface, LoginForm } from '@userfrosting/sprinkle-account/types'
+import type { AlertInterface } from '@userfrosting/sprinkle-core/types'
+import type { LoginForm } from '@userfrosting/sprinkle-account/types'
 import { useAuthStore } from '@userfrosting/sprinkle-account/stores'
 
 // Variables
@@ -40,7 +41,7 @@ function sendLogin() {
 <template>
     <form v-on:submit.prevent="sendLogin()">
         <fieldset class="uk-fieldset">
-            <UFAlertContainer v-if="error" :alert="error" />
+            <UFAlertContainer data-test="error" v-if="error" :alert="error" />
             <div class="uk-margin">
                 <div class="uk-inline uk-width-1-1">
                     <span class="uk-form-icon" uk-icon="icon: user"></span>

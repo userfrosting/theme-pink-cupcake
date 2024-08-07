@@ -32,11 +32,6 @@
             "require": "./dist/plugins.cjs",
             "types": "./dist/plugins.d.ts"
         },
-        "./types": {
-            "import": "./dist/types.js",
-            "require": "./dist/types.cjs",
-            "types": "./dist/types.d.ts"
-        },
         "./components": {
             "import": "./dist/components.js",
             "require": "./dist/components.cjs",
@@ -60,7 +55,8 @@
     "peerDependencies": {
         "vue": "^3.4.21",
         "vue-router": "^4.2.4",
-        "@userfrosting/sprinkle-account": "git+https://github.com/userfrosting/sprinkle-account.git#6.0"
+        "@userfrosting/sprinkle-account": "git+https://github.com/userfrosting/sprinkle-account.git#6.0",
+        "@userfrosting/sprinkle-core": "git+https://github.com/userfrosting/sprinkle-core.git#6.0"
     },
     "devDependencies": {
         "@rushstack/eslint-patch": "^1.8.0",

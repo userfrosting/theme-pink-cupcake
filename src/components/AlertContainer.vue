@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { type AlertInterface, AlertStyle } from '@userfrosting/sprinkle-account/types'
+import { type AlertInterface, AlertStyle } from '@userfrosting/sprinkle-core/types'
 
 /**
  * N.B.: This component uses a complex prop type instead of individual props

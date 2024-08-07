@@ -12,7 +12,6 @@ export default defineConfig({
         lib: {
             entry: {
                 plugins: 'src/plugins.ts',
-                types: 'src/types.ts',
                 components: 'src/components.ts'
             }
         },
