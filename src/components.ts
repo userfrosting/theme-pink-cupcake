@@ -7,6 +7,7 @@ import type { App } from 'vue'
 import AlertContainer from './components/AlertContainer.vue'
 import AppLink from './components/Content/AppLink.vue'
 import CardBox from './components/Content/CardBox.vue'
+import CardBoxBig from './components/Content/CardBoxBig.vue'
 import MainContent from './components/Content/MainContent.vue'
 import FooterContent from './components/Content/FooterContent.vue'
 import FormLogin from './components/Content/FormLogin.vue'
@@ -27,6 +28,7 @@ export {
     AlertContainer,
     AppLink,
     CardBox,
+    CardBoxBig,
     MainContent,
     FooterContent,
     FormLogin,
@@ -49,6 +51,7 @@ export default {
         app.component('UFAlertContainer', AlertContainer)
             .component('UFAppLink', AppLink)
             .component('UFCardBox', CardBox)
+            .component('UFCardBoxBig', CardBoxBig)
             .component('UFMainContent', MainContent)
             .component('UFFooterContent', FooterContent)
             .component('UFFormLogin', FormLogin)
@@ -72,6 +75,7 @@ declare module 'vue' {
         UFAlertContainer: typeof AlertContainer
         UFAppLink: typeof AppLink
         UFCardBox: typeof CardBox
+        UFCardBoxBig: typeof CardBoxBig
         UFMainContent: typeof MainContent
         UFFooterContent: typeof FooterContent
         UFFormLogin: typeof FormLogin
