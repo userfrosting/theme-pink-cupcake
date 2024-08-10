@@ -114,7 +114,7 @@ function submitForm(): void {
             <div class="uk-margin">
                 <label class="uk-form-label" for="form-stacked-text">Locale</label>
                 <select class="uk-select" id="form-stacked-select" v-model="form.locale">
-                    <option v-for="(value, key) in getAvailableLocales" :value="key" :key="key">
+                    <option v-for="(value, key) in getAvailableLocales()" :value="key" :key="key">
                         {{ value }}
                     </option>
                 </select>
@@ -135,7 +135,7 @@ function submitForm(): void {
                             v-model="form.captcha" />
                     </div>
                     <div class="uk-width-1-3">
-                        <img :src="getCaptchaUrl" id="captcha" data-target="#r-form-captcha" />
+                        <img :src="getCaptchaUrl()" id="captcha" data-target="#r-form-captcha" />
                     </div>
                 </div>
             </div>
