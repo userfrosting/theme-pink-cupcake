@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import UIkit from 'uikit'
-import type  { AlertInterface } from '@userfrosting/sprinkle-core/types'
+import type { AlertInterface } from '@userfrosting/sprinkle-core/types'
 import { Register } from '@userfrosting/sprinkle-account/composables'
-import type { UserInterface } from '@userfrosting/sprinkle-account/types';
+import type { UserInterface } from '@userfrosting/sprinkle-account/types'
 
 // Variables
 const { getDefaultForm, doRegister, getAvailableLocales, getCaptchaUrl } = Register
@@ -49,15 +49,28 @@ function submitForm(): void {
                 <label class="uk-form-label" for="first_name">Name and email</label>
                 <div class="uk-form-controls uk-grid-small" uk-grid>
                     <div class="uk-width-1-2">
-                        <input class="uk-input" type="text" placeholder="First Name" aria-label="First Name" id="first_name"
+                        <input
+                            class="uk-input"
+                            type="text"
+                            placeholder="First Name"
+                            aria-label="First Name"
+                            id="first_name"
                             v-model="form.first_name" />
                     </div>
                     <div class="uk-width-1-2">
-                        <input class="uk-input" type="text" placeholder="Last Name" aria-label="Last Name"
+                        <input
+                            class="uk-input"
+                            type="text"
+                            placeholder="Last Name"
+                            aria-label="Last Name"
                             v-model="form.last_name" />
                     </div>
                     <div class="uk-width-1-1">
-                        <input class="uk-input" type="email" placeholder="Email" aria-label="Email"
+                        <input
+                            class="uk-input"
+                            type="email"
+                            placeholder="Email"
+                            aria-label="Email"
                             v-model="form.email" />
                         <!-- {% if site.registration.require_email_verification %}{{translate('EMAIL.VERIFICATION_REQUIRED')}}{% else %}{{translate('EMAIL.YOUR')}}{% endif %} -->
                     </div>
@@ -67,7 +80,11 @@ function submitForm(): void {
             <div class="uk-margin">
                 <label class="uk-form-label" for="form-stacked-text">Username</label>
                 <!-- <span class="pull-right"><a href="#" id="form-register-username-suggest">[{{translate('SUGGEST')}}]</a></span> -->
-                <input class="uk-input" type="text" placeholder="Username" aria-label="Username"
+                <input
+                    class="uk-input"
+                    type="text"
+                    placeholder="Username"
+                    aria-label="Username"
                     v-model="form.user_name" />
             </div>
 
@@ -75,12 +92,20 @@ function submitForm(): void {
                 <label class="uk-form-label" for="form-stacked-text">Password</label>
                 <div class="uk-form-controls uk-grid-small" uk-grid>
                     <div class="uk-width-1-2">
-                        <input class="uk-input" type="password" placeholder="Password" aria-label="Password"
+                        <input
+                            class="uk-input"
+                            type="password"
+                            placeholder="Password"
+                            aria-label="Password"
                             v-model="form.password" />
                     </div>
                     <div class="uk-width-1-2">
-                        <input class="uk-input" type="password" placeholder="Confirm Password"
-                            aria-label="Confirm Password" v-model="form.passwordc" />
+                        <input
+                            class="uk-input"
+                            type="password"
+                            placeholder="Confirm Password"
+                            aria-label="Confirm Password"
+                            v-model="form.passwordc" />
                     </div>
                     <!-- {{translate('PASSWORD.BETWEEN', {min: site.password.length.min, max: site.password.length.max})}} -->
                 </div>
@@ -89,7 +114,9 @@ function submitForm(): void {
             <div class="uk-margin">
                 <label class="uk-form-label" for="form-stacked-text">Locale</label>
                 <select class="uk-select" id="form-stacked-select" v-model="form.locale">
-                    <option v-for="(value, key) in getAvailableLocales" :value="key" :key="key">{{ value }}</option>
+                    <option v-for="(value, key) in getAvailableLocales" :value="key" :key="key">
+                        {{ value }}
+                    </option>
                 </select>
                 <!-- <p class="help-block">{{translate("LOCALE.ACCOUNT")}}.</p> -->
             </div>
@@ -99,17 +126,25 @@ function submitForm(): void {
                 <label class="uk-form-label" for="r-form-captcha">Captcha</label>
                 <div class="uk-form-controls uk-grid-small" uk-grid>
                     <div class="uk-width-2-3">
-                        <input class="uk-input" type="password" placeholder="Captcha" aria-label="Captcha" id="r-form-captcha"
+                        <input
+                            class="uk-input"
+                            type="password"
+                            placeholder="Captcha"
+                            aria-label="Captcha"
+                            id="r-form-captcha"
                             v-model="form.captcha" />
                     </div>
                     <div class="uk-width-1-3">
-                        <img :src="getCaptchaUrl" id="captcha" data-target="#r-form-captcha">
+                        <img :src="getCaptchaUrl" id="captcha" data-target="#r-form-captcha" />
                     </div>
                 </div>
             </div>
             <!-- {% endif %} -->
 
-            <p>By registering an account with UserFrosting, you accept <a>the terms and conditions</a>.</p>
+            <p>
+                By registering an account with UserFrosting, you accept
+                <a>the terms and conditions</a>.
+            </p>
 
             <div class="uk-text-center">
                 <button class="uk-button uk-button-primary" :disabled="loading">Sign me up</button>
