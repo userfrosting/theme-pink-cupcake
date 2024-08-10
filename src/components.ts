@@ -11,6 +11,7 @@ import CardBoxBig from './components/Content/CardBoxBig.vue'
 import MainContent from './components/Content/MainContent.vue'
 import FooterContent from './components/Content/FooterContent.vue'
 import FormLogin from './components/Content/FormLogin.vue'
+import FormRegister from './components/Content/FormRegister.vue'
 import NavBar from './components/NavBar/NavBar.vue'
 import NavBarDropdown from './components/NavBar/NavBarDropdown.vue'
 import NavBarDropdownSeparator from './components/NavBar/NavBarDropdownSeparator.vue'
@@ -19,6 +20,7 @@ import NavBarLogin from './components/NavBar/NavBarLogin.vue'
 import NavBarUserCard from './components/NavBar/NavBarUserCard.vue'
 import NavBarUserCardButton from './components/NavBar/NavBarUserCardButton.vue'
 import PageLogin from './views/PageLogin.vue'
+import PageRegister from './views/PageRegister.vue'
 import SideBar from './components/SideBar/SideBar.vue'
 import SideBarDropdown from './components/SideBar/SideBarDropdown.vue'
 import SideBarItem from './components/SideBar/SideBarItem.vue'
@@ -32,6 +34,7 @@ export {
     MainContent,
     FooterContent,
     FormLogin,
+    FormRegister,
     NavBar,
     NavBarDropdown,
     NavBarDropdownSeparator,
@@ -40,6 +43,7 @@ export {
     NavBarUserCard,
     NavBarUserCardButton,
     PageLogin,
+    PageRegister,
     SideBar,
     SideBarDropdown,
     SideBarItem,
@@ -55,6 +59,7 @@ export default {
             .component('UFMainContent', MainContent)
             .component('UFFooterContent', FooterContent)
             .component('UFFormLogin', FormLogin)
+            .component('UFFormRegister', FormRegister)
             .component('UFNavBar', NavBar)
             .component('UFNavBarDropdown', NavBarDropdown)
             .component('UFNavBarDropdownSeparator', NavBarDropdownSeparator)
@@ -63,6 +68,7 @@ export default {
             .component('UFNavBarUserCard', NavBarUserCard)
             .component('UFNavBarUserCardButton', NavBarUserCardButton)
             .component('UFPageLogin', PageLogin)
+            .component('UFPageRegister', PageRegister)
             .component('UFSideBar', SideBar)
             .component('UFSideBarDropdown', SideBarDropdown)
             .component('UFSideBarItem', SideBarItem)
@@ -79,6 +85,7 @@ declare module 'vue' {
         UFMainContent: typeof MainContent
         UFFooterContent: typeof FooterContent
         UFFormLogin: typeof FormLogin
+        UFFormRegister: typeof FormRegister
         UFNavBar: typeof NavBar
         UFNavBarDropdown: typeof NavBarDropdown
         UFNavBarDropdownSeparator: typeof NavBarDropdownSeparator
@@ -87,6 +94,7 @@ declare module 'vue' {
         UFNavBarUserCard: typeof NavBarUserCard
         UFNavBarUserCardButton: typeof NavBarUserCardButton
         UFPageLogin: typeof PageLogin
+        UFPageRegister: typeof PageRegister
         UFSideBar: typeof SideBar
         UFSideBarDropdown: typeof SideBarDropdown
         UFSideBarItem: typeof SideBarItem

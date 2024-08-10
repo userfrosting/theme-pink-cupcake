@@ -13,13 +13,11 @@ let form: LoginForm = {
     password: ''
 }
 
-// Stores
-const auth = useAuthStore()
-
 // Form action
 function sendLogin() {
     loading.value = true
     error.value = null
+    const auth = useAuthStore()
     auth.login(form)
         .then((user) => {
             UIkit.notification({
