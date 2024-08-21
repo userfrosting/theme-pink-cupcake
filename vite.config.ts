@@ -36,7 +36,8 @@ export default defineConfig({
     },
     test: {
         coverage: {
-            reportsDirectory: './_meta/_coverage'
+            reportsDirectory: './_meta/_coverage',
+            include: ['src/**/*.*'],
         },
         environment: 'happy-dom'
     }

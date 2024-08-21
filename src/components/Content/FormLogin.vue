@@ -14,11 +14,12 @@ let form: LoginForm = {
 }
 
 // Form action
-function sendLogin() {
+async function sendLogin() {
     loading.value = true
     error.value = null
     const auth = useAuthStore()
-    auth.login(form)
+    await auth
+        .login(form)
         .then((user) => {
             UIkit.notification({
                 message: 'Welcome back ' + user?.full_name + '!',
@@ -48,6 +49,7 @@ function sendLogin() {
                         type="text"
                         placeholder="Username"
                         aria-label="Username"
+                        data-test="username"
                         v-model="form.user_name" />
                 </div>
             </div>
@@ -59,12 +61,15 @@ function sendLogin() {
                         type="password"
                         placeholder="Password"
                         aria-label="Password"
+                        data-test="password"
                         v-model="form.password" />
                 </div>
             </div>
             <p><a>Forgot your password?</a></p>
             <div class="uk-text-center">
-                <button class="uk-button uk-button-primary" :disabled="loading">Login</button>
+                <button class="uk-button uk-button-primary" :disabled="loading" data-test="submit">
+                    Login
+                </button>
             </div>
         </fieldset>
     </form>
