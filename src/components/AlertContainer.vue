@@ -61,14 +61,19 @@ const iconClass = computed(() => {
 
 <template>
     <div :class="alertClass" class="uk-alert" uk-alert>
-        <a v-if="alert.closeBtn" class="uk-alert-close" uk-close @click="$emit('close')"></a>
-        <h3 v-if="alert.title">
+        <a
+            v-if="alert.closeBtn"
+            data-test="closeBtn"
+            class="uk-alert-close"
+            uk-close
+            @click="$emit('close')"></a>
+        <h3 v-if="alert.title" data-test="title">
             <font-awesome-icon v-if="!alert.hideIcon" :icon="iconClass" class="uk-icon" />
             {{ alert.title }}
         </h3>
-        <p v-if="$slots.default">
+        <p v-if="$slots.default" data-test="description">
             <slot></slot>
         </p>
-        <p v-else-if="alert.description" v-html="alert.description"></p>
+        <p v-else-if="alert.description" v-html="alert.description" data-test="description"></p>
     </div>
 </template>

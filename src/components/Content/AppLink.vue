@@ -20,7 +20,7 @@ const isExternalLink = computed(() => {
 // Wrap in compute to suppress a warning. An external link will alway be a string
 // because of the previous computed value.
 const externalLink = computed((): string => {
-    return typeof link.to === 'string' ? link.to : ''
+    return link.to as string
 })
 </script>
 

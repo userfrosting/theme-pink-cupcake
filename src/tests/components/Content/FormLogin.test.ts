@@ -9,6 +9,7 @@ import type { AlertInterface } from '@userfrosting/sprinkle-core/types'
 
 // Register the AlertContainer component stub globally
 config.global.stubs['UFAlertContainer'] = AlertContainer
+config.global.stubs['FontAwesomeIcon'] = { template: '<span></span>' }
 
 // Mock the auth store
 vi.mock('@userfrosting/sprinkle-account/stores')
