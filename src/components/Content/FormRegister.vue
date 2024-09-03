@@ -19,10 +19,10 @@ let form: Register.RegisterForm = getDefaultForm()
  */
 
 // Form action
-function submitForm(): void {
+async function submitForm() {
     loading.value = true
     error.value = null
-    doRegister(form)
+    await doRegister(form)
         .then((user: UserInterface) => {
             UIkit.notification({
                 message: 'Succesfully registered ' + user?.full_name + '!',
@@ -55,6 +55,7 @@ function submitForm(): void {
                             placeholder="First Name"
                             aria-label="First Name"
                             id="first_name"
+                            data-test="first_name"
                             v-model="form.first_name" />
                     </div>
                     <div class="uk-width-1-2">
@@ -63,6 +64,7 @@ function submitForm(): void {
                             type="text"
                             placeholder="Last Name"
                             aria-label="Last Name"
+                            data-test="last_name"
                             v-model="form.last_name" />
                     </div>
                     <div class="uk-width-1-1">
@@ -71,6 +73,7 @@ function submitForm(): void {
                             type="email"
                             placeholder="Email"
                             aria-label="Email"
+                            data-test="email"
                             v-model="form.email" />
                         <!-- {% if site.registration.require_email_verification %}{{translate('EMAIL.VERIFICATION_REQUIRED')}}{% else %}{{translate('EMAIL.YOUR')}}{% endif %} -->
                     </div>
@@ -85,6 +88,7 @@ function submitForm(): void {
                     type="text"
                     placeholder="Username"
                     aria-label="Username"
+                    data-test="username"
                     v-model="form.user_name" />
             </div>
 
@@ -97,6 +101,7 @@ function submitForm(): void {
                             type="password"
                             placeholder="Password"
                             aria-label="Password"
+                            data-test="password"
                             v-model="form.password" />
                     </div>
                     <div class="uk-width-1-2">
@@ -105,6 +110,7 @@ function submitForm(): void {
                             type="password"
                             placeholder="Confirm Password"
                             aria-label="Confirm Password"
+                            data-test="passwordc"
                             v-model="form.passwordc" />
                     </div>
                     <!-- {{translate('PASSWORD.BETWEEN', {min: site.password.length.min, max: site.password.length.max})}} -->
@@ -113,7 +119,11 @@ function submitForm(): void {
 
             <div class="uk-margin">
                 <label class="uk-form-label" for="form-stacked-text">Locale</label>
-                <select class="uk-select" id="form-stacked-select" v-model="form.locale">
+                <select
+                    class="uk-select"
+                    id="form-stacked-select"
+                    data-test="locale"
+                    v-model="form.locale">
                     <option v-for="(value, key) in getAvailableLocales()" :value="key" :key="key">
                         {{ value }}
                     </option>
@@ -132,6 +142,7 @@ function submitForm(): void {
                             placeholder="Captcha"
                             aria-label="Captcha"
                             id="r-form-captcha"
+                            data-test="captcha"
                             v-model="form.captcha" />
                     </div>
                     <div class="uk-width-1-3">

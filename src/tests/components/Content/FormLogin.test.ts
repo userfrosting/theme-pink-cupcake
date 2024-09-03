@@ -34,7 +34,6 @@ const uikitNotification = {
 describe('FormLogin.vue', () => {
     afterEach(() => {
         vi.clearAllMocks()
-        vi.resetAllMocks()
     })
 
     test('renders correctly', () => {
