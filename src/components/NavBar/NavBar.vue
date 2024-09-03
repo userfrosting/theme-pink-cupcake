@@ -3,8 +3,8 @@ import AppLink from '../Content/AppLink.vue'
 
 withDefaults(
     defineProps<{
-        to: string
-        title: string
+        to?: string
+        title?: string
     }>(),
     {
         to: '',
@@ -19,12 +19,12 @@ withDefaults(
             <div class="uk-navbar-container">
                 <div class="uk-container uk-container-expand">
                     <nav class="uk-navbar" uk-navbar>
-                        <div class="uk-navbar-left">
+                        <div class="uk-navbar-left" data-test="navbar-left">
                             <AppLink :to="to" class="uk-navbar-item uk-logo" label="">
                                 <slot name="title">{{ title }}</slot>
                             </AppLink>
                         </div>
-                        <div class="uk-navbar-right">
+                        <div class="uk-navbar-right" data-test="navbar-right">
                             <ul class="uk-navbar-nav">
                                 <slot></slot>
                             </ul>
