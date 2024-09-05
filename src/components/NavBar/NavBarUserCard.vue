@@ -17,7 +17,7 @@ withDefaults(defineProps<Props>(), {
 <template>
     <NavBarDropdown class="uf-nav-user uk-text-center">
         <template #label>
-            {{ username }}
+            <span data-test="username" v-if="username">{{ username }}</span>
             <img v-if="avatar" :src="avatar" alt="avatar" class="uk-border-circle" />
         </template>
         <div class="uk-margin">
@@ -27,9 +27,9 @@ withDefaults(defineProps<Props>(), {
                 alt="avatar"
                 class="uk-border-circle"
                 uk-height-match />
-            <p class="uk-margin-remove" v-if="username">{{ username }}</p>
-            <p class="uk-margin-remove uk-text-meta" v-if="meta">({{ meta }})</p>
+            <p class="uk-margin-remove" v-if="username" data-test="username">{{ username }}</p>
+            <p class="uk-margin-remove uk-text-meta" v-if="meta" data-test="meta">({{ meta }})</p>
         </div>
-        <slot></slot>
+        <slot data-test="slot"></slot>
     </NavBarDropdown>
 </template>
