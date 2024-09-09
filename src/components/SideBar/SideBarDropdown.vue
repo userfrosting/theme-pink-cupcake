@@ -1,32 +1,26 @@
-<script setup>
+<script setup lang="ts">
 import { RouterLink } from 'vue-router'
 
-defineProps({
-    to: {
-        type: String,
-        default: ''
-    },
-    label: {
-        type: String,
-        default: ''
-    },
-    faIcon: {
-        type: String,
-        default: ''
-    },
-    icon: {
-        type: String,
-        default: ''
-    },
-    hideCaret: {
-        type: Boolean,
-        default: false
+withDefaults(
+    defineProps<{
+        to?: string | { name: string }
+        label?: string
+        faIcon?: string
+        icon?: string
+        hideCaret?: boolean
+    }>(),
+    {
+        to: '',
+        label: '',
+        faIcon: '',
+        icon: '',
+        hideCaret: false
     }
-})
+)
 </script>
 
 <template>
-    <RouterLink v-bind="$props" custom v-slot="{ isActive }">
+    <RouterLink :to="to" v-bind="$props" custom v-slot="{ isActive }">
         <li class="uk-parent" :class="{ 'uk-open': isActive }">
             <a v-bind="$attrs">
                 <span

@@ -45,6 +45,22 @@ describe('NavBar.vue', () => {
         expect(wrapper.get('[data-test="navbar-left"]').text()).toMatch('This is the Label as prop')
     })
 
+    test('Using object for to', () => {
+        // Arrange
+        const wrapper = mount(NavBar, {
+            props: {
+                title: 'This is the Label as prop',
+                to: { name: 'home' }
+            },
+            global: {
+                plugins: [router]
+            }
+        })
+
+        // Assert
+        expect(wrapper.get('[data-test="navbar-left"]').text()).toMatch('This is the Label as prop')
+    })
+
     test('Title slot provided, and it overwrites the props', () => {
         // Arrange
         const wrapper = mount(NavBar, {

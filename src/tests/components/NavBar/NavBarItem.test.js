@@ -80,6 +80,22 @@ describe('NavBarItem.vue', () => {
         expect(wrapper.text()).toMatch('UserFrosting')
     })
 
+    test('Internal, using object for to', () => {
+        // Arrange
+        const wrapper = mount(NavBarItem, {
+            props: {
+                to: { name: 'home' },
+                label: 'UserFrosting'
+            },
+            global: {
+                plugins: [router]
+            }
+        })
+
+        // Assert
+        expect(wrapper.text()).toMatch('UserFrosting')
+    })
+
     test('Internal, using both slot', () => {
         // Arrange
         const wrapper = mount(NavBarItem, {

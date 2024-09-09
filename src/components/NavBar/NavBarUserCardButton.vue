@@ -1,17 +1,17 @@
-<script setup>
+<script setup lang="ts">
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 
-const props = defineProps({
-    to: {
-        type: String,
-        default: ''
-    },
-    label: {
-        type: String,
-        default: ''
+const props = withDefaults(
+    defineProps<{
+        to?: string | { name: string }
+        label?: string
+    }>(),
+    {
+        to: '',
+        label: ''
     }
-})
+)
 
 const isExternalLink = computed(() => {
     return props.to === '' || (typeof props.to === 'string' && props.to.startsWith('http'))
@@ -22,7 +22,7 @@ const isExternalLink = computed(() => {
     <li v-if="isExternalLink">
         <a
             class="uk-button uk-button-default uk-button-small uk-text-center"
-            :href="to"
+            :href="to.toString()"
             target="_blank">
             <slot>{{ label }}</slot>
         </a>

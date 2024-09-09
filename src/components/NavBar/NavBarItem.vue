@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 /**
  * Allow external + internal links in same component, plus add active class to
  * li instead of a element
@@ -7,16 +7,16 @@
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 
-const props = defineProps({
-    to: {
-        type: String,
-        default: ''
-    },
-    label: {
-        type: String,
-        default: ''
+const props = withDefaults(
+    defineProps<{
+        to?: string | { name: string }
+        label?: string
+    }>(),
+    {
+        to: '',
+        label: ''
     }
-})
+)
 
 const isExternalLink = computed(() => {
     return props.to === '' || (typeof props.to === 'string' && props.to.startsWith('http'))
@@ -25,11 +25,11 @@ const isExternalLink = computed(() => {
 
 <template>
     <li v-if="isExternalLink">
-        <a :href="to" target="_blank">
+        <a :href="to.toString()" target="_blank">
             <slot>{{ label }}</slot>
         </a>
     </li>
-    <RouterLink v-else v-bind="$props" custom v-slot="{ isActive, href, navigate }">
+    <RouterLink v-else :to="to" v-bind="$props" custom v-slot="{ isActive, href, navigate }">
         <li :class="{ 'uk-active': isActive }">
             <a v-bind="$attrs" :href="href" @click="navigate">
                 <slot>{{ label }}</slot>

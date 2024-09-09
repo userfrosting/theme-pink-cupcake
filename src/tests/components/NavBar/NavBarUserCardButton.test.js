@@ -76,11 +76,11 @@ describe('NavBarUserCardButton.vue', () => {
         expect(wrapper.text()).toMatch('UserFrosting')
     })
 
-    test('Internal, using both slot', () => {
+    test('Internal, using both slot, object for to', () => {
         // Arrange
         const wrapper = mount(NavBarUserCardButton, {
             props: {
-                to: '/',
+                to: { name: 'home' },
                 label: 'This is the Label as prop'
             },
             slots: {

@@ -3,7 +3,7 @@ import AppLink from '../Content/AppLink.vue'
 
 withDefaults(
     defineProps<{
-        to?: string
+        to?: string | { name: string }
         title?: string
     }>(),
     {

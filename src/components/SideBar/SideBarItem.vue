@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 /**
  * Allow external + internal links in same component, plus add active class to
  * li instead of a element
@@ -7,24 +7,20 @@
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 
-const props = defineProps({
-    to: {
-        type: String,
-        default: ''
-    },
-    label: {
-        type: String,
-        default: ''
-    },
-    faIcon: {
-        type: String,
-        default: ''
-    },
-    icon: {
-        type: String,
-        default: ''
+const props = withDefaults(
+    defineProps<{
+        to?: string | { name: string }
+        label?: string
+        faIcon?: string
+        icon?: string
+    }>(),
+    {
+        to: '',
+        label: '',
+        faIcon: '',
+        icon: ''
     }
-})
+)
 
 const isExternalLink = computed(() => {
     return props.to === '' || (typeof props.to === 'string' && props.to.startsWith('http'))
@@ -33,7 +29,7 @@ const isExternalLink = computed(() => {
 
 <template>
     <li v-if="isExternalLink">
-        <a :href="to" target="_blank">
+        <a :href="to.toString()" target="_blank">
             <span
                 v-if="icon"
                 :data-uk-icon="icon"
@@ -47,7 +43,7 @@ const isExternalLink = computed(() => {
             <slot>{{ label }}</slot>
         </a>
     </li>
-    <RouterLink v-else v-bind="$props" custom v-slot="{ isExactActive, href, navigate }">
+    <RouterLink v-else :to="to" v-bind="$props" custom v-slot="{ isExactActive, href, navigate }">
         <li :class="{ 'uk-active': isExactActive }">
             <a v-bind="$attrs" :href="href" @click="navigate">
                 <span

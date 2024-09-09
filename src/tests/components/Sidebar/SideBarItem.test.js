@@ -64,7 +64,7 @@ describe('SideBarItem.vue', () => {
     test('Renders with slot', () => {
         const wrapper = mount(SideBarItem, {
             props: {
-                to: '/',
+                to: { name: 'home' },
                 label: 'Home',
                 icon: 'icon-home',
                 faIcon: 'fa-home'

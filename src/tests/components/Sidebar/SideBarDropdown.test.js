@@ -71,7 +71,7 @@ describe('SideBarDropdown.vue', () => {
     test('Renders with all slots', () => {
         const wrapper = mount(SideBarDropdown, {
             props: {
-                to: '/',
+                to: { name: 'home' },
                 label: 'Home',
                 icon: 'icon-home',
                 faIcon: 'fa-home',
