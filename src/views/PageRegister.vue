@@ -9,7 +9,10 @@ import FormRegister from '../components/Content/FormRegister.vue'
         <hr />
         <div class="uk-text-center">
             <p>Already have an account ?</p>
-            <button class="uk-button uk-button-default">
+            <button
+                class="uk-button uk-button-default"
+                @click="$emit('gotoLogin')"
+                data-test="gotoLogin">
                 <font-awesome-icon :icon="['fas', 'right-to-bracket']" /> Login
             </button>
         </div>

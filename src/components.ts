@@ -12,6 +12,7 @@ import MainContent from './components/Content/MainContent.vue'
 import FooterContent from './components/Content/FooterContent.vue'
 import FormLogin from './components/Content/FormLogin.vue'
 import FormRegister from './components/Content/FormRegister.vue'
+import FormForgotPassword from './components/Content/FormForgotPassword.vue'
 import NavBar from './components/NavBar/NavBar.vue'
 import NavBarDropdown from './components/NavBar/NavBarDropdown.vue'
 import NavBarDropdownSeparator from './components/NavBar/NavBarDropdownSeparator.vue'
@@ -21,6 +22,8 @@ import NavBarUserCard from './components/NavBar/NavBarUserCard.vue'
 import NavBarUserCardButton from './components/NavBar/NavBarUserCardButton.vue'
 import PageLogin from './views/PageLogin.vue'
 import PageRegister from './views/PageRegister.vue'
+import PageForgotPassword from './views/PageForgotPassword.vue'
+import PageResendVerification from './views/PageResendVerification.vue'
 import SideBar from './components/SideBar/SideBar.vue'
 import SideBarDropdown from './components/SideBar/SideBarDropdown.vue'
 import SideBarItem from './components/SideBar/SideBarItem.vue'
@@ -35,6 +38,7 @@ export {
     FooterContent,
     FormLogin,
     FormRegister,
+    FormForgotPassword,
     NavBar,
     NavBarDropdown,
     NavBarDropdownSeparator,
@@ -44,6 +48,8 @@ export {
     NavBarUserCardButton,
     PageLogin,
     PageRegister,
+    PageForgotPassword,
+    PageResendVerification,
     SideBar,
     SideBarDropdown,
     SideBarItem,
@@ -60,6 +66,7 @@ export default {
             .component('UFFooterContent', FooterContent)
             .component('UFFormLogin', FormLogin)
             .component('UFFormRegister', FormRegister)
+            .component('UFFormForgotPassword', FormForgotPassword)
             .component('UFNavBar', NavBar)
             .component('UFNavBarDropdown', NavBarDropdown)
             .component('UFNavBarDropdownSeparator', NavBarDropdownSeparator)
@@ -69,6 +76,8 @@ export default {
             .component('UFNavBarUserCardButton', NavBarUserCardButton)
             .component('UFPageLogin', PageLogin)
             .component('UFPageRegister', PageRegister)
+            .component('UFPageForgotPassword', PageForgotPassword)
+            .component('UFPageResendVerification', PageResendVerification)
             .component('UFSideBar', SideBar)
             .component('UFSideBarDropdown', SideBarDropdown)
             .component('UFSideBarItem', SideBarItem)
@@ -86,6 +95,7 @@ declare module 'vue' {
         UFFooterContent: typeof FooterContent
         UFFormLogin: typeof FormLogin
         UFFormRegister: typeof FormRegister
+        UFFormForgotPassword: typeof FormForgotPassword
         UFNavBar: typeof NavBar
         UFNavBarDropdown: typeof NavBarDropdown
         UFNavBarDropdownSeparator: typeof NavBarDropdownSeparator
@@ -95,6 +105,8 @@ declare module 'vue' {
         UFNavBarUserCardButton: typeof NavBarUserCardButton
         UFPageLogin: typeof PageLogin
         UFPageRegister: typeof PageRegister
+        UFPageForgotPassword: typeof PageForgotPassword
+        UFPageResendVerification: typeof PageResendVerification
         UFSideBar: typeof SideBar
         UFSideBarDropdown: typeof SideBarDropdown
         UFSideBarItem: typeof SideBarItem

@@ -1,28 +1,25 @@
 import { expect, test, describe } from 'vitest'
 import { mount, config } from '@vue/test-utils'
-import PageRegister from '../../views/PageRegister.vue'
+import PageForgotPassword from '../../views/PageForgotPassword.vue'
 import CardBoxBig from '../../components/Content/CardBoxBig.vue'
 import CardBox from '../../components/Content/CardBox.vue'
 import AlertContainer from '../../components/AlertContainer.vue'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+// Register font-awesome-icon component
+library.add(fas)
+config.global.stubs['FontAwesomeIcon'] = FontAwesomeIcon
 
 // Register global components
 config.global.components['UFCardBoxBig'] = CardBoxBig
 config.global.components['UFCardBox'] = CardBox
 config.global.components['UFAlertContainer'] = AlertContainer
 
-// Mock FormRegister & FontAwesomeIcon
-config.global.stubs['FontAwesomeIcon'] = { template: '<span></span>' }
-config.global.stubs['FormRegister'] = { template: '<span></span>' }
-
-describe('PageRegister.vue', () => {
+describe('PageForgotPassword.vue', () => {
     test('Render correctly', () => {
-        const wrapper = mount(PageRegister)
+        const wrapper = mount(PageForgotPassword)
         expect(wrapper.exists()).toBe(true)
-    })
-
-    test('Emits gotoLogin event', async () => {
-        const wrapper = mount(PageRegister)
-        await wrapper.find('[data-test="gotoLogin"]').trigger('click')
-        expect(wrapper.emitted('gotoLogin')).toBeTruthy()
     })
 })

@@ -22,4 +22,22 @@ describe('PageLogin.vue', () => {
         const wrapper = mount(PageLogin)
         expect(wrapper.exists()).toBe(true)
     })
+
+    test('Emits gotoForgotPassword event', async () => {
+        const wrapper = mount(PageLogin)
+        await wrapper.find('[data-test="gotoForgotPassword"]').trigger('click')
+        expect(wrapper.emitted('gotoForgotPassword')).toBeTruthy()
+    })
+
+    test('Emits gotoResendVerification event', async () => {
+        const wrapper = mount(PageLogin)
+        await wrapper.find('[data-test="gotoResendVerification"]').trigger('click')
+        expect(wrapper.emitted('gotoResendVerification')).toBeTruthy()
+    })
+
+    test('Emits gotoRegistration event', async () => {
+        const wrapper = mount(PageLogin)
+        await wrapper.find('[data-test="gotoRegistration"]').trigger('click')
+        expect(wrapper.emitted('gotoRegistration')).toBeTruthy()
+    })
 })

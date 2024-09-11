@@ -65,7 +65,6 @@ async function sendLogin() {
                         v-model="form.password" />
                 </div>
             </div>
-            <p><a>Forgot your password?</a></p>
             <div class="uk-text-center">
                 <button class="uk-button uk-button-primary" :disabled="loading" data-test="submit">
                     Login
