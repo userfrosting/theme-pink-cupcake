@@ -4,7 +4,7 @@ import FormResendVerification from '../components/Content/FormResendVerification
 
 <template>
     <UFCardBoxBig>
-        <h3 class="uk-card-title">Resend verification email</h3>
+        <h3 class="uk-card-title">Resend Verification Email</h3>
         <p>
             Please enter the email address you used to sign up, and your verification email will be
             resent.
