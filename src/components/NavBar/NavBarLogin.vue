@@ -6,5 +6,10 @@ import FormLogin from '../Content/FormLogin.vue'
 <template>
     <NavBarDropdown label="Login" class="uf-nav-login uk-text-center">
         <FormLogin />
+        <div class="uk-text-center">
+            <button class="uk-button uk-button-default" @click="$emit('gotoRegistration')" data-test="gotoRegistration">
+                Register
+            </button>
+        </div>
     </NavBarDropdown>
 </template>
