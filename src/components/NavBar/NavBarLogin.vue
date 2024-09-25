@@ -14,5 +14,6 @@ import FormLogin from '../Content/FormLogin.vue'
                 Register
             </button>
         </div>
+        <slot></slot>
     </NavBarDropdown>
 </template>
