@@ -14,7 +14,7 @@ const props = withDefaults(
 )
 
 const isExternalLink = computed(() => {
-    return props.to === '' || (typeof props.to === 'string' && props.to.startsWith('http'))
+    return typeof props.to === 'string' && props.to.startsWith('http')
 })
 </script>
 
