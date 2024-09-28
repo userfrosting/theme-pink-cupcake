@@ -31,7 +31,7 @@ withDefaults(
             <div v-if="icon || faIcon" class="uk-width-auto">
                 <span
                     v-if="icon"
-                    :data-uk-icon="'icon: '+icon+'; ratio: 2'"
+                    :data-uk-icon="'icon: ' + icon + '; ratio: 2'"
                     class="uk-margin-small-right"></span>
                 <font-awesome-icon v-if="faIcon" :icon="faIcon" size="2xl" fixed-width />
             </div>
