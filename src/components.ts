@@ -6,6 +6,7 @@ import type { App } from 'vue'
 
 import AlertContainer from './components/AlertContainer.vue'
 import AppLink from './components/Content/AppLink.vue'
+import InfoBox from './components/Content/InfoBox.vue'
 import CardBox from './components/Content/CardBox.vue'
 import CardBoxBig from './components/Content/CardBoxBig.vue'
 import MainContent from './components/Content/MainContent.vue'
@@ -32,6 +33,7 @@ import SideBarLabel from './components/SideBar/SideBarLabel.vue'
 export {
     AlertContainer,
     AppLink,
+    InfoBox,
     CardBox,
     CardBoxBig,
     MainContent,
@@ -60,6 +62,7 @@ export default {
     install: (app: App) => {
         app.component('UFAlertContainer', AlertContainer)
             .component('UFAppLink', AppLink)
+            .component('UFInfoBox', InfoBox)
             .component('UFCardBox', CardBox)
             .component('UFCardBoxBig', CardBoxBig)
             .component('UFMainContent', MainContent)
@@ -89,6 +92,7 @@ declare module 'vue' {
     export interface GlobalComponents {
         UFAlertContainer: typeof AlertContainer
         UFAppLink: typeof AppLink
+        UFInfoBox: typeof InfoBox
         UFCardBox: typeof CardBox
         UFCardBoxBig: typeof CardBoxBig
         UFMainContent: typeof MainContent
