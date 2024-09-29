@@ -35,6 +35,6 @@ withDefaults(
                     <span v-if="label" class="uk-text-meta uk-text-uppercase">{{ label }}</span>
                 </div>
             </div>
-        </div> 
+        </div>
     </AppLink>
 </template>
