@@ -1,6 +1,8 @@
 declare function __VLS_template(): {
     slots: {
+        header?(_: {}): any;
         default?(_: {}): any;
+        footer?(_: {}): any;
     };
     refs: {};
     attrs: Partial<{}>;

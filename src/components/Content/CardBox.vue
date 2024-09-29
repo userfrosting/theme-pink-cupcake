@@ -6,15 +6,16 @@ defineProps({
 
 <template>
     <div class="uk-card uk-card-default uk-card-small">
-        <div v-if="title" class="uk-card-header">
-            <div class="uk-grid uk-grid-small">
-                <div class="uk-width-auto">
-                    <h4 data-test="title">{{ title }}</h4>
-                </div>
-            </div>
+        <div v-if="title || $slots.header" class="uk-card-header">
+            <h4 data-test="title">
+                <slot name="header">{{ title }}</slot>
+            </h4>
         </div>
         <div class="uk-card-body" data-test="slot">
             <slot></slot>
+        </div>
+        <div v-if="$slots.footer" class="uk-card-footer">
+            <slot name="footer"></slot>
         </div>
     </div>
 </template>
