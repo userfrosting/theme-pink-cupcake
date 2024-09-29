@@ -2,6 +2,7 @@ declare function __VLS_template(): {
     slots: {
         default?(_: {}): any;
         default?(_: {}): any;
+        default?(_: {}): any;
     };
     refs: {};
     attrs: Partial<{}>;
@@ -11,12 +12,12 @@ declare const __VLS_component: import('vue').DefineComponent<{
     to: string | {
         name: string;
     };
-    label: string;
+    label?: string;
 }, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<{
     to: string | {
         name: string;
     };
-    label: string;
+    label?: string;
 }> & Readonly<{}>, {
     label: string;
     to: string | {

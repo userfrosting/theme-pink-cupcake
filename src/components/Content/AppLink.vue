@@ -5,7 +5,7 @@ import { RouterLink } from 'vue-router'
 const link = withDefaults(
     defineProps<{
         to: string | { name: string }
-        label: string
+        label?: string
     }>(),
     {
         to: '',
@@ -22,12 +22,19 @@ const isExternalLink = computed(() => {
 const externalLink = computed((): string => {
     return link.to as string
 })
+
+const toIsEmpty = computed(() => {
+    return link.to === ''
+})
 </script>
 
 <template>
     <a v-if="isExternalLink" :href="externalLink" target="_blank">
         <slot>{{ label }}</slot>
     </a>
+    <div v-else-if="toIsEmpty">
+        <slot>{{ label }}</slot>
+    </div>
     <RouterLink v-else :to="to">
         <slot>{{ label }}</slot>
     </RouterLink>
