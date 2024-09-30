@@ -10,6 +10,7 @@ import InfoBox from './components/Content/InfoBox.vue'
 import CardBox from './components/Content/CardBox.vue'
 import CardBoxBig from './components/Content/CardBoxBig.vue'
 import MainContent from './components/Content/MainContent.vue'
+import HeaderPage from './components/Content/HeaderPage.vue'
 import FooterContent from './components/Content/FooterContent.vue'
 import FormLogin from './components/Content/FormLogin.vue'
 import FormRegister from './components/Content/FormRegister.vue'
@@ -37,6 +38,7 @@ export {
     CardBox,
     CardBoxBig,
     MainContent,
+    HeaderPage,
     FooterContent,
     FormLogin,
     FormRegister,
@@ -66,6 +68,7 @@ export default {
             .component('UFCardBox', CardBox)
             .component('UFCardBoxBig', CardBoxBig)
             .component('UFMainContent', MainContent)
+            .component('UFHeaderPage', HeaderPage)
             .component('UFFooterContent', FooterContent)
             .component('UFFormLogin', FormLogin)
             .component('UFFormRegister', FormRegister)
@@ -96,6 +99,7 @@ declare module 'vue' {
         UFCardBox: typeof CardBox
         UFCardBoxBig: typeof CardBoxBig
         UFMainContent: typeof MainContent
+        UFHeaderPage: typeof HeaderPage
         UFFooterContent: typeof FooterContent
         UFFormLogin: typeof FormLogin
         UFFormRegister: typeof FormRegister

@@ -5,6 +5,7 @@ import { default as InfoBox } from './components/Content/InfoBox.vue';
 import { default as CardBox } from './components/Content/CardBox.vue';
 import { default as CardBoxBig } from './components/Content/CardBoxBig.vue';
 import { default as MainContent } from './components/Content/MainContent.vue';
+import { default as HeaderPage } from './components/Content/HeaderPage.vue';
 import { default as FooterContent } from './components/Content/FooterContent.vue';
 import { default as FormLogin } from './components/Content/FormLogin.vue';
 import { default as FormRegister } from './components/Content/FormRegister.vue';
@@ -24,7 +25,7 @@ import { default as SideBar } from './components/SideBar/SideBar.vue';
 import { default as SideBarDropdown } from './components/SideBar/SideBarDropdown.vue';
 import { default as SideBarItem } from './components/SideBar/SideBarItem.vue';
 import { default as SideBarLabel } from './components/SideBar/SideBarLabel.vue';
-export { AlertContainer, AppLink, InfoBox, CardBox, CardBoxBig, MainContent, FooterContent, FormLogin, FormRegister, FormForgotPassword, NavBar, NavBarDropdown, NavBarDropdownSeparator, NavBarItem, NavBarLogin, NavBarUserCard, NavBarUserCardButton, PageLogin, PageRegister, PageForgotPassword, PageResendVerification, SideBar, SideBarDropdown, SideBarItem, SideBarLabel };
+export { AlertContainer, AppLink, InfoBox, CardBox, CardBoxBig, MainContent, HeaderPage, FooterContent, FormLogin, FormRegister, FormForgotPassword, NavBar, NavBarDropdown, NavBarDropdownSeparator, NavBarItem, NavBarLogin, NavBarUserCard, NavBarUserCardButton, PageLogin, PageRegister, PageForgotPassword, PageResendVerification, SideBar, SideBarDropdown, SideBarItem, SideBarLabel };
 declare const _default: {
     install: (app: App) => void;
 };
@@ -37,6 +38,7 @@ declare module 'vue' {
         UFCardBox: typeof CardBox;
         UFCardBoxBig: typeof CardBoxBig;
         UFMainContent: typeof MainContent;
+        UFHeaderPage: typeof HeaderPage;
         UFFooterContent: typeof FooterContent;
         UFFormLogin: typeof FormLogin;
         UFFormRegister: typeof FormRegister;
