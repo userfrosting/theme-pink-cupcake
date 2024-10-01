@@ -118,8 +118,8 @@ const np = {
   __name: "InfoBox",
   props: {
     to: { default: "" },
-    label: { default: "" },
-    value: { default: "" },
+    label: { default: null },
+    value: { default: null },
     faIcon: { default: "" },
     icon: { default: "" }
   },
@@ -147,8 +147,8 @@ const np = {
                 }, null, 8, ["icon"])) : ut("", !0)
               ])) : ut("", !0),
               C("div", dp, [
-                s.value ? (D(), q("h4", fp, pt(s.value), 1)) : ut("", !0),
-                s.label ? (D(), q("span", pp, pt(s.label), 1)) : ut("", !0)
+                s.value !== null ? (D(), q("h4", fp, pt(s.value), 1)) : ut("", !0),
+                s.label !== null ? (D(), q("span", pp, pt(s.label), 1)) : ut("", !0)
               ])
             ])
           ])
