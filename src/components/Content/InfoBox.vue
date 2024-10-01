@@ -32,7 +32,9 @@ withDefaults(
                 </div>
                 <div class="uk-width-expand">
                     <h4 v-if="value !== null" class="uk-margin-remove">{{ value }}</h4>
-                    <span v-if="label !== null" class="uk-text-meta uk-text-uppercase">{{ label }}</span>
+                    <span v-if="label !== null" class="uk-text-meta uk-text-uppercase">
+                        {{ label }}
+                    </span>
                 </div>
             </div>
         </div>
