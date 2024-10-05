@@ -2,6 +2,10 @@
 import { useSprunjer } from '@userfrosting/sprinkle-core/sprunjer'
 import SprunjePaginator from './SprunjePaginator.vue'
 
+// interface AssociativeArray {
+//     [key: string]: string;
+// }
+
 const props = defineProps({
     dataUrl: {
         type: String,
@@ -10,10 +14,25 @@ const props = defineProps({
     hidePagination: {
         type: Boolean,
         default: false
-    }
+    },
+    // TODO : Add type AssociativeArray
+    defaultSorts: {
+        default: {}
+    },
+    defaultFilters: {
+        default: {}
+    },
+    defaultSize: Number,
+    defaultPage: Number
 })
 
-const sprunjer = useSprunjer(props.dataUrl)
+const sprunjer = useSprunjer(
+    props.dataUrl, 
+    props.defaultSorts,
+    props.defaultFilters,
+    props.defaultSize,
+    props.defaultPage
+)
 const { rows, fetch, loading } = sprunjer
 </script>
 

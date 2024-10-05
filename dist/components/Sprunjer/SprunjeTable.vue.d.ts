@@ -25,6 +25,14 @@ declare const __VLS_component: import('vue').DefineComponent<import('vue').Extra
         type: BooleanConstructor;
         default: boolean;
     };
+    defaultSorts: {
+        default: {};
+    };
+    defaultFilters: {
+        default: {};
+    };
+    defaultSize: NumberConstructor;
+    defaultPage: NumberConstructor;
 }>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<import('vue').ExtractPropTypes<{
     dataUrl: {
         type: StringConstructor;
@@ -34,8 +42,18 @@ declare const __VLS_component: import('vue').DefineComponent<import('vue').Extra
         type: BooleanConstructor;
         default: boolean;
     };
+    defaultSorts: {
+        default: {};
+    };
+    defaultFilters: {
+        default: {};
+    };
+    defaultSize: NumberConstructor;
+    defaultPage: NumberConstructor;
 }>> & Readonly<{}>, {
     hidePagination: boolean;
+    defaultSorts: {};
+    defaultFilters: {};
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, true, {}, any>;
 declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
 export default _default;
