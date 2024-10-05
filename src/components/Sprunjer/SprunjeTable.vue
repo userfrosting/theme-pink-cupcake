@@ -27,7 +27,7 @@ const props = defineProps({
 })
 
 const sprunjer = useSprunjer(
-    props.dataUrl, 
+    props.dataUrl,
     props.defaultSorts,
     props.defaultFilters,
     props.defaultSize,
