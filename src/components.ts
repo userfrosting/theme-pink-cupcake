@@ -30,6 +30,10 @@ import SideBar from './components/SideBar/SideBar.vue'
 import SideBarDropdown from './components/SideBar/SideBarDropdown.vue'
 import SideBarItem from './components/SideBar/SideBarItem.vue'
 import SideBarLabel from './components/SideBar/SideBarLabel.vue'
+import SprunjeColumn from './components/Sprunjer/SprunjeColumn.vue'
+import SprunjeHeader from './components/Sprunjer/SprunjeHeader.vue'
+import SprunjePaginator from './components/Sprunjer/SprunjePaginator.vue'
+import SprunjeTable from './components/Sprunjer/SprunjeTable.vue'
 
 export {
     AlertContainer,
@@ -57,7 +61,11 @@ export {
     SideBar,
     SideBarDropdown,
     SideBarItem,
-    SideBarLabel
+    SideBarLabel,
+    SprunjeColumn,
+    SprunjeHeader,
+    SprunjePaginator,
+    SprunjeTable
 }
 
 export default {
@@ -88,6 +96,10 @@ export default {
             .component('UFSideBarDropdown', SideBarDropdown)
             .component('UFSideBarItem', SideBarItem)
             .component('UFSideBarLabel', SideBarLabel)
+            .component('UFSprunjeColumn', SprunjeColumn)
+            .component('UFSprunjeHeader', SprunjeHeader)
+            .component('UFSprunjePaginator', SprunjePaginator)
+            .component('UFSprunjeTable', SprunjeTable)
     }
 }
 
@@ -119,5 +131,9 @@ declare module 'vue' {
         UFSideBarDropdown: typeof SideBarDropdown
         UFSideBarItem: typeof SideBarItem
         UFSideBarLabel: typeof SideBarLabel
+        UFSprunjeColumn: typeof SprunjeColumn
+        UFSprunjeHeader: typeof SprunjeHeader
+        UFSprunjePaginator: typeof SprunjePaginator
+        UFSprunjeTable: typeof SprunjeTable
     }
 }

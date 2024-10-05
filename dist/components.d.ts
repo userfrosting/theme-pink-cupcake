@@ -25,7 +25,11 @@ import { default as SideBar } from './components/SideBar/SideBar.vue';
 import { default as SideBarDropdown } from './components/SideBar/SideBarDropdown.vue';
 import { default as SideBarItem } from './components/SideBar/SideBarItem.vue';
 import { default as SideBarLabel } from './components/SideBar/SideBarLabel.vue';
-export { AlertContainer, AppLink, InfoBox, CardBox, CardBoxBig, MainContent, HeaderPage, FooterContent, FormLogin, FormRegister, FormForgotPassword, NavBar, NavBarDropdown, NavBarDropdownSeparator, NavBarItem, NavBarLogin, NavBarUserCard, NavBarUserCardButton, PageLogin, PageRegister, PageForgotPassword, PageResendVerification, SideBar, SideBarDropdown, SideBarItem, SideBarLabel };
+import { default as SprunjeColumn } from './components/Sprunjer/SprunjeColumn.vue';
+import { default as SprunjeHeader } from './components/Sprunjer/SprunjeHeader.vue';
+import { default as SprunjePaginator } from './components/Sprunjer/SprunjePaginator.vue';
+import { default as SprunjeTable } from './components/Sprunjer/SprunjeTable.vue';
+export { AlertContainer, AppLink, InfoBox, CardBox, CardBoxBig, MainContent, HeaderPage, FooterContent, FormLogin, FormRegister, FormForgotPassword, NavBar, NavBarDropdown, NavBarDropdownSeparator, NavBarItem, NavBarLogin, NavBarUserCard, NavBarUserCardButton, PageLogin, PageRegister, PageForgotPassword, PageResendVerification, SideBar, SideBarDropdown, SideBarItem, SideBarLabel, SprunjeColumn, SprunjeHeader, SprunjePaginator, SprunjeTable };
 declare const _default: {
     install: (app: App) => void;
 };
@@ -58,5 +62,9 @@ declare module 'vue' {
         UFSideBarDropdown: typeof SideBarDropdown;
         UFSideBarItem: typeof SideBarItem;
         UFSideBarLabel: typeof SideBarLabel;
+        UFSprunjeColumn: typeof SprunjeColumn;
+        UFSprunjeHeader: typeof SprunjeHeader;
+        UFSprunjePaginator: typeof SprunjePaginator;
+        UFSprunjeTable: typeof SprunjeTable;
     }
 }
