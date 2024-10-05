@@ -25,7 +25,24 @@ declare const __VLS_component: import('vue').DefineComponent<import('vue').Extra
         type: BooleanConstructor;
         default: boolean;
     };
-}>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<import('vue').ExtractPropTypes<{
+}>, {
+    sprunjer: {
+        dataUrl: string;
+        size: import('vue').Ref<number, number>;
+        page: import('vue').Ref<number, number>;
+        sorts: import('vue').Ref<string, string>;
+        data: import('vue').Ref<any, any>;
+        fetch: () => Promise<void>;
+        loading: import('vue').Ref<boolean, boolean>;
+        downloadCsv: () => void;
+        totalPages: import('vue').ComputedRef<number>;
+        countFiltered: import('vue').ComputedRef<any>;
+        count: import('vue').ComputedRef<any>;
+        rows: import('vue').ComputedRef<any>;
+        first: import('vue').ComputedRef<number>;
+        last: import('vue').ComputedRef<number>;
+    };
+}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<import('vue').ExtractPropTypes<{
     dataUrl: {
         type: StringConstructor;
         required: true;
