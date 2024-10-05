@@ -15,8 +15,6 @@ const props = defineProps({
 
 const sprunjer = useSprunjer(props.dataUrl)
 const { rows, fetch, loading } = sprunjer
-
-defineExpose({ sprunjer })
 </script>
 
 <template>
