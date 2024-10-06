@@ -16,7 +16,7 @@ export default defineConfig({
             }
         },
         rollupOptions: {
-            external: ['vue', 'vue-router', 'pinia'],
+            external: ['vue', 'vue-router', 'pinia', '@userfrosting/sprinkle-core/sprunjer'],
             output: {
                 exports: 'named',
                 globals: {
