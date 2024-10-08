@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { provide } from 'vue'
 import { useSprunjer } from '@userfrosting/sprinkle-core/sprunjer'
 import SprunjePaginator from './SprunjePaginator.vue'
 
@@ -33,12 +34,14 @@ const sprunjer = useSprunjer(
     props.defaultSize,
     props.defaultPage
 )
-const { rows, fetch, loading } = sprunjer
+const { rows } = sprunjer
+
+provide('sprunjer', sprunjer)
 </script>
 
 <template>
-    <slot name="actions" :sprunjer="{ fetch, loading }"></slot>
-    <table class="uk-table uk-table-striped">
+    <slot name="actions"></slot>
+    <table class="uk-table uk-table-striped uk-table-small">
         <thead>
             <tr>
                 <slot name="header"></slot>
@@ -51,6 +54,6 @@ const { rows, fetch, loading } = sprunjer
         </tbody>
     </table>
     <slot v-if="!hidePagination" name="paginator">
-        <SprunjePaginator :sprunjer="sprunjer" />
+        <SprunjePaginator />
     </slot>
 </template>

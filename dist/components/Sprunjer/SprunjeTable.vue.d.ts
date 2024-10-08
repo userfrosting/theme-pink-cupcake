@@ -1,11 +1,6 @@
 declare function __VLS_template(): {
     slots: {
-        actions?(_: {
-            sprunjer: {
-                fetch: () => Promise<void>;
-                loading: boolean;
-            };
-        }): any;
+        actions?(_: {}): any;
         header?(_: {}): any;
         body?(_: {
             item: any;

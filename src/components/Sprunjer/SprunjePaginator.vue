@@ -1,16 +1,17 @@
 <script setup lang="ts">
 import type { Sprunjer } from '@userfrosting/sprinkle-core/sprunjer'
+import { inject } from 'vue'
 
 interface Props {
-    sprunjer: Sprunjer
     rowsPerPageOptions?: number[]
 }
 
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
     rowsPerPageOptions: () => [5, 10, 20, 50]
 })
 
-const { size, page, totalPages, countFiltered, first, last } = props.sprunjer
+const sprunjer = inject('sprunjer') as Sprunjer
+const { size, page, totalPages, countFiltered, first, last } = sprunjer
 
 function goToPage(goToPage: number) {
     page.value = goToPage
