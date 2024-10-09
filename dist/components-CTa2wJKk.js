@@ -12122,30 +12122,24 @@ const Yw = /* @__PURE__ */ si(Gw, [["render", Xw]]), Qw = {
     defaultPage: { default: 0 }
   },
   setup(i) {
-    const s = op(
-      i.dataUrl,
-      i.defaultSorts,
-      i.defaultFilters,
-      i.defaultSize,
-      i.defaultPage
-    ), { rows: a, sorts: r } = s;
-    return console.log("SprunjeTable", i.defaultSorts, r), sp("sprunjer", s), (u, h) => (I(), j(Zi, null, [
-      et(u.$slots, "actions"),
+    const s = op(i.dataUrl, i.defaultSorts, i.defaultFilters, i.defaultSize, i.defaultPage), { rows: a } = s;
+    return sp("sprunjer", s), (r, u) => (I(), j(Zi, null, [
+      et(r.$slots, "actions"),
       x("table", ly, [
         x("thead", null, [
           x("tr", null, [
-            et(u.$slots, "header")
+            et(r.$slots, "header")
           ])
         ]),
         x("tbody", null, [
-          (I(!0), j(Zi, null, Uo(M(a), (f) => (I(), j("tr", {
-            key: f.id
+          (I(!0), j(Zi, null, Uo(M(a), (h) => (I(), j("tr", {
+            key: h.id
           }, [
-            et(u.$slots, "body", { item: f })
+            et(r.$slots, "body", { item: h })
           ]))), 128))
         ])
       ]),
-      u.hidePagination ? ht("", !0) : et(u.$slots, "paginator", { key: 0 }, () => [
+      r.hidePagination ? ht("", !0) : et(r.$slots, "paginator", { key: 0 }, () => [
         Ut(qc)
       ])
     ], 64));

@@ -3,7 +3,7 @@ import { provide } from 'vue'
 import { useSprunjer } from '@userfrosting/sprinkle-core/sprunjer'
 import SprunjePaginator from './SprunjePaginator.vue'
 
-const { 
+const {
     dataUrl,
     hidePagination = false,
     defaultSorts = {},
@@ -19,15 +19,8 @@ const {
     defaultPage?: number
 }>()
 
-const sprunjer = useSprunjer(
-    dataUrl,
-    defaultSorts,
-    defaultFilters,
-    defaultSize,
-    defaultPage
-)
-const { rows, sorts } = sprunjer
-console.log("SprunjeTable", defaultSorts, sorts)
+const sprunjer = useSprunjer(dataUrl, defaultSorts, defaultFilters, defaultSize, defaultPage)
+const { rows } = sprunjer
 
 provide('sprunjer', sprunjer)
 </script>
