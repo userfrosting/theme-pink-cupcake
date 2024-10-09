@@ -12139,24 +12139,24 @@ const Yw = /* @__PURE__ */ si(Gw, [["render", Xw]]), Qw = {
       s.defaultFilters,
       s.defaultSize,
       s.defaultPage
-    ), { rows: r } = a;
-    return sp("sprunjer", a), (u, h) => (I(), j(Zi, null, [
-      et(u.$slots, "actions"),
+    ), { rows: r, sorts: u } = a;
+    return console.log("SprunjeTable", s, u), sp("sprunjer", a), (h, f) => (I(), j(Zi, null, [
+      et(h.$slots, "actions"),
       x("table", ly, [
         x("thead", null, [
           x("tr", null, [
-            et(u.$slots, "header")
+            et(h.$slots, "header")
           ])
         ]),
         x("tbody", null, [
-          (I(!0), j(Zi, null, Uo(M(r), (f) => (I(), j("tr", {
-            key: f.id
+          (I(!0), j(Zi, null, Uo(M(r), (g) => (I(), j("tr", {
+            key: g.id
           }, [
-            et(u.$slots, "body", { item: f })
+            et(h.$slots, "body", { item: g })
           ]))), 128))
         ])
       ]),
-      i.hidePagination ? ht("", !0) : et(u.$slots, "paginator", { key: 0 }, () => [
+      i.hidePagination ? ht("", !0) : et(h.$slots, "paginator", { key: 0 }, () => [
         Ut(qc)
       ])
     ], 64));

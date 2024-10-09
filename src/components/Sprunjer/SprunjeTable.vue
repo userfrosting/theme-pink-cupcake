@@ -34,7 +34,8 @@ const sprunjer = useSprunjer(
     props.defaultSize,
     props.defaultPage
 )
-const { rows } = sprunjer
+const { rows, sorts } = sprunjer
+console.log("SprunjeTable", props, sorts)
 
 provide('sprunjer', sprunjer)
 </script>
