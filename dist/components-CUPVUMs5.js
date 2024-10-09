@@ -11934,7 +11934,7 @@ const Fw = /* @__PURE__ */ si(Pw, [["render", Nw]]), Dw = ["data-uk-icon"], jw =
         key: 1,
         to: r.to
       }, r.$props, { custom: "" }), {
-        default: Bt(({ isExactActive: f, href: g, navigate: k }) => [
+        default: Bt(({ isActive: f, href: g, navigate: k }) => [
           x("li", {
             class: Ce({ "uk-active": f })
           }, [

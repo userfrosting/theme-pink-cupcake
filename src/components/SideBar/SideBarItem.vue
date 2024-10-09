@@ -43,8 +43,8 @@ const isExternalLink = computed(() => {
             <slot>{{ label }}</slot>
         </a>
     </li>
-    <RouterLink v-else :to="to" v-bind="$props" custom v-slot="{ isExactActive, href, navigate }">
-        <li :class="{ 'uk-active': isExactActive }">
+    <RouterLink v-else :to="to" v-bind="$props" custom v-slot="{ isActive, href, navigate }">
+        <li :class="{ 'uk-active': isActive }">
             <a v-bind="$attrs" :href="href" @click="navigate">
                 <span
                     v-if="icon"
