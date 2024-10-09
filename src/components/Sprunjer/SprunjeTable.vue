@@ -3,39 +3,31 @@ import { provide } from 'vue'
 import { useSprunjer } from '@userfrosting/sprinkle-core/sprunjer'
 import SprunjePaginator from './SprunjePaginator.vue'
 
-// interface AssociativeArray {
-//     [key: string]: string;
-// }
-
-const props = defineProps({
-    dataUrl: {
-        type: String,
-        required: true
-    },
-    hidePagination: {
-        type: Boolean,
-        default: false
-    },
-    // TODO : Add type AssociativeArray
-    defaultSorts: {
-        default: {}
-    },
-    defaultFilters: {
-        default: {}
-    },
-    defaultSize: Number,
-    defaultPage: Number
-})
+const { 
+    dataUrl,
+    hidePagination = false,
+    defaultSorts = {},
+    defaultFilters = {},
+    defaultSize = 10,
+    defaultPage = 0
+} = defineProps<{
+    dataUrl: string
+    hidePagination?: boolean
+    defaultSorts?: { [key: string]: string }
+    defaultFilters?: { [key: string]: string }
+    defaultSize?: number
+    defaultPage?: number
+}>()
 
 const sprunjer = useSprunjer(
-    props.dataUrl,
-    props.defaultSorts,
-    props.defaultFilters,
-    props.defaultSize,
-    props.defaultPage
+    dataUrl,
+    defaultSorts,
+    defaultFilters,
+    defaultSize,
+    defaultPage
 )
 const { rows, sorts } = sprunjer
-console.log("SprunjeTable", props, sorts)
+console.log("SprunjeTable", defaultSorts, sorts)
 
 provide('sprunjer', sprunjer)
 </script>

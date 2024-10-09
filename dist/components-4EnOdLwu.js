@@ -12114,49 +12114,38 @@ const Yw = /* @__PURE__ */ si(Gw, [["render", Xw]]), Qw = {
 }), ly = { class: "uk-table uk-table-striped uk-table-small" }, cy = /* @__PURE__ */ pt({
   __name: "SprunjeTable",
   props: {
-    dataUrl: {
-      type: String,
-      required: !0
-    },
-    hidePagination: {
-      type: Boolean,
-      default: !1
-    },
-    // TODO : Add type AssociativeArray
-    defaultSorts: {
-      default: {}
-    },
-    defaultFilters: {
-      default: {}
-    },
-    defaultSize: Number,
-    defaultPage: Number
+    dataUrl: {},
+    hidePagination: { type: Boolean, default: !1 },
+    defaultSorts: { default: () => ({}) },
+    defaultFilters: { default: () => ({}) },
+    defaultSize: { default: 10 },
+    defaultPage: { default: 0 }
   },
   setup(i) {
-    const s = i, a = op(
-      s.dataUrl,
-      s.defaultSorts,
-      s.defaultFilters,
-      s.defaultSize,
-      s.defaultPage
-    ), { rows: r, sorts: u } = a;
-    return console.log("SprunjeTable", s, u), sp("sprunjer", a), (h, f) => (I(), j(Zi, null, [
-      et(h.$slots, "actions"),
+    const s = op(
+      i.dataUrl,
+      i.defaultSorts,
+      i.defaultFilters,
+      i.defaultSize,
+      i.defaultPage
+    ), { rows: a, sorts: r } = s;
+    return console.log("SprunjeTable", i.defaultSorts, r), sp("sprunjer", s), (u, h) => (I(), j(Zi, null, [
+      et(u.$slots, "actions"),
       x("table", ly, [
         x("thead", null, [
           x("tr", null, [
-            et(h.$slots, "header")
+            et(u.$slots, "header")
           ])
         ]),
         x("tbody", null, [
-          (I(!0), j(Zi, null, Uo(M(r), (g) => (I(), j("tr", {
-            key: g.id
+          (I(!0), j(Zi, null, Uo(M(a), (f) => (I(), j("tr", {
+            key: f.id
           }, [
-            et(h.$slots, "body", { item: g })
+            et(u.$slots, "body", { item: f })
           ]))), 128))
         ])
       ]),
-      i.hidePagination ? ht("", !0) : et(h.$slots, "paginator", { key: 0 }, () => [
+      u.hidePagination ? ht("", !0) : et(u.$slots, "paginator", { key: 0 }, () => [
         Ut(qc)
       ])
     ], 64));
