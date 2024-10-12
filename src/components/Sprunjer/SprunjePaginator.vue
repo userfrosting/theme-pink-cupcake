@@ -19,11 +19,11 @@ function goToPage(goToPage: number) {
 </script>
 
 <template>
-    <div class="uk-child-width-expand" uk-grid>
+    <div class="uk-child-width-auto" uk-grid>
         <div class="uk-text-left uk-text-meta">
             <span>Showing {{ first }} - {{ last }} of {{ countFiltered }}</span>
         </div>
-        <div class="uk-text-center">
+        <div class="uk-text-center uk-width-expand">
             <select
                 class="uk-select uk-form-small uk-form-width-small"
                 aria-label="Select per page"

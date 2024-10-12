@@ -12022,9 +12022,9 @@ const Yw = /* @__PURE__ */ si(Gw, [["render", Xw]]), Qw = {
     };
   }
 }), ey = {
-  class: "uk-child-width-expand",
+  class: "uk-child-width-auto",
   "uk-grid": ""
-}, ny = { class: "uk-text-left uk-text-meta" }, iy = { class: "uk-text-center" }, sy = ["value"], oy = { class: "uk-text-right" }, ry = { "aria-label": "Pagination" }, ay = {
+}, ny = { class: "uk-text-left uk-text-meta" }, iy = { class: "uk-text-center uk-width-expand" }, sy = ["value"], oy = { class: "uk-text-right" }, ry = { "aria-label": "Pagination" }, ay = {
   class: "uk-pagination uk-flex-right",
   "uk-margin": ""
 }, qc = /* @__PURE__ */ pt({
