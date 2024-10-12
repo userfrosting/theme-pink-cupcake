@@ -12122,7 +12122,7 @@ const Yw = /* @__PURE__ */ si(Gw, [["render", Xw]]), Qw = {
     defaultPage: { default: 0 }
   },
   setup(i) {
-    const s = op(i.dataUrl, i.defaultSorts, i.defaultFilters, i.defaultSize, i.defaultPage), { rows: a } = s;
+    const s = op(() => i.dataUrl, i.defaultSorts, i.defaultFilters, i.defaultSize, i.defaultPage), { rows: a } = s;
     return sp("sprunjer", s), (r, u) => (I(), j(Zi, null, [
       et(r.$slots, "actions"),
       x("table", ly, [

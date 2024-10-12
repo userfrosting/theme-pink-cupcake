@@ -19,7 +19,7 @@ const {
     defaultPage?: number
 }>()
 
-const sprunjer = useSprunjer(dataUrl, defaultSorts, defaultFilters, defaultSize, defaultPage)
+const sprunjer = useSprunjer(() => dataUrl, defaultSorts, defaultFilters, defaultSize, defaultPage)
 const { rows } = sprunjer
 
 provide('sprunjer', sprunjer)
