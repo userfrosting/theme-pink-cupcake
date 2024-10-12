@@ -2,6 +2,7 @@
 import { provide } from 'vue'
 import { useSprunjer } from '@userfrosting/sprinkle-core/sprunjer'
 import SprunjePaginator from './SprunjePaginator.vue'
+import SprunjeSearch from './SprunjeSearch.vue'
 import { useSlots } from 'vue'
 
 const {
@@ -36,7 +37,7 @@ provide('sprunjer', sprunjer)
         </div>
         <div class="uk-text-right" v-if="slots.filters">
             <slot name="filters">
-                <SprunjeSearch :column="searchColumn" />
+                <SprunjeSearch v-if="searchColumn" :column="searchColumn" />
                 <!-- <SprunjeFilter /> -->
             </slot>
         </div>
