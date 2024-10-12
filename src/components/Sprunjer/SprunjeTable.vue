@@ -3,7 +3,6 @@ import { provide } from 'vue'
 import { useSprunjer } from '@userfrosting/sprinkle-core/sprunjer'
 import SprunjePaginator from './SprunjePaginator.vue'
 import SprunjeSearch from './SprunjeSearch.vue'
-import { useSlots } from 'vue'
 
 const {
     dataUrl,
@@ -25,17 +24,16 @@ const {
 
 const sprunjer = useSprunjer(() => dataUrl, defaultSorts, defaultFilters, defaultSize, defaultPage)
 const { rows } = sprunjer
-const slots = useSlots()
 
 provide('sprunjer', sprunjer)
 </script>
 
 <template>
-    <div uk-grid class="uk-child-width-1-2" v-if="slots.actions || slots.filters">
-        <div class="uk-text-left" v-if="slots.actions">
+    <div uk-grid class="uk-child-width-1-2">
+        <div class="uk-text-left">
             <slot name="actions"></slot>
         </div>
-        <div class="uk-text-right" v-if="slots.filters">
+        <div class="uk-text-right">
             <slot name="filters">
                 <SprunjeSearch v-if="searchColumn" :column="searchColumn" />
                 <!-- <SprunjeFilter /> -->
