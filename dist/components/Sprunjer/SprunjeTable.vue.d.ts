@@ -1,6 +1,7 @@
 declare function __VLS_template(): {
     slots: {
         actions?(_: {}): any;
+        filters?(_: {}): any;
         header?(_: {}): any;
         body?(_: {
             item: any;
@@ -22,6 +23,7 @@ declare const __VLS_component: import('vue').DefineComponent<{
     };
     defaultSize?: number;
     defaultPage?: number;
+    searchColumn?: string;
 }, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<{
     dataUrl: string;
     hidePagination?: boolean;
@@ -33,6 +35,7 @@ declare const __VLS_component: import('vue').DefineComponent<{
     };
     defaultSize?: number;
     defaultPage?: number;
+    searchColumn?: string;
 }> & Readonly<{}>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
 declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
 export default _default;
