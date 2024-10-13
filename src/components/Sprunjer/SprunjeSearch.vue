@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import type { Sprunjer } from '@userfrosting/sprinkle-core/sprunjer'
-import { inject, ref, watch } from 'vue'
+import { inject, ref, watch, computed } from 'vue'
 
 const props = defineProps({
     column: {
         type: String,
         required: true
+    },
+    label: {
+        type: String
     }
 })
 
@@ -16,6 +19,10 @@ const { filters } = sprunjer
 watch(filterValue, () => {
     filters.value[props.column] = filterValue.value
 })
+
+const searchLabel = computed(() => {
+    return props.label ? 'Search ' + props.label + '...' : 'Search ' + props.column + '...'
+})
 </script>
 
 <template>
@@ -23,7 +30,7 @@ watch(filterValue, () => {
         <input
             class="uk-search-input uk-form-small"
             type="search"
-            :placeholder="'Search ' + column + '...'"
+            :placeholder="searchLabel"
             aria-label="Search"
             v-model="filterValue" />
         <span class="uk-search-icon-flip" uk-search-icon></span>

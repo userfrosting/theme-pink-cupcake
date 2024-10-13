@@ -6,6 +6,7 @@ declare function __VLS_template(): {
         body?(_: {
             item: any;
         }): any;
+        filterPanel?(_: {}): any;
         paginator?(_: {}): any;
     };
     refs: {};
@@ -15,6 +16,7 @@ type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
 declare const __VLS_component: import('vue').DefineComponent<{
     dataUrl: string;
     hidePagination?: boolean;
+    hideFilters?: boolean;
     defaultSorts?: {
         [key: string]: string;
     };
@@ -27,6 +29,7 @@ declare const __VLS_component: import('vue').DefineComponent<{
 }, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<{
     dataUrl: string;
     hidePagination?: boolean;
+    hideFilters?: boolean;
     defaultSorts?: {
         [key: string]: string;
     };
