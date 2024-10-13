@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Sprunjer } from '@userfrosting/sprinkle-core/sprunjer'
-import { inject, ref, watch, computed } from 'vue'
+import { inject, computed } from 'vue'
 
 const props = defineProps({
     column: {
@@ -12,13 +12,8 @@ const props = defineProps({
     }
 })
 
-const filterValue = ref('')
 const sprunjer = inject('sprunjer') as Sprunjer
 const { filters } = sprunjer
-
-watch(filterValue, () => {
-    filters.value[props.column] = filterValue.value
-})
 
 const searchLabel = computed(() => {
     return props.label ? 'Search ' + props.label + '...' : 'Search ' + props.column + '...'
@@ -32,7 +27,7 @@ const searchLabel = computed(() => {
             type="search"
             :placeholder="searchLabel"
             aria-label="Search"
-            v-model="filterValue" />
+            v-model="filters[column]" />
         <span class="uk-search-icon-flip" uk-search-icon></span>
     </div>
 </template>
