@@ -4,7 +4,8 @@
  */
 import type { App } from 'vue'
 
-import AlertContainer from './components/AlertContainer.vue'
+import UFAlert from './components/UFAlert.vue'
+import UFLabel from './components/Content/UFLabel.vue'
 import AppLink from './components/Content/AppLink.vue'
 import InfoBox from './components/Content/InfoBox.vue'
 import CardBox from './components/Content/CardBox.vue'
@@ -36,7 +37,8 @@ import SprunjePaginator from './components/Sprunjer/SprunjePaginator.vue'
 import SprunjeTable from './components/Sprunjer/SprunjeTable.vue'
 
 export {
-    AlertContainer,
+    UFAlert,
+    UFLabel,
     AppLink,
     InfoBox,
     CardBox,
@@ -70,7 +72,8 @@ export {
 
 export default {
     install: (app: App) => {
-        app.component('UFAlertContainer', AlertContainer)
+        app.component('UFAlert', UFAlert)
+            .component('UFLabel', UFLabel)
             .component('UFAppLink', AppLink)
             .component('UFInfoBox', InfoBox)
             .component('UFCardBox', CardBox)
@@ -105,7 +108,8 @@ export default {
 
 declare module 'vue' {
     export interface GlobalComponents {
-        UFAlertContainer: typeof AlertContainer
+        UFAlert: typeof UFAlert
+        UFLabel: typeof UFLabel
         UFAppLink: typeof AppLink
         UFInfoBox: typeof InfoBox
         UFCardBox: typeof CardBox

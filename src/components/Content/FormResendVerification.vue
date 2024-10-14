@@ -28,7 +28,7 @@ async function sendForm() {
 <template>
     <form v-on:submit.prevent="sendForm()">
         <fieldset class="uk-fieldset">
-            <UFAlertContainer data-test="error" v-if="alert" :alert="alert" />
+            <UFAlert data-test="error" v-if="alert" :alert="alert" />
             <div class="uk-margin">
                 <div class="uk-inline uk-width-1-1">
                     <span class="uk-form-icon" uk-icon="icon: mail"></span>

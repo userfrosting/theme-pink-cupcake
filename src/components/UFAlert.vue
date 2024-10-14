@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { type AlertInterface, AlertStyle } from '@userfrosting/sprinkle-core/types'
+import { computed, ref, watch } from 'vue'
+import { type AlertInterface, Severity } from '@userfrosting/sprinkle-core/types'
+
+const emit = defineEmits(['close'])
 
 /**
  * N.B.: This component uses a complex prop type instead of individual props
@@ -9,25 +11,43 @@ import { type AlertInterface, AlertStyle } from '@userfrosting/sprinkle-core/typ
  *
  * @see https://vuejs.org/guide/typescript/composition-api#complex-prop-types
  */
-const props = defineProps<{
+const { alert } = defineProps<{
     alert: AlertInterface
 }>()
+
+const isVisible = ref(true)
+
+// When the alert prop changes, show the alert
+watch(
+    () => alert,
+    () => {
+        showAlert()
+    }
+)
 
 /**
  * Defines style class to use
  */
 const alertClass = computed(() => {
-    switch (props.alert.style) {
-        case AlertStyle.Success: {
+    switch (alert.style) {
+        case Severity.Success: {
             return 'uk-alert-success'
         }
-        case AlertStyle.Warning: {
+        case Severity.Warning: {
             return 'uk-alert-warning'
         }
-        case AlertStyle.Danger: {
+        case Severity.Danger: {
             return 'uk-alert-danger'
         }
-        case AlertStyle.Primary:
+        case Severity.Info: {
+            return 'uk-alert-info'
+        }
+        case Severity.Secondary: {
+            return 'uk-alert-secondary'
+        }
+        case Severity.Muted: {
+            return 'uk-alert-muted'
+        }
         default: {
             return 'uk-alert-primary'
         }
@@ -35,22 +55,30 @@ const alertClass = computed(() => {
 })
 
 const iconClass = computed(() => {
-    switch (props.alert.style) {
-        case AlertStyle.Success: {
+    switch (alert.style) {
+        case Severity.Success: {
             return 'fa-solid fa-circle-check'
         }
-        case AlertStyle.Warning: {
+        case Severity.Warning: {
             return 'fa-solid fa-circle-exclamation'
         }
-        case AlertStyle.Danger: {
+        case Severity.Danger: {
             return 'fa-solid fa-triangle-exclamation'
         }
-        case AlertStyle.Primary:
         default: {
             return 'fa-solid fa-circle-info'
         }
     }
 })
+
+const closeAlert = () => {
+    emit('close')
+    isVisible.value = false
+}
+
+const showAlert = () => {
+    isVisible.value = true
+}
 
 /**
  * TODO : Closing an alert using the button will remove the HTML from the DOM.
@@ -60,16 +88,17 @@ const iconClass = computed(() => {
 </script>
 
 <template>
-    <div :class="alertClass" class="uk-alert" uk-alert>
-        <a
-            v-if="alert.closeBtn"
-            data-test="closeBtn"
-            class="uk-alert-close"
-            uk-close
-            @click="$emit('close')"></a>
+    <div :class="alertClass" class="uk-alert" uk-alert v-if="isVisible">
         <h3 v-if="alert.title" data-test="title">
             <font-awesome-icon v-if="!alert.hideIcon" :icon="iconClass" class="uk-icon" />
             {{ alert.title }}
+            <a
+                v-if="alert.closeBtn"
+                data-test="closeBtn"
+                @click="closeAlert"
+                class="uk-alert-close">
+                <font-awesome-icon icon="xmark" />
+            </a>
         </h3>
         <p v-if="$slots.default" data-test="description">
             <slot></slot>

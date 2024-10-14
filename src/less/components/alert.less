@@ -1,19 +1,41 @@
 // Variables
 // ========================================================================
-@alert-primary-background: #e7f2fa;
-@alert-success-background: #e6f9e6;
-@alert-warning-background: #fff2db;
-@alert-danger-background: #fae2e2;
-
 // Custom title bar backgrounds
-@alert-primary-title-background: #6ab0de;
-@alert-success-title-background: #77c577;
-@alert-warning-title-background: #f0b37e;
-@alert-danger-title-background: #df6f6c;
+@alert-primary-title-background: @global-primary-background;
+@alert-success-title-background: @global-success-background;
+@alert-warning-title-background: @global-warning-background;
+@alert-danger-title-background: @global-danger-background;
+@alert-info-title-background: @global-info-background;
+@alert-secondary-title-background: @global-secondary-background;
+@alert-muted-title-background: @global-muted-background;
+
+// Main background colors
+// N.B.: Preset are not changed, only the custom ones
+@alert-info-background: lighten(tint(@global-info-background, 40%), 25%);
+@alert-secondary-background: @global-muted-background;
+@alert-muted-background: @global-muted-background;
+
+// Main alert text color
+@alert-primary-color: @global-color;
+@alert-success-color: @global-color;
+@alert-warning-color: @global-color;
+@alert-danger-color: @global-color;
+@alert-info-color: @global-color;
+@alert-secondary-color: @global-color;
+@alert-muted-color: @global-color;
 
 // Custom title style
-@alert-title-color: #ffffff;
-@alert-title-height: 34px;
+@alert-primary-title-color: @global-inverse-color;
+@alert-success-title-color: @global-inverse-color;
+@alert-warning-title-color: @global-inverse-color;
+@alert-danger-title-color: @global-inverse-color;
+@alert-info-title-color: @global-inverse-color;
+@alert-secondary-title-color: @global-inverse-color;
+@alert-muted-title-color: @global-color;
+
+// Set the title height
+@alert-title-vertical-padding: 6px;
+@alert-title-horizontal-padding: @alert-content-padding-horizontal;
 
 // Remove the main div padding
 @alert-padding: 0px;
@@ -23,53 +45,103 @@
 @alert-content-padding-vertical: 5px;
 @alert-content-padding-horizontal: 15px;
 
-// Custom alert close to match title || content
-@alert-close-right: @alert-content-padding-horizontal - 5px;
-@alert-close-top: 10px; // (@alert-title-height - 14px) / 2
-
-// Custom hooks
-// ========================================================================
-// Use default font color for close button
-.hook-alert-close() {
-    color: @base-body-color;
-    font-weight: bold;
-}
-.hook-alert-close-hover() {
-    color: @base-body-color;
-}
+// Fix the close button position
+@alert-close-padding-right: 10px;
 
 // Custom styles
 // ========================================================================
-// Custom style to the 'p' element + remove 'p' inherited margin
-.uk-alert p {
-    padding: @alert-content-padding-vertical @alert-content-padding-horizontal;
-    color: @base-body-color;
-    margin-top: 0px;
+.hook-alert-primary() {
+    color: @alert-primary-color;
 }
 
-// Custom style to the 'h3' element + remove 'h3' inherited margin
-.uk-alert h3 {
-    font-size: @base-body-font-size;
-    color: @alert-title-color;
-    line-height: @alert-title-height;
-    padding-left: @alert-content-padding-horizontal;
-    margin-bottom: 0px;
+.hook-alert-success() {
+    color: @alert-success-color;
+}
 
-    .uk-icon {
-        padding-right: 5px;
+.hook-alert-warning() {
+    color: @alert-warning-color;
+}
+
+.hook-alert-danger() {
+    color: @alert-danger-color;
+}
+
+.hook-alert-close() {
+    right: @alert-close-padding-right;
+    opacity: 1;
+}
+
+.hook-alert-misc() {
+    // Custom severities
+    .uk-alert-info {
+        background: @alert-info-background;
+        color: @alert-info-color;
+        .hook-alert-info();
+    }
+
+    .uk-alert-secondary {
+        background: @alert-secondary-background;
+        color: @alert-secondary-color;
+        .hook-alert-secondary();
+    }
+
+    .uk-alert-muted {
+        background: @alert-muted-background;
+        color: @alert-muted-color;
+        .hook-alert-muted();
+    }
+
+    // Custom style to the 'p' element + remove 'p' inherited margin
+    .uk-alert p {
+        padding: @alert-content-padding-vertical @alert-content-padding-horizontal;
+        margin-top: 0px;
+    }
+
+    // Custom style to the 'h3' element + remove 'h3' inherited margin
+    .uk-alert h3 {
+        font-size: @base-body-font-size;
+        padding: @alert-title-vertical-padding @alert-title-horizontal-padding;
+        margin-bottom: 0px;
+
+        .uk-icon {
+            padding-right: 5px;
+        }
+    }
+
+    // Apply custom title bar background
+    .uk-alert-primary h3 {
+        background-color: @alert-primary-title-background;
+        color: @alert-primary-title-color;
+    }
+    .uk-alert-success h3 {
+        background-color: @alert-success-title-background;
+        color: @alert-success-title-color;
+    }
+    .uk-alert-warning h3 {
+        background-color: @alert-warning-title-background;
+        color: @alert-warning-title-color;
+    }
+    .uk-alert-danger h3 {
+        background-color: @alert-danger-title-background;
+        color: @alert-danger-title-color;
+    }
+    .uk-alert-info h3 {
+        background-color: @alert-info-title-background;
+        color: @alert-info-title-color;
+    }
+    .uk-alert-secondary h3 {
+        background-color: @alert-secondary-title-background;
+        color: @alert-secondary-title-color;
+    }
+    .uk-alert-muted h3 {
+        background-color: @alert-muted-title-background;
+        color: @alert-muted-title-color;
     }
 }
 
-// Apply custom title bar background
-.uk-alert-primary h3 {
-    background-color: @alert-primary-title-background;
+.hook-alert-info() {
 }
-.uk-alert-success h3 {
-    background-color: @alert-success-title-background;
+.hook-alert-secondary() {
 }
-.uk-alert-warning h3 {
-    background-color: @alert-warning-title-background;
-}
-.uk-alert-danger h3 {
-    background-color: @alert-danger-title-background;
+.hook-alert-muted() {
 }

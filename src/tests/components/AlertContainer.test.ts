@@ -1,7 +1,7 @@
 import { mount, config } from '@vue/test-utils'
 import { describe, test, expect } from 'vitest'
-import AlertContainer from '../../components/AlertContainer.vue'
-import { AlertStyle, type AlertInterface } from '@userfrosting/sprinkle-core/types'
+import UFAlert from '../../components/UFAlert.vue'
+import { Severity, type AlertInterface } from '@userfrosting/sprinkle-core/types'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -10,11 +10,11 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(fas)
 config.global.stubs['FontAwesomeIcon'] = FontAwesomeIcon
 
-describe('AlertContainer', () => {
+describe('UFAlert', () => {
     test('renders correctly with empty alert', () => {
         // Arrange
         const myAlert: AlertInterface = {}
-        const wrapper = mount(AlertContainer, {
+        const wrapper = mount(UFAlert, {
             props: {
                 alert: myAlert
             }
@@ -33,10 +33,10 @@ describe('AlertContainer', () => {
         const myAlert: AlertInterface = {
             title: 'Alert from Var',
             description: 'This is the description',
-            style: AlertStyle.Warning,
+            style: Severity.Warning,
             closeBtn: true
         }
-        const wrapper = mount(AlertContainer, {
+        const wrapper = mount(UFAlert, {
             props: {
                 alert: myAlert
             }
@@ -55,7 +55,7 @@ describe('AlertContainer', () => {
     test('renders correctly with slot', () => {
         // Arrange
         const myAlert: AlertInterface = {}
-        const wrapper = mount(AlertContainer, {
+        const wrapper = mount(UFAlert, {
             slots: {
                 default: 'This is a slot'
             },
@@ -74,10 +74,10 @@ describe('AlertContainer', () => {
         const myAlert: AlertInterface = {
             title: 'Alert from Var',
             description: 'This is the description',
-            style: AlertStyle.Warning,
+            style: Severity.Warning,
             closeBtn: true
         }
-        const wrapper = mount(AlertContainer, {
+        const wrapper = mount(UFAlert, {
             slots: {
                 default: 'This is a slot'
             },
@@ -96,10 +96,10 @@ describe('AlertContainer', () => {
         const myAlert: AlertInterface = {
             title: 'Alert with hidden icon',
             description: 'This alert has a hidden icon',
-            style: AlertStyle.Success,
+            style: Severity.Success,
             hideIcon: true
         }
-        const wrapper = mount(AlertContainer, {
+        const wrapper = mount(UFAlert, {
             props: {
                 alert: myAlert
             }
@@ -121,9 +121,9 @@ describe('AlertContainer', () => {
         // Arrange
         const myAlert: AlertInterface = {
             title: 'Alert',
-            style: AlertStyle.Success
+            style: Severity.Success
         }
-        const wrapper = mount(AlertContainer, {
+        const wrapper = mount(UFAlert, {
             props: {
                 alert: myAlert
             }
@@ -139,9 +139,9 @@ describe('AlertContainer', () => {
         // Arrange
         const myAlert: AlertInterface = {
             title: 'Alert',
-            style: AlertStyle.Warning
+            style: Severity.Warning
         }
-        const wrapper = mount(AlertContainer, {
+        const wrapper = mount(UFAlert, {
             props: {
                 alert: myAlert
             }
@@ -157,9 +157,9 @@ describe('AlertContainer', () => {
         // Arrange
         const myAlert: AlertInterface = {
             title: 'Alert',
-            style: AlertStyle.Danger
+            style: Severity.Danger
         }
-        const wrapper = mount(AlertContainer, {
+        const wrapper = mount(UFAlert, {
             props: {
                 alert: myAlert
             }
@@ -175,9 +175,9 @@ describe('AlertContainer', () => {
         // Arrange
         const myAlert: AlertInterface = {
             title: 'Alert',
-            style: AlertStyle.Primary
+            style: Severity.Primary
         }
-        const wrapper = mount(AlertContainer, {
+        const wrapper = mount(UFAlert, {
             props: {
                 alert: myAlert
             }
@@ -195,7 +195,7 @@ describe('AlertContainer', () => {
             title: 'Alert',
             closeBtn: true
         }
-        const wrapper = mount(AlertContainer, {
+        const wrapper = mount(UFAlert, {
             props: {
                 alert: myAlert
             }

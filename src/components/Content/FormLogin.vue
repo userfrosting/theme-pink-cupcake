@@ -40,7 +40,7 @@ async function sendLogin() {
 <template>
     <form v-on:submit.prevent="sendLogin()">
         <fieldset class="uk-fieldset">
-            <UFAlertContainer data-test="error" v-if="error" :alert="error" />
+            <UFAlert data-test="error" v-if="error" :alert="error" />
             <div class="uk-margin">
                 <div class="uk-inline uk-width-1-1">
                     <span class="uk-form-icon" uk-icon="icon: user"></span>

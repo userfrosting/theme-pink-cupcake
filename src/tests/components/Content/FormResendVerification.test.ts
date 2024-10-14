@@ -1,12 +1,12 @@
 import { mount, config } from '@vue/test-utils'
 import { describe, test, expect, vi, afterEach } from 'vitest'
 import FormResendVerification from '../../../components/Content/FormResendVerification.vue'
-import AlertContainer from '../../../components/AlertContainer.vue'
-import { AlertStyle, type AlertInterface } from '@userfrosting/sprinkle-core/types'
+import UFAlert from '../../../components/UFAlert.vue'
+import { Severity, type AlertInterface } from '@userfrosting/sprinkle-core/types'
 import { resendVerification } from '@userfrosting/sprinkle-account/composables'
 
-// Register the AlertContainer component stub globally
-config.global.stubs['UFAlertContainer'] = AlertContainer
+// Register the UFAlert component stub globally
+config.global.stubs['UFAlert'] = UFAlert
 config.global.stubs['FontAwesomeIcon'] = { template: '<span></span>' }
 
 // Test email var
@@ -22,7 +22,7 @@ vi.mock('@userfrosting/sprinkle-account/composables', () => {
 // Mocked response
 const mockedResponse: AlertInterface = {
     description: 'Mocked message',
-    style: AlertStyle.Success,
+    style: Severity.Success,
     closeBtn: true
 }
 

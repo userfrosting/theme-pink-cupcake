@@ -43,7 +43,7 @@ async function submitForm() {
 <template>
     <form v-on:submit.prevent="submitForm()">
         <fieldset class="uk-fieldset uk-form-stacked">
-            <UFAlertContainer data-test="error" v-if="error" :alert="error" />
+            <UFAlert data-test="error" v-if="error" :alert="error" />
 
             <div class="uk-margin">
                 <label class="uk-form-label" for="first_name">Name and email</label>

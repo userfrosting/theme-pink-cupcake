@@ -2,13 +2,13 @@ import { mount, config } from '@vue/test-utils'
 import { describe, test, afterEach, expect, vi } from 'vitest'
 import FormLogin from '../../../components/Content/FormLogin.vue'
 import { useAuthStore } from '@userfrosting/sprinkle-account/stores'
-import AlertContainer from '../../../components/AlertContainer.vue'
+import UFAlert from '../../../components/UFAlert.vue'
 import UIkit from 'uikit'
 import type { LoginForm } from '@userfrosting/sprinkle-account/types'
 import type { AlertInterface } from '@userfrosting/sprinkle-core/types'
 
-// Register the AlertContainer component stub globally
-config.global.stubs['UFAlertContainer'] = AlertContainer
+// Register the UFAlert component stub globally
+config.global.stubs['UFAlert'] = UFAlert
 config.global.stubs['FontAwesomeIcon'] = { template: '<span></span>' }
 
 // Mock the auth store

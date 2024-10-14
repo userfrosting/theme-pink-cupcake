@@ -1,14 +1,14 @@
 import { mount, config } from '@vue/test-utils'
 import { describe, test, expect, vi, afterEach } from 'vitest'
 import FormRegister from '../../../components/Content/FormRegister.vue'
-import AlertContainer from '../../../components/AlertContainer.vue'
+import UFAlert from '../../../components/UFAlert.vue'
 import UIkit from 'uikit'
 import type { UserInterface } from '@userfrosting/sprinkle-account/types'
 import type { AlertInterface } from '@userfrosting/sprinkle-core/types'
 import { Register } from '@userfrosting/sprinkle-account/composables'
 
-// Register the AlertContainer component stub globally
-config.global.stubs['UFAlertContainer'] = AlertContainer
+// Register the UFAlert component stub globally
+config.global.stubs['UFAlert'] = UFAlert
 config.global.stubs['FontAwesomeIcon'] = { template: '<span></span>' }
 
 // Mock default form
