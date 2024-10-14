@@ -1,6 +1,6 @@
 import { App } from 'vue';
 import { default as UFAlert } from './components/UFAlert.vue';
-import { default as UFLabel } from './components/Content/UFLabel.vue';
+import { default as UFLabel } from './components/UFLabel.vue';
 import { default as AppLink } from './components/Content/AppLink.vue';
 import { default as InfoBox } from './components/Content/InfoBox.vue';
 import { default as CardBox } from './components/Content/CardBox.vue';

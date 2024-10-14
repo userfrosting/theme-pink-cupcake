@@ -5,7 +5,7 @@
 import type { App } from 'vue'
 
 import UFAlert from './components/UFAlert.vue'
-import UFLabel from './components/Content/UFLabel.vue'
+import UFLabel from './components/UFLabel.vue'
 import AppLink from './components/Content/AppLink.vue'
 import InfoBox from './components/Content/InfoBox.vue'
 import CardBox from './components/Content/CardBox.vue'
