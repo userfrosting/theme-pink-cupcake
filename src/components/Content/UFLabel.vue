@@ -2,15 +2,15 @@
 import { defineProps, computed } from 'vue'
 import { Severity } from '@userfrosting/sprinkle-core/types'
 
-const props = defineProps<{
-    severity: Severity | keyof typeof Severity
+const { severity = '' } = defineProps<{
+    severity?: Severity | keyof typeof Severity
 }>()
 
 /**
  * Defines style class to use
  */
 const styleClass = computed(() => {
-    switch (props.severity) {
+    switch (severity) {
         case Severity.Success: {
             return 'uk-label-success'
         }

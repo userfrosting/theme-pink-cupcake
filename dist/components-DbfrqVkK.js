@@ -92,11 +92,11 @@ const ap = {
 }), hp = /* @__PURE__ */ dt({
   __name: "UFLabel",
   props: {
-    severity: {}
+    severity: { default: "" }
   },
   setup(i) {
-    const s = i, a = ce(() => {
-      switch (s.severity) {
+    const s = ce(() => {
+      switch (i.severity) {
         case Nt.Success:
           return "uk-label-success";
         case Nt.Warning:
@@ -114,10 +114,10 @@ const ap = {
           return "uk-label-primary";
       }
     });
-    return (r, u) => (I(), j("span", {
-      class: ye(["uk-label", a.value])
+    return (a, r) => (I(), j("span", {
+      class: ye(["uk-label", s.value])
     }, [
-      Z(r.$slots, "default")
+      Z(a.$slots, "default")
     ], 2));
   }
 }), dp = ["href"], fp = { key: 1 }, Ho = /* @__PURE__ */ dt({
