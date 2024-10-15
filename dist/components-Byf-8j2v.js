@@ -12213,7 +12213,7 @@ const Zw = /* @__PURE__ */ ri(Yw, [["render", Qw]]), ty = {
               "onUpdate:modelValue": (T) => L(r)[S] = T,
               class: "uk-select"
             }, [
-              v[0] || (v[0] = x("option", { value: "" }, "Any", -1)),
+              v[0] || (v[0] = x("option", { value: "" }, null, -1)),
               (I(!0), D(Qe, null, ei(k(S), (T) => (I(), D("option", {
                 key: T.value,
                 value: T.value

@@ -32,7 +32,7 @@ const listableOptions = (column: string) => {
         <dt>{{ column }}</dt>
         <dd>
             <select v-if="isListable(column)" v-model="filters[column]" class="uk-select">
-                <option value="">Any</option>
+                <option value=""></option>
                 <option
                     v-for="option in listableOptions(column)"
                     :key="option.value"
