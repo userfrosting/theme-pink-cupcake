@@ -9,8 +9,20 @@ const filterable = computed(() => {
     return data.value.filterable
 })
 
+const listable = computed(() => {
+    return data.value.listable
+})
+
 const resetFilters = () => {
     filters.value = {}
+}
+
+const isListable = (column: string) => {
+    return listable.value[column] !== undefined
+}
+
+const listableOptions = (column: string) => {
+    return listable.value[column]
 }
 </script>
 
@@ -19,7 +31,21 @@ const resetFilters = () => {
     <dl class="uk-description-list" v-for="(column, index) in filterable" :key="index">
         <dt>{{ column }}</dt>
         <dd>
-            <input class="uk-input" type="text" :placeholder="column" v-model="filters[column]" />
+            <select v-if="isListable(column)" v-model="filters[column]" class="uk-select">
+                <option value="">Any</option>
+                <option
+                    v-for="option in listableOptions(column)"
+                    :key="option.value"
+                    :value="option.value">
+                    {{ option.text }}
+                </option>
+            </select>
+            <input
+                v-else
+                class="uk-input"
+                type="text"
+                :placeholder="column"
+                v-model="filters[column]" />
         </dd>
     </dl>
     <button class="uk-button uk-button-default uk-button-small" @click="resetFilters">
