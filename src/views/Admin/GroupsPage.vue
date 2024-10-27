@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import GroupsCreateModal from '@/components/Pages/Admin/Group/GroupsCreateModal.vue'
+import GroupsDeleteModal from '@/components/Pages/Admin/Group/GroupsDeleteModal.vue'
 </script>
 
 <template>
@@ -33,15 +34,7 @@ import GroupsCreateModal from '@/components/Pages/Admin/Group/GroupsCreateModal.
                 </UFSprunjeColumn>
                 <UFSprunjeColumn>{{ item.description }}</UFSprunjeColumn>
                 <UFSprunjeColumn>
-                    <button class="uk-button uk-button-default uk-button-small" type="button">
-                        Actions <font-awesome-icon icon="caret-down" fixed-width />
-                    </button>
-                    <div uk-dropdown>
-                        <ul class="uk-nav uk-dropdown-nav">
-                            <li><a href="#">Edit Group</a></li>
-                            <li><a href="#">Delete Group</a></li>
-                        </ul>
-                    </div>
+                    <GroupsDeleteModal :groupSlug="item.slug" />
                 </UFSprunjeColumn>
             </template>
         </UFSprunjeTable>

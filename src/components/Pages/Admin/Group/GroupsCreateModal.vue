@@ -53,7 +53,11 @@ const closeModal = () => {
     <!-- This is the modal -->
     <div id="group-create-form" uk-modal>
         <div class="uk-modal-dialog uk-modal-body">
-            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <button
+                class="uk-modal-close-default"
+                type="button"
+                uk-close
+                @click="resetForm()"></button>
             <h3 class="uk-modal-title">Create Group</h3>
             <form v-on:submit.prevent="submitForm()">
                 <fieldset class="uk-fieldset uk-form-stacked">
