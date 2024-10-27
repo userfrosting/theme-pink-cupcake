@@ -1,6 +1,9 @@
+import { Sprunjer } from '@userfrosting/sprinkle-core/sprunjer';
 declare function __VLS_template(): {
     slots: {
-        default?(_: {}): any;
+        default?(_: {
+            sprunjer: Sprunjer;
+        }): any;
     };
     refs: {};
     attrs: Partial<{}>;

@@ -1,4 +1,4 @@
-import { U as d2, _ as P8, a as p2, c as hi, g as di, P as pi } from "./components-BNTZz5Lt.js";
+import { U as d2, _ as P8, a as p2, c as hi, g as di, P as pi } from "./components-DwGc7oAO.js";
 import { defineComponent as $, resolveComponent as h, openBlock as H, createElementBlock as q, Fragment as c1, createVNode as z, createBlock as U, withCtx as u, createTextVNode as C, createElementVNode as f, renderList as _3, toDisplayString as g, unref as A, ref as l1, inject as D8, withModifiers as Mi, createCommentVNode as a0, withDirectives as t3, vModelText as i3, watch as I2, renderSlot as R2, computed as p1, h as B8 } from "vue";
 import { defineStore as Ci } from "pinia";
 import { useRouter as gi, useRoute as A3 } from "vue-router";
@@ -4914,6 +4914,7 @@ const VL = /* @__PURE__ */ $({
         type: "button",
         onClick: n[0] || (n[0] = (t) => A(e)(s.groupSlug).then(() => {
           A(l).fetch();
+        }).catch(() => {
         }))
       }, [
         z(o, {
@@ -5051,6 +5052,7 @@ const PL = /* @__PURE__ */ $({
       type: "button",
       onClick: n[0] || (n[0] = (o) => A(e)(s.groupSlug).then(() => {
         A(l).push({ name: "admin.groups" });
+      }).catch(() => {
       }))
     }, " Delete Group "));
   }

@@ -1,5 +1,5 @@
-import { defineComponent as ht, ref as ge, watch as ep, computed as ce, resolveComponent as Pt, openBlock as I, createElementBlock as D, normalizeClass as ye, createBlock as gt, createCommentVNode as et, createTextVNode as _t, toDisplayString as ot, createVNode as At, renderSlot as Q, unref as U, withCtx as Dt, createElementVNode as x, createSlots as np, withModifiers as os, withDirectives as Lt, vModelText as ne, Fragment as Qe, renderList as ei, vModelSelect as zo, isRef as Ho, mergeProps as ni, normalizeProps as ip, guardReactiveProps as sp, inject as rs, provide as op } from "vue";
-import { RouterLink as oi } from "vue-router";
+import { defineComponent as ht, ref as ge, watch as ep, computed as ce, resolveComponent as Pt, openBlock as I, createElementBlock as D, normalizeClass as ye, createBlock as gt, createCommentVNode as et, createTextVNode as _t, toDisplayString as ot, createVNode as At, renderSlot as Q, unref as U, withCtx as Dt, createElementVNode as x, createSlots as np, withModifiers as os, withDirectives as Lt, vModelText as ne, Fragment as Qe, renderList as ei, vModelSelect as zo, isRef as Ho, mergeProps as ni, normalizeProps as ip, guardReactiveProps as sp, inject as oi, provide as op } from "vue";
+import { RouterLink as ri } from "vue-router";
 import { defineStore as Hl } from "pinia";
 import { useSprunjer as rp } from "@userfrosting/sprinkle-core/sprunjer";
 var Nt = /* @__PURE__ */ ((i) => (i.Primary = "Primary", i.Secondary = "Secondary", i.Success = "Success", i.Warning = "Warning", i.Danger = "Danger", i.Info = "Info", i.Muted = "Muted", i))(Nt || {});
@@ -140,7 +140,7 @@ const ap = {
       Q(h.$slots, "default", {}, () => [
         _t(ot(h.label), 1)
       ])
-    ])) : (I(), gt(U(oi), {
+    ])) : (I(), gt(U(ri), {
       key: 2,
       to: h.to
     }, {
@@ -275,7 +275,7 @@ const ap = {
       ]);
     };
   }
-}), ri = (i, s) => {
+}), rs = (i, s) => {
   const a = i.__vccOpts || i;
   for (const [r, u] of s)
     a[r] = u;
@@ -294,7 +294,7 @@ function Bp(i, s) {
     ])
   ]);
 }
-const Fp = /* @__PURE__ */ ri(Pp, [["render", Bp]]), Np = { class: "uf-page-header" }, Dp = { class: "uk-margin-remove" }, jp = {
+const Fp = /* @__PURE__ */ rs(Pp, [["render", Bp]]), Np = { class: "uf-page-header" }, Dp = { class: "uk-margin-remove" }, jp = {
   key: 0,
   class: "uk-text-meta uk-margin-remove"
 }, Up = /* @__PURE__ */ ht({
@@ -321,7 +321,7 @@ function Hp(i, s) {
     ])
   ]);
 }
-const qp = /* @__PURE__ */ ri(Lp, [["render", Hp]]);
+const qp = /* @__PURE__ */ rs(Lp, [["render", Hp]]);
 var Wp = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {};
 function Vp(i) {
   return i && i.__esModule && Object.prototype.hasOwnProperty.call(i, "default") ? i.default : i;
@@ -11622,7 +11622,7 @@ const wb = { class: "uk-fieldset uk-form-stacked" }, yb = { class: "uk-margin" }
 function iw(i, s) {
   return I(), D("li", nw);
 }
-const sw = /* @__PURE__ */ ri(ew, [["render", iw]]), ow = { key: 0 }, rw = ["href"], aw = ["href", "onClick"], lw = /* @__PURE__ */ ht({
+const sw = /* @__PURE__ */ rs(ew, [["render", iw]]), ow = { key: 0 }, rw = ["href"], aw = ["href", "onClick"], lw = /* @__PURE__ */ ht({
   __name: "NavBarItem",
   props: {
     to: { default: "" },
@@ -11639,7 +11639,7 @@ const sw = /* @__PURE__ */ ri(ew, [["render", iw]]), ow = { key: 0 }, rw = ["hre
           _t(ot(r.label), 1)
         ])
       ], 8, rw)
-    ])) : (I(), gt(U(oi), ni({
+    ])) : (I(), gt(U(ri), ni({
       key: 1,
       to: r.to
     }, r.$props, { custom: "" }), {
@@ -11746,7 +11746,7 @@ const sw = /* @__PURE__ */ ri(ew, [["render", iw]]), ow = { key: 0 }, rw = ["hre
         ])
       ], 8, ww)
     ])) : (I(), D("li", yw, [
-      At(U(oi), {
+      At(U(ri), {
         to: r.to,
         class: "uk-button uk-button-default uk-button-small uk-text-center"
       }, {
@@ -11922,7 +11922,7 @@ function Uw(i, s) {
     ])
   ]);
 }
-const Lw = /* @__PURE__ */ ri(Fw, [["render", Uw]]), Mw = ["data-uk-icon"], zw = {
+const Lw = /* @__PURE__ */ rs(Fw, [["render", Uw]]), Mw = ["data-uk-icon"], zw = {
   key: 2,
   "uk-nav-parent-icon": "",
   "data-test": "caret"
@@ -11941,7 +11941,7 @@ const Lw = /* @__PURE__ */ ri(Fw, [["render", Uw]]), Mw = ["data-uk-icon"], zw =
   setup(i) {
     return (s, a) => {
       const r = Pt("font-awesome-icon");
-      return I(), gt(U(oi), ni({ to: s.to }, s.$props, { custom: "" }), {
+      return I(), gt(U(ri), ni({ to: s.to }, s.$props, { custom: "" }), {
         default: Dt(({ isActive: u }) => [
           x("li", {
             class: ye(["uk-parent", { "uk-open": u }])
@@ -12006,7 +12006,7 @@ const Lw = /* @__PURE__ */ ri(Fw, [["render", Uw]]), Mw = ["data-uk-icon"], zw =
             _t(ot(r.label), 1)
           ])
         ], 8, Vw)
-      ])) : (I(), gt(U(oi), ni({
+      ])) : (I(), gt(U(ri), ni({
         key: 1,
         to: r.to
       }, r.$props, { custom: "" }), {
@@ -12048,28 +12048,30 @@ const Lw = /* @__PURE__ */ ri(Fw, [["render", Uw]]), Mw = ["data-uk-icon"], zw =
   setup(i) {
     return (s, a) => (I(), D("li", Yw, ot(s.label), 1));
   }
-}), Zw = {};
-function ty(i, s) {
-  return I(), D("td", null, [
-    Q(i.$slots, "default")
-  ]);
-}
-const ey = /* @__PURE__ */ ri(Zw, [["render", ty]]), ny = {
+}), Zw = /* @__PURE__ */ ht({
+  __name: "SprunjeColumn",
+  setup(i) {
+    const s = oi("sprunjer");
+    return (a, r) => (I(), D("td", null, [
+      Q(a.$slots, "default", { sprunjer: U(s) })
+    ]));
+  }
+}), ty = {
   key: 0,
   class: "uk-table-link uk-padding-small"
-}, iy = {
+}, ey = {
   key: 1,
   class: "uk-padding-small"
-}, sy = /* @__PURE__ */ ht({
+}, ny = /* @__PURE__ */ ht({
   __name: "SprunjeHeader",
   props: {
     sort: {}
   },
   setup(i) {
-    const s = rs("sprunjer"), { sorts: a, toggleSort: r } = s;
+    const s = oi("sprunjer"), { sorts: a, toggleSort: r } = s;
     return (u, h) => {
       const f = Pt("font-awesome-icon");
-      return u.sort ? (I(), D("th", ny, [
+      return u.sort ? (I(), D("th", ty, [
         x("a", {
           class: "uk-link-reset",
           onClick: h[0] || (h[0] = (g) => U(r)(u.sort))
@@ -12092,15 +12094,15 @@ const ey = /* @__PURE__ */ ri(Zw, [["render", ty]]), ny = {
             class: "uk-align-right uk-margin-remove"
           }))
         ])
-      ])) : (I(), D("th", iy, [
+      ])) : (I(), D("th", ey, [
         Q(u.$slots, "default")
       ]));
     };
   }
-}), oy = {
+}), iy = {
   class: "uk-child-width-auto",
   "uk-grid": ""
-}, ry = { class: "uk-text-left uk-text-meta" }, ay = { class: "uk-text-center uk-width-expand" }, ly = ["value"], cy = { class: "uk-text-right" }, uy = { "aria-label": "Pagination" }, hy = {
+}, sy = { class: "uk-text-left uk-text-meta" }, oy = { class: "uk-text-center uk-width-expand" }, ry = ["value"], ay = { class: "uk-text-right" }, ly = { "aria-label": "Pagination" }, cy = {
   class: "uk-pagination uk-flex-right",
   "uk-margin": ""
 }, qc = /* @__PURE__ */ ht({
@@ -12109,17 +12111,17 @@ const ey = /* @__PURE__ */ ri(Zw, [["render", ty]]), ny = {
     rowsPerPageOptions: { default: () => [5, 10, 20, 50] }
   },
   setup(i) {
-    const s = rs("sprunjer"), { size: a, page: r, totalPages: u, countFiltered: h, first: f, last: g } = s;
+    const s = oi("sprunjer"), { size: a, page: r, totalPages: u, countFiltered: h, first: f, last: g } = s;
     function k(b) {
       r.value = b;
     }
     return (b, v) => {
       const A = Pt("font-awesome-icon");
-      return I(), D("div", oy, [
-        x("div", ry, [
+      return I(), D("div", iy, [
+        x("div", sy, [
           x("span", null, "Showing " + ot(U(f)) + " - " + ot(U(g)) + " of " + ot(U(h)), 1)
         ]),
-        x("div", ay, [
+        x("div", oy, [
           Lt(x("select", {
             class: "uk-select uk-form-small uk-form-width-small",
             "aria-label": "Select per page",
@@ -12128,14 +12130,14 @@ const ey = /* @__PURE__ */ ri(Zw, [["render", ty]]), ny = {
             (I(!0), D(Qe, null, ei(b.rowsPerPageOptions, (S) => (I(), D("option", {
               key: S,
               value: S
-            }, ot(S) + " per page ", 9, ly))), 128))
+            }, ot(S) + " per page ", 9, ry))), 128))
           ], 512), [
             [zo, U(a)]
           ])
         ]),
-        x("div", cy, [
-          x("nav", uy, [
-            x("ul", hy, [
+        x("div", ay, [
+          x("nav", ly, [
+            x("ul", cy, [
               x("li", null, [
                 x("a", {
                   onClick: v[1] || (v[1] = (S) => k(0)),
@@ -12187,10 +12189,10 @@ const ey = /* @__PURE__ */ ri(Zw, [["render", ty]]), ny = {
       ]);
     };
   }
-}), dy = {
+}), uy = {
   key: 0,
   class: "uk-search uk-search-default"
-}, fy = ["placeholder"], py = /* @__PURE__ */ ht({
+}, hy = ["placeholder"], dy = /* @__PURE__ */ ht({
   __name: "SprunjeSearch",
   props: {
     column: {
@@ -12202,15 +12204,15 @@ const ey = /* @__PURE__ */ ri(Zw, [["render", ty]]), ny = {
     }
   },
   setup(i) {
-    const s = i, a = rs("sprunjer"), { filters: r } = a, u = ce(() => s.label ? "Search " + s.label + "..." : "Search " + s.column + "...");
-    return (h, f) => i.column ? (I(), D("div", dy, [
+    const s = i, a = oi("sprunjer"), { filters: r } = a, u = ce(() => s.label ? "Search " + s.label + "..." : "Search " + s.column + "...");
+    return (h, f) => i.column ? (I(), D("div", uy, [
       Lt(x("input", {
         class: "uk-search-input uk-form-small",
         type: "search",
         placeholder: u.value,
         "aria-label": "Search",
         "onUpdate:modelValue": f[0] || (f[0] = (g) => U(r)[i.column] = g)
-      }, null, 8, fy), [
+      }, null, 8, hy), [
         [ne, U(r)[i.column]]
       ]),
       f[1] || (f[1] = x("span", {
@@ -12219,10 +12221,10 @@ const ey = /* @__PURE__ */ ri(Zw, [["render", ty]]), ny = {
       }, null, -1))
     ])) : et("", !0);
   }
-}), my = ["onUpdate:modelValue"], gy = ["value"], vy = ["placeholder", "onUpdate:modelValue"], by = /* @__PURE__ */ ht({
+}), fy = ["onUpdate:modelValue"], py = ["value"], my = ["placeholder", "onUpdate:modelValue"], gy = /* @__PURE__ */ ht({
   __name: "SprunjeFilters",
   setup(i) {
-    const s = rs("sprunjer"), { data: a, filters: r } = s, u = ce(() => a.value.filterable), h = ce(() => a.value.listable), f = () => {
+    const s = oi("sprunjer"), { data: a, filters: r } = s, u = ce(() => a.value.filterable), h = ce(() => a.value.listable), f = () => {
       r.value = {};
     }, g = (b) => h.value[b] !== void 0, k = (b) => h.value[b];
     return (b, v) => {
@@ -12244,8 +12246,8 @@ const ey = /* @__PURE__ */ ri(Zw, [["render", ty]]), ny = {
               (I(!0), D(Qe, null, ei(k(S), (T) => (I(), D("option", {
                 key: T.value,
                 value: T.value
-              }, ot(T.text), 9, gy))), 128))
-            ], 8, my)), [
+              }, ot(T.text), 9, py))), 128))
+            ], 8, fy)), [
               [zo, U(r)[S]]
             ]) : Lt((I(), D("input", {
               key: 1,
@@ -12253,7 +12255,7 @@ const ey = /* @__PURE__ */ ri(Zw, [["render", ty]]), ny = {
               type: "text",
               placeholder: S,
               "onUpdate:modelValue": (T) => U(r)[S] = T
-            }, null, 8, vy)), [
+            }, null, 8, my)), [
               [ne, U(r)[S]]
             ])
           ])
@@ -12271,16 +12273,16 @@ const ey = /* @__PURE__ */ ri(Zw, [["render", ty]]), ny = {
       ], 64);
     };
   }
-}), wy = {
+}), vy = {
   "uk-grid": "",
   class: "uk-child-width-1-2"
-}, yy = { class: "uk-text-left" }, ky = { class: "uk-text-right" }, $y = {
+}, by = { class: "uk-text-left" }, wy = { class: "uk-text-right" }, yy = {
   "uk-grid": "",
   class: "uk-grid-small uk-grid-divider"
-}, xy = { class: "uk-width-expand" }, Sy = { class: "uk-table uk-table-striped uk-table-small" }, _y = {
+}, ky = { class: "uk-width-expand" }, $y = { class: "uk-table uk-table-striped uk-table-small" }, xy = {
   key: 0,
   class: "uk-width-1-4"
-}, Ey = /* @__PURE__ */ ht({
+}, Sy = /* @__PURE__ */ ht({
   __name: "SprunjeTable",
   props: {
     dataUrl: {},
@@ -12297,13 +12299,13 @@ const ey = /* @__PURE__ */ ri(Zw, [["render", ty]]), ny = {
     return op("sprunjer", a), (u, h) => {
       const f = Pt("font-awesome-icon");
       return I(), D(Qe, null, [
-        x("div", wy, [
-          x("div", yy, [
+        x("div", vy, [
+          x("div", by, [
             Q(u.$slots, "actions")
           ]),
-          x("div", ky, [
+          x("div", wy, [
             Q(u.$slots, "filters"),
-            u.searchColumn ? (I(), gt(py, {
+            u.searchColumn ? (I(), gt(dy, {
               key: 0,
               column: u.searchColumn
             }, null, 8, ["column"])) : et("", !0),
@@ -12316,9 +12318,9 @@ const ey = /* @__PURE__ */ ri(Zw, [["render", ty]]), ny = {
             ]))
           ])
         ]),
-        x("div", $y, [
-          x("div", xy, [
-            x("table", Sy, [
+        x("div", yy, [
+          x("div", ky, [
+            x("table", $y, [
               x("thead", null, [
                 x("tr", null, [
                   Q(u.$slots, "header")
@@ -12333,8 +12335,8 @@ const ey = /* @__PURE__ */ ri(Zw, [["render", ty]]), ny = {
               ])
             ])
           ]),
-          s.value === !0 ? (I(), D("div", _y, [
-            At(by),
+          s.value === !0 ? (I(), D("div", xy, [
+            At(gy),
             Q(u.$slots, "filterPanel")
           ])) : et("", !0)
         ]),
@@ -12344,23 +12346,23 @@ const ey = /* @__PURE__ */ ri(Zw, [["render", ty]]), ny = {
       ], 64);
     };
   }
-}), By = {
+}), Ry = {
   install: (i) => {
-    i.component("UFAlert", up).component("UFLabel", hp).component("UFAppLink", qo).component("UFInfoBox", kp).component("UFCardBox", Op).component("UFCardBoxBig", Ap).component("UFMainContent", Fp).component("UFHeaderPage", Up).component("UFFooterContent", qp).component("UFFormLogin", Go).component("UFFormRegister", zc).component("UFFormForgotPassword", Hc).component("UFNavBar", Yb).component("UFNavBarDropdown", er).component("UFNavBarDropdownSeparator", sw).component("UFNavBarItem", lw).component("UFNavBarLogin", uw).component("UFNavBarUserCard", vw).component("UFNavBarUserCardButton", kw).component("UFPageLogin", Sw).component("UFPageRegister", Ew).component("UFPageForgotPassword", Ow).component("UFPageResendVerification", Bw).component("UFSideBar", Lw).component("UFSideBarDropdown", qw).component("UFSideBarItem", Xw).component("UFSideBarLabel", Qw).component("UFSprunjeColumn", ey).component("UFSprunjeHeader", sy).component("UFSprunjePaginator", qc).component("UFSprunjeTable", Ey);
+    i.component("UFAlert", up).component("UFLabel", hp).component("UFAppLink", qo).component("UFInfoBox", kp).component("UFCardBox", Op).component("UFCardBoxBig", Ap).component("UFMainContent", Fp).component("UFHeaderPage", Up).component("UFFooterContent", qp).component("UFFormLogin", Go).component("UFFormRegister", zc).component("UFFormForgotPassword", Hc).component("UFNavBar", Yb).component("UFNavBarDropdown", er).component("UFNavBarDropdownSeparator", sw).component("UFNavBarItem", lw).component("UFNavBarLogin", uw).component("UFNavBarUserCard", vw).component("UFNavBarUserCardButton", kw).component("UFPageLogin", Sw).component("UFPageRegister", Ew).component("UFPageForgotPassword", Ow).component("UFPageResendVerification", Bw).component("UFSideBar", Lw).component("UFSideBarDropdown", qw).component("UFSideBarItem", Xw).component("UFSideBarLabel", Qw).component("UFSprunjeColumn", Zw).component("UFSprunjeHeader", ny).component("UFSprunjePaginator", qc).component("UFSprunjeTable", Sy);
   }
 };
 export {
-  ey as A,
-  sy as B,
+  Zw as A,
+  ny as B,
   qc as C,
-  Ey as D,
+  Sy as D,
   qp as F,
   Fp as M,
   sw as N,
-  By as P,
+  Ry as P,
   Lw as S,
   Wl as U,
-  ri as _,
+  rs as _,
   Nt as a,
   up as b,
   Wp as c,
