@@ -1,9 +1,6 @@
-import { SystemInfo, SprinkleList } from '@userfrosting/sprinkle-admin/composable/useDashboardApi';
 declare const _default: import('vue').DefineComponent<{
-    info: SystemInfo;
-    sprinkles: SprinkleList;
+    slug: string;
 }, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<{
-    info: SystemInfo;
-    sprinkles: SprinkleList;
+    slug: string;
 }> & Readonly<{}>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
 export default _default;
