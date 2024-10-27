@@ -2,6 +2,7 @@ import type { App } from 'vue'
 
 // Import sub-plugins
 import PinkCupcakeComponents from './components'
+import AdminSprinkle from './views/Admin'
 import FontAwesome from './plugins/font-awesome'
 
 // Init UIkit
@@ -13,6 +14,7 @@ UIkit.use(Icons)
 export default {
     install: (app: App) => {
         app.use(PinkCupcakeComponents)
+        app.use(AdminSprinkle) // TODO : Add option to disable this or load on demand
         app.use(FontAwesome)
     }
 }

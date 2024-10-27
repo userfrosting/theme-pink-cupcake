@@ -1,4 +1,5 @@
 /// <reference types="vitest" />
+import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
@@ -29,6 +30,7 @@ export default defineConfig({
     // Add UIKit alias : https://stackoverflow.com/a/75264118/445757
     resolve: {
         alias: {
+            '@': fileURLToPath(new URL('./src', import.meta.url)),
             '../../images/backgrounds': 'uikit/src/images/backgrounds',
             '../../images/components': 'uikit/src/images/components',
             '../../images/icons': 'uikit/src/images/icons'
