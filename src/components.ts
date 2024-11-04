@@ -6,6 +6,10 @@ import type { App } from 'vue'
 
 import UFAlert from './components/UFAlert.vue'
 import UFLabel from './components/UFLabel.vue'
+import UFModal from './components/Modals/UFModal.vue'
+import UFModalAlert from './components/Modals/UFModalAlert.vue'
+import UFModalConfirmation from './components/Modals/UFModalConfirmation.vue'
+import UFModalPrompt from './components/Modals/UFModalPrompt.vue'
 import AppLink from './components/Content/AppLink.vue'
 import InfoBox from './components/Content/InfoBox.vue'
 import CardBox from './components/Content/CardBox.vue'
@@ -39,6 +43,10 @@ import SprunjeTable from './components/Sprunjer/SprunjeTable.vue'
 export {
     UFAlert,
     UFLabel,
+    UFModal,
+    UFModalAlert,
+    UFModalConfirmation,
+    UFModalPrompt,
     AppLink,
     InfoBox,
     CardBox,
@@ -74,6 +82,10 @@ export default {
     install: (app: App) => {
         app.component('UFAlert', UFAlert)
             .component('UFLabel', UFLabel)
+            .component('UFModal', UFModal)
+            .component('UFModalAlert', UFModalAlert)
+            .component('UFModalConfirmation', UFModalConfirmation)
+            .component('UFModalPrompt', UFModalPrompt)
             .component('UFAppLink', AppLink)
             .component('UFInfoBox', InfoBox)
             .component('UFCardBox', CardBox)
@@ -110,6 +122,10 @@ declare module 'vue' {
     export interface GlobalComponents {
         UFAlert: typeof UFAlert
         UFLabel: typeof UFLabel
+        UFModal: typeof UFModal
+        UFModalAlert: typeof UFModalAlert
+        UFModalConfirmation: typeof UFModalConfirmation
+        UFModalPrompt: typeof UFModalPrompt
         UFAppLink: typeof AppLink
         UFInfoBox: typeof InfoBox
         UFCardBox: typeof CardBox

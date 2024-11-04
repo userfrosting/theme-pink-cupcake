@@ -17,10 +17,10 @@ declare const _default: import('vue').DefineComponent<{
 }> & Readonly<{}>, {
     label: any;
     icon: string;
+    value: any;
     to: string | {
         name: string;
     };
-    value: any;
     faIcon: string;
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
 export default _default;

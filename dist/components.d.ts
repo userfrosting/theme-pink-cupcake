@@ -1,6 +1,10 @@
 import { App } from 'vue';
 import { default as UFAlert } from './components/UFAlert.vue';
 import { default as UFLabel } from './components/UFLabel.vue';
+import { default as UFModal } from './components/Modals/UFModal.vue';
+import { default as UFModalAlert } from './components/Modals/UFModalAlert.vue';
+import { default as UFModalConfirmation } from './components/Modals/UFModalConfirmation.vue';
+import { default as UFModalPrompt } from './components/Modals/UFModalPrompt.vue';
 import { default as AppLink } from './components/Content/AppLink.vue';
 import { default as InfoBox } from './components/Content/InfoBox.vue';
 import { default as CardBox } from './components/Content/CardBox.vue';
@@ -30,7 +34,7 @@ import { default as SprunjeColumn } from './components/Sprunjer/SprunjeColumn.vu
 import { default as SprunjeHeader } from './components/Sprunjer/SprunjeHeader.vue';
 import { default as SprunjePaginator } from './components/Sprunjer/SprunjePaginator.vue';
 import { default as SprunjeTable } from './components/Sprunjer/SprunjeTable.vue';
-export { UFAlert, UFLabel, AppLink, InfoBox, CardBox, CardBoxBig, MainContent, HeaderPage, FooterContent, FormLogin, FormRegister, FormForgotPassword, NavBar, NavBarDropdown, NavBarDropdownSeparator, NavBarItem, NavBarLogin, NavBarUserCard, NavBarUserCardButton, PageLogin, PageRegister, PageForgotPassword, PageResendVerification, SideBar, SideBarDropdown, SideBarItem, SideBarLabel, SprunjeColumn, SprunjeHeader, SprunjePaginator, SprunjeTable };
+export { UFAlert, UFLabel, UFModal, UFModalAlert, UFModalConfirmation, UFModalPrompt, AppLink, InfoBox, CardBox, CardBoxBig, MainContent, HeaderPage, FooterContent, FormLogin, FormRegister, FormForgotPassword, NavBar, NavBarDropdown, NavBarDropdownSeparator, NavBarItem, NavBarLogin, NavBarUserCard, NavBarUserCardButton, PageLogin, PageRegister, PageForgotPassword, PageResendVerification, SideBar, SideBarDropdown, SideBarItem, SideBarLabel, SprunjeColumn, SprunjeHeader, SprunjePaginator, SprunjeTable };
 declare const _default: {
     install: (app: App) => void;
 };
@@ -39,6 +43,10 @@ declare module 'vue' {
     interface GlobalComponents {
         UFAlert: typeof UFAlert;
         UFLabel: typeof UFLabel;
+        UFModal: typeof UFModal;
+        UFModalAlert: typeof UFModalAlert;
+        UFModalConfirmation: typeof UFModalConfirmation;
+        UFModalPrompt: typeof UFModalPrompt;
         UFAppLink: typeof AppLink;
         UFInfoBox: typeof InfoBox;
         UFCardBox: typeof CardBox;
