@@ -26,7 +26,7 @@ export function useGroupDeleteModal() {
                         UIkit.notification({
                             message: response.message,
                             status: 'success',
-                            pos: 'bottom-right',
+                            pos: 'top-right',
                             timeout: 4000
                         })
 
@@ -38,7 +38,7 @@ export function useGroupDeleteModal() {
                         UIkit.notification({
                             message: err.description,
                             status: 'danger',
-                            pos: 'bottom-right',
+                            pos: 'top-right',
                             timeout: 4000
                         })
 

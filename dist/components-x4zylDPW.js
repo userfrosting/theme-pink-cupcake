@@ -9620,8 +9620,8 @@ const Wg = ql("auth", {
       i.value = !0, r.value = null, await Wg().login(a).then((f) => {
         Vl.notification({
           message: "Welcome back " + (f == null ? void 0 : f.full_name) + "!",
-          status: "success",
-          pos: "bottom-right",
+          status: "primary",
+          pos: "top-right",
           timeout: 4e3
         });
       }).catch((f) => {
@@ -11597,7 +11597,7 @@ const Mb = { class: "uk-fieldset uk-form-stacked" }, Lb = { class: "uk-margin" }
         Vl.notification({
           message: "Succesfully registered " + (b == null ? void 0 : b.full_name) + "!",
           status: "success",
-          pos: "bottom-right",
+          pos: "top-right",
           timeout: 4e3
         });
       }).catch((b) => {

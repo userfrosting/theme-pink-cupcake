@@ -27,7 +27,7 @@ async function submitForm() {
             UIkit.notification({
                 message: 'Succesfully registered ' + user?.full_name + '!',
                 status: 'success',
-                pos: 'bottom-right',
+                pos: 'top-right',
                 timeout: 4000
             })
         })

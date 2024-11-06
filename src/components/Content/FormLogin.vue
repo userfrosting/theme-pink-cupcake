@@ -23,8 +23,8 @@ async function sendLogin() {
         .then((user) => {
             UIkit.notification({
                 message: 'Welcome back ' + user?.full_name + '!',
-                status: 'success',
-                pos: 'bottom-right',
+                status: 'primary',
+                pos: 'top-right',
                 timeout: 4000
             })
         })
