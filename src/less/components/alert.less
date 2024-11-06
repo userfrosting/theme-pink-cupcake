@@ -11,7 +11,11 @@
 
 // Main background colors
 // N.B.: Preset are not changed, only the custom ones
-@alert-info-background: lighten(tint(@global-info-background, 40%), 25%);
+@alert-primary-background: @global-primary-background-lighten;
+@alert-warning-background: @global-warning-background-lighten;
+@alert-danger-background: @global-danger-background-lighten;
+@alert-success-background: @global-success-background-lighten;
+@alert-info-background: @global-info-background-lighten;
 @alert-secondary-background: @global-muted-background;
 @alert-muted-background: @global-muted-background;
 
