@@ -42,6 +42,7 @@ const deleteConfirmed = () => {
     <button
         class="uk-button uk-button-danger uk-button-small"
         type="button"
+        v-bind="$attrs"
         :uk-toggle="'target: #confirm-group-delete-' + props.group.slug">
         <font-awesome-icon icon="trash" fixed-width />
     </button>

@@ -35,7 +35,9 @@ const { group } = defineProps<{
         <GroupDeleteModal
             :group="group"
             @deleted="router.push({ name: 'admin.groups' })"
-            class="uk-width-1-1 uk-margin-small-bottom" />
+            class="uk-width-1-1 uk-margin-small-bottom">
+            Delete Group
+        </GroupDeleteModal>
         <slot data-test="slot"></slot>
     </UFCardBox>
 </template>
