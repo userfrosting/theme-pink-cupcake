@@ -1,13 +1,11 @@
 <script setup lang="ts">
 import UIkit from 'uikit'
-import { inject } from 'vue'
-import type { Sprunjer } from '@userfrosting/sprinkle-core/sprunjer'
+import { defineEmits } from 'vue'
 import { useGroupDeleteApi } from '@userfrosting/sprinkle-admin/composable/useGroupDeleteApi'
 import type { GroupInterface } from '@userfrosting/sprinkle-account/types'
 import { Severity } from '@userfrosting/sprinkle-core/types'
 
 // Variables
-const sprunjer = inject('sprunjer') as Sprunjer
 const { deleteGroup } = useGroupDeleteApi()
 
 // Props
@@ -15,36 +13,39 @@ const props = defineProps<{
     group: GroupInterface
 }>()
 
+// Emits
+const emits = defineEmits(['deleted'])
+
 // Methods
 const deleteConfirmed = () => {
-    deleteGroup(props.group.slug)
-        .then((response) => {
-            sprunjer.fetch()
-            UIkit.notification({
-                message: response.message,
-                status: 'success',
-                pos: 'top-right',
-                timeout: 4000
-            })
+    deleteGroup(props.group.slug).then((response) => {
+        emits('deleted')
+        UIkit.notification({
+            message: response.message,
+            status: 'success',
+            pos: 'top-right',
+            timeout: 4000
         })
-        .catch((error) => {
-            UIkit.notification({
-                message: error.description,
-                status: 'danger',
-                pos: 'top-right',
-                timeout: 4000
-            })
+    }).catch((error) => {
+        UIkit.notification({
+            message: error.description,
+            status: 'danger',
+            pos: 'top-right',
+            timeout: 4000
         })
+    })    
 }
 </script>
 
 <template>
     <button
         class="uk-button uk-button-danger uk-button-small"
-        type="button"
         v-bind="$attrs"
+        type="button"
         :uk-toggle="'target: #confirm-group-delete-' + props.group.slug">
-        <font-awesome-icon icon="trash" fixed-width />
+        <slot>
+            <font-awesome-icon icon="trash" fixed-width />
+        </slot>
     </button>
 
     <!-- This is the modal -->
