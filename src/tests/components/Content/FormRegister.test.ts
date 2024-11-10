@@ -77,7 +77,7 @@ const testForm: Register.RegisterForm = {
 const uikitNotification = {
     message: 'Succesfully registered John Doe!',
     status: 'success',
-    pos: 'bottom-right',
+    pos: 'top-right',
     timeout: 4000
 }
 

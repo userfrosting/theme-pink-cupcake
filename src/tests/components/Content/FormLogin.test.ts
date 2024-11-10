@@ -26,8 +26,8 @@ const form: LoginForm = {
 // UiKit notification data
 const uikitNotification = {
     message: 'Welcome back John Doe!',
-    status: 'success',
-    pos: 'bottom-right',
+    status: 'primary',
+    pos: 'top-right',
     timeout: 4000
 }
 
