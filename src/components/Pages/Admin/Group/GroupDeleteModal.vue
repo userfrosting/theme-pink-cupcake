@@ -18,22 +18,24 @@ const emits = defineEmits(['deleted'])
 
 // Methods
 const deleteConfirmed = () => {
-    deleteGroup(props.group.slug).then((response) => {
-        emits('deleted')
-        UIkit.notification({
-            message: response.message,
-            status: 'success',
-            pos: 'top-right',
-            timeout: 4000
+    deleteGroup(props.group.slug)
+        .then((response) => {
+            emits('deleted')
+            UIkit.notification({
+                message: response.message,
+                status: 'success',
+                pos: 'top-right',
+                timeout: 4000
+            })
         })
-    }).catch((error) => {
-        UIkit.notification({
-            message: error.description,
-            status: 'danger',
-            pos: 'top-right',
-            timeout: 4000
+        .catch((error) => {
+            UIkit.notification({
+                message: error.description,
+                status: 'danger',
+                pos: 'top-right',
+                timeout: 4000
+            })
         })
-    })    
 }
 </script>
 
