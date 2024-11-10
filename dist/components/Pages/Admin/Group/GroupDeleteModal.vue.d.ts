@@ -1,6 +1,7 @@
+import { GroupInterface } from '@userfrosting/sprinkle-account/types';
 declare const _default: import('vue').DefineComponent<{
-    groupSlug: string;
+    group: GroupInterface;
 }, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<{
-    groupSlug: string;
+    group: GroupInterface;
 }> & Readonly<{}>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
 export default _default;

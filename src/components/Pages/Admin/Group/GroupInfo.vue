@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
+import { useRouter } from 'vue-router'
 import type { GroupApi } from '@userfrosting/sprinkle-admin/composable/useGroupApi'
 import GroupDeleteModal from '@/components/Pages/Admin/Group/GroupDeleteModal.vue'
 
+const router = useRouter()
 const { group } = defineProps<{
     group: GroupApi
 }>()
@@ -30,7 +32,10 @@ const { group } = defineProps<{
             class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom uk-button-small">
             Edit Group
         </button>
-        <GroupDeleteModal :groupSlug="group.slug" />
+        <GroupDeleteModal
+            :group="group"
+            @deleted="router.push({ name: 'admin.groups' })"
+            class="uk-width-1-1 uk-margin-small-bottom" />
         <slot data-test="slot"></slot>
     </UFCardBox>
 </template>

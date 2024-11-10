@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import GroupsCreateModal from '@/components/Pages/Admin/Group/GroupsCreateModal.vue'
-import GroupsDeleteModal from '@/components/Pages/Admin/Group/GroupsDeleteModal.vue'
+import GroupDeleteModal from '@/components/Pages/Admin/Group/GroupDeleteModal.vue'
 </script>
 
 <template>
@@ -33,8 +33,8 @@ import GroupsDeleteModal from '@/components/Pages/Admin/Group/GroupsDeleteModal.
                     </strong>
                 </UFSprunjeColumn>
                 <UFSprunjeColumn>{{ item.description }}</UFSprunjeColumn>
-                <UFSprunjeColumn>
-                    <GroupsDeleteModal :groupSlug="item.slug" />
+                <UFSprunjeColumn v-slot="{ sprunjer }">
+                    <GroupDeleteModal :group="item" @deleted="sprunjer.fetch()" />
                 </UFSprunjeColumn>
             </template>
         </UFSprunjeTable>

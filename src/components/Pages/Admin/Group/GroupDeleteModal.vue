@@ -1,26 +1,62 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
-import { useGroupDeleteModal } from '@/composable/useGroupDeleteModal'
+import UIkit from 'uikit'
+import { inject } from 'vue'
+import type { Sprunjer } from '@userfrosting/sprinkle-core/sprunjer'
+import { useGroupDeleteApi } from '@userfrosting/sprinkle-admin/composable/useGroupDeleteApi'
+import type { GroupInterface } from '@userfrosting/sprinkle-account/types'
+import { Severity } from '@userfrosting/sprinkle-core/types'
 
 // Variables
-const router = useRouter()
-const { confirmDeleteGroup } = useGroupDeleteModal()
+const sprunjer = inject('sprunjer') as Sprunjer
+const { deleteGroup } = useGroupDeleteApi()
 
 // Props
 const props = defineProps<{
-    groupSlug: string
+    group: GroupInterface
 }>()
+
+// Methods
+const deleteConfirmed = () => {
+    deleteGroup(props.group.slug)
+        .then((response) => {
+            sprunjer.fetch()
+            UIkit.notification({
+                message: response.message,
+                status: 'success',
+                pos: 'top-right',
+                timeout: 4000
+            })
+        })
+        .catch((error) => {
+            UIkit.notification({
+                message: error.description,
+                status: 'danger',
+                pos: 'top-right',
+                timeout: 4000
+            })
+        })
+}
 </script>
 
 <template>
     <button
-        class="uk-button uk-button-danger uk-width-1-1 uk-margin-small-bottom uk-button-small"
+        class="uk-button uk-button-danger uk-button-small"
         type="button"
-        @click="
-            confirmDeleteGroup(props.groupSlug).then(() => {
-                router.push({ name: 'admin.groups' })
-            })
-        ">
-        Delete Group
+        :uk-toggle="'target: #confirm-group-delete-' + props.group.slug">
+        <font-awesome-icon icon="trash" fixed-width />
     </button>
+
+    <!-- This is the modal -->
+    <UFModalConfirmation
+        :id="'confirm-group-delete-' + props.group.slug"
+        title="Delete Group ?"
+        @confirmed="deleteConfirmed()"
+        acceptLabel="Yes, Delete Group"
+        acceptIcon="trash"
+        :rejectIcon="null"
+        :acceptSeverity="Severity.Danger">
+        <template #prompt>
+            Are you sure you want to delete the <strong>{{ props.group.name }}</strong> group?
+        </template>
+    </UFModalConfirmation>
 </template>
