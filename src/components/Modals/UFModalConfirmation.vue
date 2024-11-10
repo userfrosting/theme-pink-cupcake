@@ -106,7 +106,7 @@ const btnClass = (severity: Severity) => {
         <slot>
             <div class="uk-text-center">
                 <p v-if="icon"><font-awesome-icon :icon="icon" class="uk-text-warning fa-4x" /></p>
-                {{ prompt }}
+                <slot name="prompt">{{ prompt }}</slot>
             </div>
         </slot>
         <template #footer>

@@ -34,6 +34,7 @@ declare function __VLS_template(): {
     slots: {
         header?(_: {}): any;
         default?(_: {}): any;
+        prompt?(_: {}): any;
         footer?(_: {}): any;
     };
     refs: {};

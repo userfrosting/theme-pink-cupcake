@@ -1,4 +1,4 @@
-import { defineComponent as st, ref as ve, watch as np, computed as ce, resolveComponent as xt, openBlock as R, createElementBlock as B, normalizeClass as he, createBlock as dt, createCommentVNode as Q, createTextVNode as pt, toDisplayString as X, createVNode as Ct, renderSlot as H, createElementVNode as k, createSlots as oi, withCtx as gt, mergeModels as sp, useModel as ip, useTemplateRef as op, withDirectives as jt, vModelText as Wt, unref as U, withModifiers as ri, Fragment as Qe, renderList as es, vModelSelect as Ho, isRef as qo, mergeProps as ns, normalizeProps as rp, guardReactiveProps as ap, inject as os, provide as lp } from "vue";
+import { defineComponent as st, ref as ve, watch as np, computed as ce, resolveComponent as xt, openBlock as R, createElementBlock as B, normalizeClass as he, createBlock as dt, createCommentVNode as Q, createTextVNode as pt, toDisplayString as X, createVNode as Ct, renderSlot as z, createElementVNode as k, createSlots as oi, withCtx as gt, mergeModels as sp, useModel as ip, useTemplateRef as op, withDirectives as jt, vModelText as Wt, unref as U, withModifiers as ri, Fragment as Qe, renderList as es, vModelSelect as Ho, isRef as qo, mergeProps as ns, normalizeProps as rp, guardReactiveProps as ap, inject as os, provide as lp } from "vue";
 import { RouterLink as rs } from "vue-router";
 import { defineStore as ql } from "pinia";
 import { useSprunjer as cp } from "@userfrosting/sprinkle-core/sprunjer";
@@ -80,7 +80,7 @@ const up = {
           ])) : Q("", !0)
         ])) : Q("", !0),
         $.$slots.default ? (R(), B("p", hp, [
-          H($.$slots, "default")
+          z($.$slots, "default")
         ])) : $.alert.description ? (R(), B("p", {
           key: 2,
           innerHTML: $.alert.description,
@@ -117,7 +117,7 @@ const up = {
     return (r, a) => (R(), B("span", {
       class: he(["uk-label", i.value])
     }, [
-      H(r.$slots, "default")
+      z(r.$slots, "default")
     ], 2));
   }
 }), mp = ["esc-close", "bg-close"], gp = { class: "uk-modal-dialog" }, vp = {
@@ -158,14 +158,14 @@ const up = {
         s.closable ? (R(), B("button", vp)) : Q("", !0),
         i.$slots.header ? (R(), B("div", bp, [
           k("h2", wp, [
-            H(i.$slots, "header")
+            z(i.$slots, "header")
           ])
         ])) : Q("", !0),
         k("div", yp, [
-          H(i.$slots, "default")
+          z(i.$slots, "default")
         ]),
         i.$slots.footer ? (R(), B("div", kp, [
-          H(i.$slots, "footer")
+          z(i.$slots, "footer")
         ])) : Q("", !0)
       ])
     ], 8, mp));
@@ -195,12 +195,12 @@ const up = {
       const a = xt("UFModal");
       return R(), dt(a, null, oi({
         footer: gt(() => [
-          H(i.$slots, "footer", {}, () => [
+          z(i.$slots, "footer", {}, () => [
             k("button", Sp, X(s.btnLabel), 1)
           ])
         ]),
         default: gt(() => [
-          H(i.$slots, "default", {}, () => [
+          z(i.$slots, "default", {}, () => [
             k("div", xp, X(s.prompt), 1)
           ])
         ]),
@@ -209,7 +209,7 @@ const up = {
         s.title || i.$slots.header ? {
           name: "header",
           fn: gt(() => [
-            H(i.$slots, "header", {}, () => [
+            z(i.$slots, "header", {}, () => [
               pt(X(s.title), 1)
             ])
           ]),
@@ -265,7 +265,7 @@ const up = {
         escClose: r.escClose
       }, oi({
         footer: gt(() => [
-          H(r.$slots, "footer", {}, () => [
+          z(r.$slots, "footer", {}, () => [
             r.cancelBtn ? (R(), B("button", {
               key: 0,
               class: he(["uk-button uk-modal-close", i(r.rejectSeverity)]),
@@ -293,7 +293,7 @@ const up = {
           ])
         ]),
         default: gt(() => [
-          H(r.$slots, "default", {}, () => [
+          z(r.$slots, "default", {}, () => [
             k("div", Ep, [
               r.icon ? (R(), B("p", Op, [
                 Ct(u, {
@@ -301,7 +301,9 @@ const up = {
                   class: "uk-text-warning fa-4x"
                 }, null, 8, ["icon"])
               ])) : Q("", !0),
-              pt(" " + X(r.prompt), 1)
+              z(r.$slots, "prompt", {}, () => [
+                pt(X(r.prompt), 1)
+              ])
             ])
           ])
         ]),
@@ -310,7 +312,7 @@ const up = {
         r.title || r.$slots.header ? {
           name: "header",
           fn: gt(() => [
-            H(r.$slots, "header", {}, () => [
+            z(r.$slots, "header", {}, () => [
               pt(X(r.title), 1)
             ])
           ]),
@@ -355,7 +357,7 @@ const up = {
       const f = xt("UFModal");
       return R(), dt(f, null, oi({
         footer: gt(() => [
-          H(u.$slots, "footer", {}, () => [
+          z(u.$slots, "footer", {}, () => [
             k("button", {
               class: "uk-button uk-button-primary uk-modal-close",
               type: "button",
@@ -365,7 +367,7 @@ const up = {
           ])
         ]),
         default: gt(() => [
-          H(u.$slots, "default", {}, () => [
+          z(u.$slots, "default", {}, () => [
             k("form", {
               class: "uk-form-stacked",
               onSubmit: h[1] || (h[1] = (g) => a())
@@ -392,7 +394,7 @@ const up = {
         s.title || u.$slots.header ? {
           name: "header",
           fn: gt(() => [
-            H(u.$slots, "header", {}, () => [
+            z(u.$slots, "header", {}, () => [
               pt(X(s.title), 1)
             ])
           ]),
@@ -414,11 +416,11 @@ const up = {
       href: a.value,
       target: "_blank"
     }, [
-      H(h.$slots, "default", {}, () => [
+      z(h.$slots, "default", {}, () => [
         pt(X(h.label), 1)
       ])
     ], 8, Ip)) : u.value ? (R(), B("div", Bp, [
-      H(h.$slots, "default", {}, () => [
+      z(h.$slots, "default", {}, () => [
         pt(X(h.label), 1)
       ])
     ])) : (R(), dt(U(rs), {
@@ -426,7 +428,7 @@ const up = {
       to: h.to
     }, {
       default: gt(() => [
-        H(h.$slots, "default", {}, () => [
+        z(h.$slots, "default", {}, () => [
           pt(X(h.label), 1)
         ])
       ]),
@@ -506,16 +508,16 @@ const up = {
     return (i, r) => (R(), B("div", Hp, [
       s.title || i.$slots.header ? (R(), B("div", qp, [
         k("h4", Wp, [
-          H(i.$slots, "header", {}, () => [
+          z(i.$slots, "header", {}, () => [
             pt(X(s.title), 1)
           ])
         ])
       ])) : Q("", !0),
       k("div", Vp, [
-        H(i.$slots, "default")
+        z(i.$slots, "default")
       ]),
       i.$slots.footer ? (R(), B("div", Jp, [
-        H(i.$slots, "footer")
+        z(i.$slots, "footer")
       ])) : Q("", !0)
     ]));
   }
@@ -531,14 +533,14 @@ const up = {
         k("div", Xp, [
           Ct(a, null, oi({
             default: gt(() => [
-              H(i.$slots, "default")
+              z(i.$slots, "default")
             ]),
             _: 2
           }, [
             i.$slots.header || s.title ? {
               name: "header",
               fn: gt(() => [
-                H(i.$slots, "header", {}, () => [
+                z(i.$slots, "header", {}, () => [
                   pt(X(s.title), 1)
                 ])
               ]),
@@ -547,7 +549,7 @@ const up = {
             i.$slots.footer ? {
               name: "footer",
               fn: gt(() => [
-                H(i.$slots, "footer")
+                z(i.$slots, "footer")
               ]),
               key: "1"
             } : void 0
@@ -571,7 +573,7 @@ const up = {
 function em(s, i) {
   return R(), B("div", Zp, [
     k("div", tm, [
-      H(s.$slots, "default")
+      z(s.$slots, "default")
     ])
   ]);
 }
@@ -598,7 +600,7 @@ function um(s, i) {
   return R(), B("footer", lm, [
     i[0] || (i[0] = k("hr", null, null, -1)),
     k("p", cm, [
-      H(s.$slots, "default")
+      z(s.$slots, "default")
     ])
   ]);
 }
@@ -1515,20 +1517,20 @@ var Wl = { exports: {} };
       const n = Ot(t) ? Me(t, !1, ["hidden"]) : [];
       return n.reduce(
         (d, p, m) => {
-          const { scrollTop: y, scrollHeight: x, offsetHeight: C } = p, I = te(p), F = x - I.height, { height: z, top: tt } = n[m - 1] ? te(n[m - 1]) : et(t);
+          const { scrollTop: y, scrollHeight: x, offsetHeight: C } = p, I = te(p), F = x - I.height, { height: H, top: tt } = n[m - 1] ? te(n[m - 1]) : et(t);
           let ot = Math.ceil(tt - I.top - e + y);
-          return e > 0 && C < z + e ? ot += e : e = 0, ot > F ? (e -= ot - F, ot = F) : ot < 0 && (e -= ot, ot = 0), () => o(p, ot - y, t, F).then(d);
+          return e > 0 && C < H + e ? ot += e : e = 0, ot > F ? (e -= ot - F, ot = F) : ot < 0 && (e -= ot, ot = 0), () => o(p, ot - y, t, F).then(d);
         },
         () => Promise.resolve()
       )();
       function o(d, p, m, y) {
         return new Promise((x) => {
-          const C = d.scrollTop, I = l(Math.abs(p)), F = Date.now(), z = qi(d) === d, tt = et(m).top + (z ? 0 : C);
+          const C = d.scrollTop, I = l(Math.abs(p)), F = Date.now(), H = qi(d) === d, tt = et(m).top + (H ? 0 : C);
           let ot = 0, me = 15;
           (function wn() {
             const yn = c(Mt((Date.now() - F) / I));
             let ge = 0;
-            n[0] === d && C + p < y && (ge = et(m).top + (z ? 0 : d.scrollTop) - tt - D(zi(m)).height), w(d, "scrollBehavior") !== "auto" && w(d, "scrollBehavior", "auto"), d.scrollTop = C + (p + ge) * yn, w(d, "scrollBehavior", ""), yn === 1 && (ot === ge || !me--) ? x() : (ot = ge, requestAnimationFrame(wn));
+            n[0] === d && C + p < y && (ge = et(m).top + (H ? 0 : d.scrollTop) - tt - D(zi(m)).height), w(d, "scrollBehavior") !== "auto" && w(d, "scrollBehavior", "auto"), d.scrollTop = C + (p + ge) * yn, w(d, "scrollBehavior", ""), yn === 1 && (ot === ge || !me--) ? x() : (ot = ge, requestAnimationFrame(wn));
           })();
         });
       }
@@ -1631,8 +1633,8 @@ var Wl = { exports: {} };
           continue;
         let F = 0;
         if (d[m] === "flip") {
-          const z = n.attach.target[m];
-          if (z === C && o[C] <= I[C] || z === x && o[x] >= I[x])
+          const H = n.attach.target[m];
+          if (H === C && o[C] <= I[C] || H === x && o[x] >= I[x])
             continue;
           F = Su(t, e, n, m)[x] - o[x];
           const tt = xu(t, e[m], c, m);
@@ -1647,11 +1649,11 @@ var Wl = { exports: {} };
             continue;
           }
         } else if (d[m] === "shift") {
-          const z = et(e[m]), { offset: tt } = n;
+          const H = et(e[m]), { offset: tt } = n;
           F = Mt(
             Mt(o[x], I[x], I[C] - o[y]),
-            z[x] - o[y] + tt[m],
-            z[C] - tt[m]
+            H[x] - o[y] + tt[m],
+            H[C] - tt[m]
           ) - o[x];
         }
         p = Wi(p, F, m);
@@ -2199,11 +2201,11 @@ var Wl = { exports: {} };
       const l = o.map((F) => Lr(F, !0)), c = { ...w(e, ["height", "padding"]), display: "block" }, d = o.concat(e);
       await Promise.all(d.map(ht.cancel)), w(d, "transitionProperty", "none"), await t(), o = o.concat(ut(e).filter((F) => !S(o, F))), await Promise.resolve(), w(d, "transitionProperty", "");
       const p = N(e, "style"), m = w(e, ["height", "padding"]), [y, x] = Mu(e, o, l), C = o.map((F) => ({ style: N(F, "style") }));
-      o.forEach((F, z) => x[z] && w(F, x[z])), w(e, c), j(e, "scroll"), await Yi();
-      const I = o.map((F, z) => ct(F) === e && ht.start(F, y[z], n, "ease")).concat(ht.start(e, m, n, "ease"));
+      o.forEach((F, H) => x[H] && w(F, x[H])), w(e, c), j(e, "scroll"), await Yi();
+      const I = o.map((F, H) => ct(F) === e && ht.start(F, y[H], n, "ease")).concat(ht.start(e, m, n, "ease"));
       try {
-        await Promise.all(I), o.forEach((F, z) => {
-          N(F, C[z]), ct(F) === e && w(F, "display", y[z].opacity === 0 ? "none" : "");
+        await Promise.all(I), o.forEach((F, H) => {
+          N(F, C[H]), ct(F) === e && w(F, "display", y[H].opacity === 0 ? "none" : "");
         }), N(e, "style", p);
       } catch {
         N(o, "style", ""), Lu(e, c);
@@ -2276,17 +2278,17 @@ var Wl = { exports: {} };
         w(e, "alignContent", "flex-start"), zt(e, x);
         const F = Wr(e);
         w(C, d);
-        const z = F.map(async (tt, ot) => {
+        const H = F.map(async (tt, ot) => {
           await zu(ot * o), await ht.start(tt, c, n / 2, "ease");
         });
-        x !== I && z.push(
+        x !== I && H.push(
           ht.start(
             e,
             { height: I },
             n / 2 + F.length * o,
             "ease"
           )
-        ), await Promise.all(z).then(() => {
+        ), await Promise.all(H).then(() => {
           rt(e, Zi), l === Ns(e) && (w(e, { height: "", alignContent: "" }), w(C, { opacity: "" }), delete e.dataset.transition);
         });
       });
@@ -2550,8 +2552,8 @@ var Wl = { exports: {} };
       const [m = "reveal", y = "top"] = ((p = n[0]) == null ? void 0 : p.split("-")) || [], x = [
         ["left", "right"],
         ["top", "bottom"]
-      ], C = x[S(x[0], y) ? 0 : 1], I = C[1] === y, z = ["width", "height"][x.indexOf(C)], tt = `margin-${C[0]}`, ot = `margin-${y}`;
-      let me = D(t)[z];
+      ], C = x[S(x[0], y) ? 0 : 1], I = C[1] === y, H = ["width", "height"][x.indexOf(C)], tt = `margin-${C[0]}`, ot = `margin-${y}`;
+      let me = D(t)[H];
       const wn = ht.inProgress(t);
       await ht.cancel(t), e && d(t, !0);
       const yn = Object.fromEntries(
@@ -2567,7 +2569,7 @@ var Wl = { exports: {} };
           tt,
           ot
         ].map((ml) => [ml, t.style[ml]])
-      ), ge = D(t), wo = Y(w(t, tt)), dl = Y(w(t, ot)), Ge = ge[z] + dl;
+      ), ge = D(t), wo = Y(w(t, tt)), dl = Y(w(t, ot)), Ge = ge[H] + dl;
       !wn && !e && (me += dl);
       const [Xs] = Ii(t, "<div>");
       w(Xs, {
@@ -2593,11 +2595,11 @@ var Wl = { exports: {} };
         width: ge.width,
         height: ge.height,
         overflow: "hidden",
-        [z]: me
+        [H]: me
       });
       const fl = me / Ge;
       o = (l * Ge + o) * (e ? 1 - fl : fl);
-      const pl = { [z]: e ? Ge : 0 };
+      const pl = { [H]: e ? Ge : 0 };
       I && (w(t, tt, Ge - me + wo), pl[tt] = e ? wo : Ge + wo), !I ^ m === "reveal" && (w(Xs, tt, -Ge + me), ht.start(Xs, { [tt]: e ? 0 : -Ge }, o, c));
       try {
         await ht.start(t, pl, o, c);
@@ -2796,10 +2798,10 @@ var Wl = { exports: {} };
       return {
         dir: n,
         show(C, I = 0, F) {
-          const z = F ? "linear" : l;
-          return C -= Math.round(C * Mt(I, -1, 1)), this.translate(I), He(e, "itemin", { percent: I, duration: C, timing: z, dir: n }), He(t, "itemout", { percent: 1 - I, duration: C, timing: z, dir: n }), Promise.all([
-            ht.start(e, m[1], C, z),
-            ht.start(t, m[0], C, z)
+          const H = F ? "linear" : l;
+          return C -= Math.round(C * Mt(I, -1, 1)), this.translate(I), He(e, "itemin", { percent: I, duration: C, timing: H, dir: n }), He(t, "itemout", { percent: 1 - I, duration: C, timing: H, dir: n }), Promise.all([
+            ht.start(e, m[1], C, H),
+            ht.start(t, m[0], C, H)
           ]).then(() => {
             this.reset(), x();
           }, at), y;
@@ -4048,8 +4050,8 @@ var Wl = { exports: {} };
         height: e.offsetHeight
       }, d = ["bgx", "bgy"].filter((x) => x in o), p = {};
       for (const x of d) {
-        const C = o[x].map(([ot]) => ot), I = Math.min(...C), F = Math.max(...C), z = C.indexOf(I) < C.indexOf(F), tt = F - I;
-        p[x] = `${(z ? -tt : 0) - (z ? I : F)}px`, c[x === "bgy" ? "height" : "width"] += tt;
+        const C = o[x].map(([ot]) => ot), I = Math.min(...C), F = Math.max(...C), H = C.indexOf(I) < C.indexOf(F), tt = F - I;
+        p[x] = `${(H ? -tt : 0) - (H ? I : F)}px`, c[x === "bgy" ? "height" : "width"] += tt;
       }
       const m = $i.cover(l, c);
       for (const x of d) {
@@ -4331,10 +4333,10 @@ var Wl = { exports: {} };
               "px"
             )
           );
-          const I = this.getActives(), F = this.getItemIn(), z = this.getItemIn(!0);
+          const I = this.getActives(), F = this.getItemIn(), H = this.getItemIn(!0);
           x = t ? Mt(x, -1, 1) : 0;
           for (const tt of ut(c)) {
-            const ot = S(I, tt), me = tt === F, wn = tt === z, yn = me || !wn && (ot || n * (Rt ? -1 : 1) === -1 ^ qs(tt, c) > qs(t || e));
+            const ot = S(I, tt), me = tt === F, wn = tt === H, yn = me || !wn && (ot || n * (Rt ? -1 : 1) === -1 ^ qs(tt, c) > qs(t || e));
             He(tt, `itemtranslate${yn ? "in" : "out"}`, {
               dir: n,
               percent: wn ? 1 - x : me ? x : ot ? 1 : 0
@@ -6178,19 +6180,19 @@ var Wl = { exports: {} };
             const { rows: e } = t;
             let { masonry: n, parallax: o, parallaxJustify: l, margin: c } = this;
             if (o = Math.max(0, Bt(o)), !(n || o || l) || Qa(e) || e[0].some(
-              (z, tt) => e.some((ot) => ot[tt] && ot[tt].offsetWidth !== z.offsetWidth)
+              (H, tt) => e.some((ot) => ot[tt] && ot[tt].offsetWidth !== H.offsetWidth)
             ))
               return t.translates = t.scrollColumns = !1;
             let d = Bd(e, c), p, m;
             n ? [p, m] = Id(e, d, n === "next") : p = Fd(e);
             const y = p.map(
-              (z) => Be(z, "offsetHeight") + d * (z.length - 1)
+              (H) => Be(H, "offsetHeight") + d * (H.length - 1)
             ), x = Math.max(0, ...y);
             let C, I, F;
             return (o || l) && (C = y.map(
-              (z, tt) => l ? x - z + o : o / (tt % 2 || 8)
+              (H, tt) => l ? x - H + o : o / (tt % 2 || 8)
             ), l || (o = Math.max(
-              ...y.map((z, tt) => z + C[tt] - x)
+              ...y.map((H, tt) => H + C[tt] - x)
             )), I = Bt(this.parallaxStart, "height", this.$el, !0), F = Bt(this.parallaxEnd, "height", this.$el, !0)), {
               columns: p,
               translates: m,
@@ -7404,20 +7406,20 @@ var Wl = { exports: {} };
             let C = Bt(this.offset, "height", o ? this.$el : x);
             y === "bottom" && (t < c || this.overflowFlip) && (C += c - t);
             const I = this.overflowFlip ? 0 : Math.max(0, t + C - m), F = et(x).top - // offset possible `transform: translateY` animation 'uk-animation-slide-top' while hiding
-            new DOMMatrix(w(x, "transform")).m42, z = D(this.$el).height, tt = (this.start === !1 ? F : mo(this.start, this.$el, F)) - C, ot = this.end === !1 ? d : Math.min(
+            new DOMMatrix(w(x, "transform")).m42, H = D(this.$el).height, tt = (this.start === !1 ? F : mo(this.start, this.$el, F)) - C, ot = this.end === !1 ? d : Math.min(
               d,
-              mo(this.end, this.$el, F + t, !0) - z - C + I
+              mo(this.end, this.$el, F + t, !0) - H - C + I
             );
             return o = !this.showOnUp && tt + C === F && ot === Math.min(
               d,
-              mo(!0, this.$el, 0, !0) - z - C + I
+              mo(!0, this.$el, 0, !0) - H - C + I
             ) && w(Gs(this.$el), "overflowY") !== "hidden", {
               start: tt,
               end: ot,
               offset: C,
               overflow: I,
               height: t,
-              elHeight: z,
+              elHeight: H,
               width: e,
               margin: n,
               top: Nn(x)[0],
@@ -11854,7 +11856,7 @@ const Mb = { class: "uk-fieldset uk-form-stacked" }, Lb = { class: "uk-margin" }
                   label: ""
                 }, {
                   default: gt(() => [
-                    H(i.$slots, "title", {}, () => [
+                    z(i.$slots, "title", {}, () => [
                       pt(X(i.title), 1)
                     ])
                   ]),
@@ -11863,7 +11865,7 @@ const Mb = { class: "uk-fieldset uk-form-stacked" }, Lb = { class: "uk-margin" }
               ]),
               k("div", gw, [
                 k("ul", vw, [
-                  H(i.$slots, "default")
+                  z(i.$slots, "default")
                 ])
               ])
             ])
@@ -11886,7 +11888,7 @@ const Mb = { class: "uk-fieldset uk-form-stacked" }, Lb = { class: "uk-margin" }
   setup(s) {
     return (i, r) => (R(), B("li", null, [
       k("a", ww, [
-        H(i.$slots, "label", {}, () => [
+        z(i.$slots, "label", {}, () => [
           pt(X(i.label), 1)
         ]),
         r[0] || (r[0] = pt()),
@@ -11894,7 +11896,7 @@ const Mb = { class: "uk-fieldset uk-form-stacked" }, Lb = { class: "uk-margin" }
       ]),
       k("div", yw, [
         k("ul", kw, [
-          H(i.$slots, "default")
+          z(i.$slots, "default")
         ])
       ])
     ]));
@@ -11916,7 +11918,7 @@ const _w = /* @__PURE__ */ ai($w, [["render", Sw]]), Ew = { key: 0 }, Ow = ["hre
         href: a.to.toString(),
         target: "_blank"
       }, [
-        H(a.$slots, "default", {}, () => [
+        z(a.$slots, "default", {}, () => [
           pt(X(a.label), 1)
         ])
       ], 8, Ow)
@@ -11932,7 +11934,7 @@ const _w = /* @__PURE__ */ ai($w, [["render", Sw]]), Ew = { key: 0 }, Ow = ["hre
             href: f,
             onClick: g
           }), [
-            H(a.$slots, "default", {}, () => [
+            z(a.$slots, "default", {}, () => [
               pt(X(a.label), 1)
             ])
           ], 16, Tw)
@@ -11957,7 +11959,7 @@ const _w = /* @__PURE__ */ ai($w, [["render", Sw]]), Ew = { key: 0 }, Ow = ["hre
             "data-test": "gotoRegistration"
           }, " Register ")
         ]),
-        H(i.$slots, "default")
+        z(i.$slots, "default")
       ]),
       _: 3
     }));
@@ -12003,7 +12005,7 @@ const _w = /* @__PURE__ */ ai($w, [["render", Sw]]), Ew = { key: 0 }, Ow = ["hre
           i.username ? (R(), B("p", Nw, X(i.username), 1)) : Q("", !0),
           i.meta ? (R(), B("p", Dw, "(" + X(i.meta) + ")", 1)) : Q("", !0)
         ]),
-        H(i.$slots, "default", { dataTest: "slot" })
+        z(i.$slots, "default", { dataTest: "slot" })
       ]),
       _: 3
     }));
@@ -12022,7 +12024,7 @@ const _w = /* @__PURE__ */ ai($w, [["render", Sw]]), Ew = { key: 0 }, Ow = ["hre
         href: a.to.toString(),
         target: "_blank"
       }, [
-        H(a.$slots, "default", {}, () => [
+        z(a.$slots, "default", {}, () => [
           pt(X(a.label), 1)
         ])
       ], 8, Mw)
@@ -12032,7 +12034,7 @@ const _w = /* @__PURE__ */ ai($w, [["render", Sw]]), Ew = { key: 0 }, Ow = ["hre
         class: "uk-button uk-button-default uk-button-small uk-text-center"
       }, {
         default: gt(() => [
-          H(a.$slots, "default", {}, () => [
+          z(a.$slots, "default", {}, () => [
             pt(X(a.label), 1)
           ])
         ]),
@@ -12198,7 +12200,7 @@ function ry(s, i) {
   return R(), B("aside", sy, [
     k("div", iy, [
       k("ul", oy, [
-        H(s.$slots, "default")
+        z(s.$slots, "default")
       ])
     ])
   ]);
@@ -12240,13 +12242,13 @@ const ay = /* @__PURE__ */ ai(ny, [["render", ry]]), ly = ["data-uk-icon"], cy =
                 icon: i.faIcon,
                 "data-test": "faIcon"
               }, null, 8, ["icon"])) : Q("", !0),
-              H(i.$slots, "label", {}, () => [
+              z(i.$slots, "label", {}, () => [
                 pt(X(i.label), 1)
               ]),
               i.hideCaret ? Q("", !0) : (R(), B("span", cy))
             ], 16),
             k("ul", uy, [
-              H(i.$slots, "default")
+              z(i.$slots, "default")
             ])
           ], 2)
         ]),
@@ -12283,7 +12285,7 @@ const ay = /* @__PURE__ */ ai(ny, [["render", ry]]), ly = ["data-uk-icon"], cy =
             icon: a.faIcon,
             "data-test": "faIcon"
           }, null, 8, ["icon"])) : Q("", !0),
-          H(a.$slots, "default", {}, () => [
+          z(a.$slots, "default", {}, () => [
             pt(X(a.label), 1)
           ])
         ], 8, fy)
@@ -12311,7 +12313,7 @@ const ay = /* @__PURE__ */ ai(ny, [["render", ry]]), ly = ["data-uk-icon"], cy =
                 icon: a.faIcon,
                 "data-test": "faIcon"
               }, null, 8, ["icon"])) : Q("", !0),
-              H(a.$slots, "default", {}, () => [
+              z(a.$slots, "default", {}, () => [
                 pt(X(a.label), 1)
               ])
             ], 16, my)
@@ -12334,7 +12336,7 @@ const ay = /* @__PURE__ */ ai(ny, [["render", ry]]), ly = ["data-uk-icon"], cy =
   setup(s) {
     const i = os("sprunjer");
     return (r, a) => (R(), B("td", null, [
-      H(r.$slots, "default", { sprunjer: U(i) })
+      z(r.$slots, "default", { sprunjer: U(i) })
     ]));
   }
 }), ky = {
@@ -12357,7 +12359,7 @@ const ay = /* @__PURE__ */ ai(ny, [["render", ry]]), ly = ["data-uk-icon"], cy =
           class: "uk-link-reset",
           onClick: h[0] || (h[0] = (g) => U(a)(u.sort))
         }, [
-          H(u.$slots, "default"),
+          z(u.$slots, "default"),
           U(r)[u.sort] === "asc" ? (R(), dt(f, {
             key: 0,
             icon: ["fas", "sort-up"],
@@ -12376,7 +12378,7 @@ const ay = /* @__PURE__ */ ai(ny, [["render", ry]]), ly = ["data-uk-icon"], cy =
           }))
         ])
       ])) : (R(), B("th", $y, [
-        H(u.$slots, "default")
+        z(u.$slots, "default")
       ]));
     };
   }
@@ -12582,10 +12584,10 @@ const ay = /* @__PURE__ */ ai(ny, [["render", ry]]), ly = ["data-uk-icon"], cy =
       return R(), B(Qe, null, [
         k("div", jy, [
           k("div", Uy, [
-            H(u.$slots, "actions")
+            z(u.$slots, "actions")
           ]),
           k("div", My, [
-            H(u.$slots, "filters"),
+            z(u.$slots, "filters"),
             u.searchColumn ? (R(), dt(Iy, {
               key: 0,
               column: u.searchColumn
@@ -12604,24 +12606,24 @@ const ay = /* @__PURE__ */ ai(ny, [["render", ry]]), ly = ["data-uk-icon"], cy =
             k("table", Hy, [
               k("thead", null, [
                 k("tr", null, [
-                  H(u.$slots, "header")
+                  z(u.$slots, "header")
                 ])
               ]),
               k("tbody", null, [
                 (R(!0), B(Qe, null, es(U(a), (g) => (R(), B("tr", {
                   key: g.id
                 }, [
-                  H(u.$slots, "body", { item: g })
+                  z(u.$slots, "body", { item: g })
                 ]))), 128))
               ])
             ])
           ]),
           i.value === !0 ? (R(), B("div", qy, [
             Ct(Dy),
-            H(u.$slots, "filterPanel")
+            z(u.$slots, "filterPanel")
           ])) : Q("", !0)
         ]),
-        u.hidePagination ? Q("", !0) : H(u.$slots, "paginator", { key: 0 }, () => [
+        u.hidePagination ? Q("", !0) : z(u.$slots, "paginator", { key: 0 }, () => [
           Ct(Wc)
         ])
       ], 64);
