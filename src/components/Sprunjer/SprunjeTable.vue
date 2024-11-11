@@ -48,10 +48,10 @@ provide('sprunjer', sprunjer)
 <template>
     <div uk-grid class="uk-child-width-1-2">
         <div class="uk-text-left">
-            <slot name="actions"></slot>
+            <slot name="actions" :sprunjer="sprunjer"></slot>
         </div>
         <div class="uk-text-right">
-            <slot name="filters"></slot>
+            <slot name="filters" :sprunjer="sprunjer"></slot>
             <SprunjeSearch v-if="searchColumn" :column="searchColumn" />
             <a
                 class="uk-button uk-button-default uk-button-small"
@@ -66,22 +66,22 @@ provide('sprunjer', sprunjer)
             <table class="uk-table uk-table-striped uk-table-small">
                 <thead>
                     <tr>
-                        <slot name="header"></slot>
+                        <slot name="header" :sprunjer="sprunjer"></slot>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="row in rows" :key="row.id">
-                        <slot name="body" :item="row"></slot>
+                        <slot name="body" :item="row" :sprunjer="sprunjer"></slot>
                     </tr>
                 </tbody>
             </table>
         </div>
         <div v-if="filterPanelOpen === true" class="uk-width-1-4">
             <SprunjeFilters />
-            <slot name="filterPanel"></slot>
+            <slot name="filterPanel" :sprunjer="sprunjer"></slot>
         </div>
     </div>
-    <slot v-if="!hidePagination" name="paginator">
+    <slot v-if="!hidePagination" name="paginator" :sprunjer="sprunjer">
         <SprunjePaginator />
     </slot>
 </template>

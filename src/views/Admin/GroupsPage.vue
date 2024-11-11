@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import GroupsCreateModal from '@/components/Pages/Admin/Group/GroupsCreateModal.vue'
+import GroupCreateModal from '@/components/Pages/Admin/Group/GroupCreateModal.vue'
 import GroupDeleteModal from '@/components/Pages/Admin/Group/GroupDeleteModal.vue'
 </script>
 
@@ -10,8 +10,8 @@ import GroupDeleteModal from '@/components/Pages/Admin/Group/GroupDeleteModal.vu
 
     <UFCardBox>
         <UFSprunjeTable dataUrl="/api/groups" searchColumn="name">
-            <template #actions>
-                <GroupsCreateModal />
+            <template #actions="{ sprunjer }">
+                <GroupCreateModal @saved="sprunjer.fetch()" />
             </template>
 
             <template #header>
@@ -20,7 +20,7 @@ import GroupDeleteModal from '@/components/Pages/Admin/Group/GroupDeleteModal.vu
                 <UFSprunjeHeader>Actions</UFSprunjeHeader>
             </template>
 
-            <template #body="{ item }">
+            <template #body="{ item, sprunjer }">
                 <UFSprunjeColumn>
                     <strong>
                         <RouterLink
@@ -33,8 +33,9 @@ import GroupDeleteModal from '@/components/Pages/Admin/Group/GroupDeleteModal.vu
                     </strong>
                 </UFSprunjeColumn>
                 <UFSprunjeColumn>{{ item.description }}</UFSprunjeColumn>
-                <UFSprunjeColumn v-slot="{ sprunjer }">
-                    <GroupDeleteModal :group="item" @deleted="sprunjer.fetch()" />
+                <UFSprunjeColumn>
+                    <GroupEditModal :group="item" @saved="sprunjer.fetch()" />
+                    <GroupDeleteModal :group="item" />
                 </UFSprunjeColumn>
             </template>
         </UFSprunjeTable>
