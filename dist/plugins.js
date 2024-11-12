@@ -5230,7 +5230,11 @@ const OL = { class: "uk-text-center" }, RL = { class: "uk-text-center uk-margin-
           s[4] || (s[4] = f("hr", null, null, -1)),
           m(c7, {
             group: e.group,
-            onSaved: s[0] || (s[0] = (o) => F(l).push({ name: "admin.group", params: { slug: o.slug }, replace: !0 })),
+            onSaved: s[0] || (s[0] = (o) => F(l).push({
+              name: "admin.group",
+              params: { slug: o.slug },
+              replace: !0
+            })),
             class: "uk-width-1-1 uk-margin-small-bottom uk-button uk-button-primary"
           }, null, 8, ["group"]),
           m(l7, {

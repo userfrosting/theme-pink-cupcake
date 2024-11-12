@@ -31,7 +31,14 @@ const { group } = defineProps<{
         <hr />
         <GroupEditModal
             :group="group"
-            @saved="(editedGroup) => router.push({ name: 'admin.group', params: { slug: editedGroup.slug }, replace: true })"
+            @saved="
+                (editedGroup) =>
+                    router.push({
+                        name: 'admin.group',
+                        params: { slug: editedGroup.slug },
+                        replace: true
+                    })
+            "
             class="uk-width-1-1 uk-margin-small-bottom uk-button uk-button-primary" />
         <GroupDeleteModal
             :group="group"
