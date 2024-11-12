@@ -5,7 +5,7 @@ import GroupInfo from '@/components/Pages/Admin/Group/GroupInfo.vue'
 import GroupUsers from '@/components/Pages/Admin/Group/GroupUsers.vue'
 
 const route = useRoute()
-const { group, error } = useGroupApi(route)
+const { group, error, fetchApi } = useGroupApi(route)
 </script>
 
 <template>
@@ -16,7 +16,7 @@ const { group, error } = useGroupApi(route)
     <template v-else>
         <div uk-grid>
             <div class="uk-width-1-3">
-                <GroupInfo :group="group" />
+                <GroupInfo :group="group" @groupUpdated="fetchApi()" />
             </div>
             <div class="uk-width-2-3">
                 <GroupUsers :slug="$route.params.slug.toString()" />

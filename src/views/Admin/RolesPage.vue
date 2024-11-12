@@ -6,8 +6,8 @@
     <UFCardBox>
         <UFSprunjeTable dataUrl="/api/roles" searchColumn="name">
             <template #actions>
-                <button class="uk-button uk-button-default">
-                    <font-awesome-icon icon="address-card" /> Create Role
+                <button class="uk-button uk-button-primary">
+                    <font-awesome-icon icon="plus" /> Create Role
                 </button>
             </template>
 

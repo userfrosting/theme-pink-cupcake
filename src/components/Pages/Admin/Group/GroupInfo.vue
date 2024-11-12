@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
+import { defineProps, defineEmits } from 'vue'
 import { useRouter } from 'vue-router'
 import type { GroupApi } from '@userfrosting/sprinkle-admin/composable/useGroupApi'
 import GroupEditModal from '@/components/Pages/Admin/Group/GroupEditModal.vue'
@@ -9,6 +9,8 @@ const router = useRouter()
 const { group } = defineProps<{
     group: GroupApi
 }>()
+
+const emits = defineEmits(['groupUpdated'])
 </script>
 
 <template>
@@ -31,19 +33,12 @@ const { group } = defineProps<{
         <hr />
         <GroupEditModal
             :group="group"
-            @saved="
-                (editedGroup) =>
-                    router.push({
-                        name: 'admin.group',
-                        params: { slug: editedGroup.slug },
-                        replace: true
-                    })
-            "
-            class="uk-width-1-1 uk-margin-small-bottom uk-button uk-button-primary" />
+            @saved="emits('groupUpdated')"
+            class="uk-width-1-1 uk-margin-small-bottom uk-button uk-button-primary uk-button-small" />
         <GroupDeleteModal
             :group="group"
             @deleted="router.push({ name: 'admin.groups' })"
-            class="uk-width-1-1 uk-margin-small-bottom uk-button uk-button-danger" />
+            class="uk-width-1-1 uk-margin-small-bottom uk-button uk-button-danger uk-button-small" />
         <slot data-test="slot"></slot>
     </UFCardBox>
 </template>

@@ -22,7 +22,7 @@ import GroupDeleteModal from '@/components/Pages/Admin/Group/GroupDeleteModal.vu
             </template>
 
             <template #body="{ item, sprunjer }">
-                <UFSprunjeColumn>
+                <UFSprunjeColumn class="uk-width-1-6">
                     <strong>
                         <RouterLink
                             :to="{

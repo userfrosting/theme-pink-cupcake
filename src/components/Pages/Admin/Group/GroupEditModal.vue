@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import UIkit from 'uikit'
-import { defineEmits, ref } from 'vue'
+import { defineEmits, ref, watch } from 'vue'
 import { useGroupEditApi } from '@userfrosting/sprinkle-admin/composable/useGroupEditApi'
 import type { GroupEditForm } from '@userfrosting/sprinkle-admin/composable/useGroupEditApi'
 import type { GroupInterface } from '@userfrosting/sprinkle-account/types'
@@ -22,6 +22,24 @@ const formData = ref<GroupEditForm>({
     description: props.group.description,
     icon: props.group.icon
 })
+
+/**
+ * Watchers - Watch for changes in the group prop and update formData
+ * accordingly. Useful when the group prop is updated from the parent component,
+ * or the modal is reused.
+ */
+watch(
+    () => props.group,
+    (newGroup: GroupInterface) => {
+        formData.value = {
+            slug: newGroup.slug,
+            name: newGroup.name,
+            description: newGroup.description,
+            icon: newGroup.icon
+        }
+    },
+    { deep: true }
+)
 
 /**
  * API - Use the group edit API.
