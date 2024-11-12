@@ -40,15 +40,9 @@ const deleteConfirmed = () => {
 </script>
 
 <template>
-    <button
-        class="uk-button uk-button-danger uk-button-small"
-        v-bind="$attrs"
-        type="button"
-        :uk-toggle="'target: #confirm-group-delete-' + props.group.slug">
-        <slot>
-            <font-awesome-icon icon="trash" fixed-width />
-        </slot>
-    </button>
+    <a href="#" v-bind="$attrs" :uk-toggle="'target: #confirm-group-delete-' + props.group.slug">
+        <slot><font-awesome-icon icon="trash" fixed-width /> Delete Group</slot>
+    </a>
 
     <!-- This is the modal -->
     <UFModalConfirmation

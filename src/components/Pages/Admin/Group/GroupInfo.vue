@@ -2,6 +2,7 @@
 import { defineProps } from 'vue'
 import { useRouter } from 'vue-router'
 import type { GroupApi } from '@userfrosting/sprinkle-admin/composable/useGroupApi'
+import GroupEditModal from '@/components/Pages/Admin/Group/GroupEditModal.vue'
 import GroupDeleteModal from '@/components/Pages/Admin/Group/GroupDeleteModal.vue'
 
 const router = useRouter()
@@ -28,16 +29,14 @@ const { group } = defineProps<{
             </dd>
         </dl>
         <hr />
-        <button
-            class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom uk-button-small">
-            Edit Group
-        </button>
+        <GroupEditModal
+            :group="group"
+            @saved="(editedGroup) => router.push({ name: 'admin.group', params: { slug: editedGroup.slug }, replace: true })"
+            class="uk-width-1-1 uk-margin-small-bottom uk-button uk-button-primary" />
         <GroupDeleteModal
             :group="group"
             @deleted="router.push({ name: 'admin.groups' })"
-            class="uk-width-1-1 uk-margin-small-bottom">
-            Delete Group
-        </GroupDeleteModal>
+            class="uk-width-1-1 uk-margin-small-bottom uk-button uk-button-danger" />
         <slot data-test="slot"></slot>
     </UFCardBox>
 </template>

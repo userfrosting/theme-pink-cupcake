@@ -41,7 +41,7 @@ const submitForm = () => {
     submitGroupEdit(props.group.slug, formData.value)
         .then((response) => {
             // Emit the saved event
-            emits('saved')
+            emits('saved', response.group)
 
             // Close the modal
             UIkit.modal('#modal-group-edit-' + props.group.slug).hide()
@@ -67,15 +67,9 @@ const submitForm = () => {
 </script>
 
 <template>
-    <button
-        class="uk-button uk-button-primary uk-button-small"
-        v-bind="$attrs"
-        type="button"
-        :uk-toggle="'target: #modal-group-edit-' + props.group.slug">
-        <slot>
-            <font-awesome-icon icon="pen-to-square" fixed-width />
-        </slot>
-    </button>
+    <a href="#" v-bind="$attrs" :uk-toggle="'target: #modal-group-edit-' + props.group.slug">
+        <slot> <font-awesome-icon icon="pen-to-square" fixed-width /> Edit Group </slot>
+    </a>
 
     <!-- This is the modal -->
     <UFModal :id="'modal-group-edit-' + props.group.slug" closable>

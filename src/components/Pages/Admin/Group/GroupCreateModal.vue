@@ -59,17 +59,13 @@ const submitForm = () => {
 </script>
 
 <template>
-    <button
-        class="uk-button uk-button-default"
-        v-bind="$attrs"
-        type="button"
-        :uk-toggle="'target: #modal-group-create'">
-        <slot> <font-awesome-icon icon="plus" fixed-width /> Create Group </slot>
-    </button>
+    <a v-bind="$attrs" :uk-toggle="'target: #modal-group-create'">
+        <slot><font-awesome-icon icon="plus" fixed-width /> Create Group</slot>
+    </a>
 
     <!-- This is the modal -->
     <UFModal id="modal-group-create" closable>
-        <template #header> Create Group </template>
+        <template #header>Create Group</template>
         <template #default>
             <GroupForm v-model="formData" @submit="submitForm()" />
         </template>

@@ -12,7 +12,7 @@ import GroupDeleteModal from '@/components/Pages/Admin/Group/GroupDeleteModal.vu
     <UFCardBox>
         <UFSprunjeTable dataUrl="/api/groups" searchColumn="name">
             <template #actions="{ sprunjer }">
-                <GroupCreateModal @saved="sprunjer.fetch()" />
+                <GroupCreateModal @saved="sprunjer.fetch()" class="uk-button uk-button-primary" />
             </template>
 
             <template #header>
@@ -35,8 +35,36 @@ import GroupDeleteModal from '@/components/Pages/Admin/Group/GroupDeleteModal.vu
                 </UFSprunjeColumn>
                 <UFSprunjeColumn>{{ item.description }}</UFSprunjeColumn>
                 <UFSprunjeColumn>
-                    <GroupEditModal :group="item" @saved="sprunjer.fetch()" />
-                    <GroupDeleteModal :group="item" />
+                    <button class="uk-button uk-button-primary uk-text-nowrap" type="button">
+                        Actions <span uk-drop-parent-icon></span>
+                    </button>
+                    <div
+                        class="uk-padding-small"
+                        uk-dropdown="pos: bottom-right; mode: click; offset: 2">
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <li>
+                                <RouterLink
+                                    :to="{
+                                        name: 'admin.group',
+                                        params: { slug: item.slug }
+                                    }">
+                                    <font-awesome-icon icon="eye" fixed-width /> View
+                                </RouterLink>
+                            </li>
+                            <li>
+                                <GroupEditModal
+                                    :group="item"
+                                    @saved="sprunjer.fetch()"
+                                    class="uk-drop-close" />
+                            </li>
+                            <li>
+                                <GroupDeleteModal
+                                    :group="item"
+                                    @deleted="sprunjer.fetch()"
+                                    class="uk-drop-close" />
+                            </li>
+                        </ul>
+                    </div>
                 </UFSprunjeColumn>
             </template>
         </UFSprunjeTable>
