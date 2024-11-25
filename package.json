@@ -87,6 +87,7 @@
     "scripts": {
         "dev": "vite",
         "build": "vue-tsc && vite build",
+        "watch": "vue-tsc && vite build --watch",
         "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
         "format": "prettier --write src/",
         "test": "vitest",
