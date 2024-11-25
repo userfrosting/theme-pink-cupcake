@@ -12,7 +12,7 @@ import moment from 'moment'
     <UFCardBox>
         <UFSprunjeTable dataUrl="/api/users" searchColumn="name">
             <template #actions>
-                <button class="uk-button uk-button-default">
+                <button class="uk-button uk-button-primary">
                     <font-awesome-icon icon="user-plus" /> Create user
                 </button>
             </template>
