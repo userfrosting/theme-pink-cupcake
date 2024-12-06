@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
-import type { RoleApi } from '@userfrosting/sprinkle-admin/composable/useRoleApi'
+import type { RoleApi } from '@userfrosting/sprinkle-admin/interfaces'
 
 const { role } = defineProps<{
     role: RoleApi

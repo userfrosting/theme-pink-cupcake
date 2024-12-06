@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
 import moment from 'moment'
-import { Severity } from '@userfrosting/sprinkle-core/types'
-import type { UserApi } from '@userfrosting/sprinkle-admin/composable/useUserApi'
+import { Severity } from '@userfrosting/sprinkle-core/interfaces'
+import type { UserApi } from '@userfrosting/sprinkle-admin/interfaces'
 
 const { user } = defineProps<{
     user: UserApi

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import UIkit from 'uikit'
-import type { AlertInterface } from '@userfrosting/sprinkle-core/types'
-import type { LoginForm } from '@userfrosting/sprinkle-account/types'
+import type { AlertInterface } from '@userfrosting/sprinkle-core/interfaces'
+import type { LoginForm } from '@userfrosting/sprinkle-account/interfaces'
 import { useAuthStore } from '@userfrosting/sprinkle-account/stores'
 
 // Variables
@@ -28,7 +28,7 @@ async function sendLogin() {
                 timeout: 4000
             })
         })
-        .catch((err) => {
+        .catch((err: AlertInterface) => {
             error.value = err
         })
         .finally(() => {

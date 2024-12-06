@@ -4,8 +4,8 @@ import FormLogin from '../../../components/Content/FormLogin.vue'
 import { useAuthStore } from '@userfrosting/sprinkle-account/stores'
 import UFAlert from '../../../components/UFAlert.vue'
 import UIkit from 'uikit'
-import type { LoginForm } from '@userfrosting/sprinkle-account/types'
-import type { AlertInterface } from '@userfrosting/sprinkle-core/types'
+import type { LoginForm } from '@userfrosting/sprinkle-account/interfaces'
+import type { AlertInterface } from '@userfrosting/sprinkle-core/interfaces'
 
 // Register the UFAlert component stub globally
 config.global.stubs['UFAlert'] = UFAlert

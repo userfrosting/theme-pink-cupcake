@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import { useRoleApi } from '@userfrosting/sprinkle-admin/composable/useRoleApi'
-import RoleInfo from '@/components/Pages/Admin/Role/RoleInfo.vue'
-import RoleUsers from '@/components/Pages/Admin/Role/RoleUsers.vue'
-import RolePermissions from '@/components/Pages/Admin/Role/RolePermissions.vue'
+import { useRoleApi } from '@userfrosting/sprinkle-admin/composables'
+import RoleInfo from '../../components/Pages/Admin/Role/RoleInfo.vue'
+import RoleUsers from '../../components/Pages/Admin/Role/RoleUsers.vue'
+import RolePermissions from '../../components/Pages/Admin/Role/RolePermissions.vue'
 
 const route = useRoute()
 const { role, error } = useRoleApi(route)

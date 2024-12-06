@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { defineProps, defineEmits } from 'vue'
 import { useRouter } from 'vue-router'
-import type { GroupApi } from '@userfrosting/sprinkle-admin/composable/useGroupApi'
-import GroupEditModal from '@/components/Pages/Admin/Group/GroupEditModal.vue'
-import GroupDeleteModal from '@/components/Pages/Admin/Group/GroupDeleteModal.vue'
+import type { GroupApi } from '@userfrosting/sprinkle-admin/interfaces'
+import GroupEditModal from './GroupEditModal.vue'
+import GroupDeleteModal from './GroupDeleteModal.vue'
 
 const router = useRouter()
 const { group } = defineProps<{

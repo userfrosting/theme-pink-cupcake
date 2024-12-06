@@ -1,5 +1,5 @@
 <script setup>
-import { Severity } from '@userfrosting/sprinkle-core/types'
+import { Severity } from '@userfrosting/sprinkle-core/interfaces'
 import moment from 'moment'
 </script>
 

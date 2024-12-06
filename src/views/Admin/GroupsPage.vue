@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import GroupCreateModal from '@/components/Pages/Admin/Group/GroupCreateModal.vue'
-import GroupEditModal from '@/components/Pages/Admin/Group/GroupEditModal.vue'
-import GroupDeleteModal from '@/components/Pages/Admin/Group/GroupDeleteModal.vue'
+import GroupCreateModal from '../../components/Pages/Admin/Group/GroupCreateModal.vue'
+import GroupEditModal from '../../components/Pages/Admin/Group/GroupEditModal.vue'
+import GroupDeleteModal from '../../components/Pages/Admin/Group/GroupDeleteModal.vue'
 </script>
 
 <template>

@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import UIkit from 'uikit'
 import { defineEmits, ref, watch } from 'vue'
-import { useGroupEditApi } from '@userfrosting/sprinkle-admin/composable/useGroupEditApi'
-import type { GroupEditForm } from '@userfrosting/sprinkle-admin/composable/useGroupEditApi'
-import type { GroupInterface } from '@userfrosting/sprinkle-account/types'
+import { useGroupEditApi } from '@userfrosting/sprinkle-admin/composables'
+import type { GroupEditForm } from '@userfrosting/sprinkle-admin/interfaces'
+import type { GroupInterface } from '@userfrosting/sprinkle-account/interfaces'
 import GroupForm from './GroupForm.vue'
 
 /**

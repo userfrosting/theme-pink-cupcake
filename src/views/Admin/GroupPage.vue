@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import { useGroupApi } from '@userfrosting/sprinkle-admin/composable/useGroupApi'
-import GroupInfo from '@/components/Pages/Admin/Group/GroupInfo.vue'
-import GroupUsers from '@/components/Pages/Admin/Group/GroupUsers.vue'
+import { useGroupApi } from '@userfrosting/sprinkle-admin/composables'
+import GroupInfo from '../../components/Pages/Admin/Group/GroupInfo.vue'
+import GroupUsers from '../../components/Pages/Admin/Group/GroupUsers.vue'
 
 const route = useRoute()
 const { group, error, fetchApi } = useGroupApi(route)

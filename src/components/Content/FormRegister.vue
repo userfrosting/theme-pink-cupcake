@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import UIkit from 'uikit'
-import type { AlertInterface } from '@userfrosting/sprinkle-core/types'
+import type { AlertInterface } from '@userfrosting/sprinkle-core/interfaces'
 import { Register } from '@userfrosting/sprinkle-account/composables'
-import type { UserInterface } from '@userfrosting/sprinkle-account/types'
+import type { UserInterface, RegisterForm } from '@userfrosting/sprinkle-account/interfaces'
 
 // Variables
 const { getDefaultForm, doRegister, getAvailableLocales, getCaptchaUrl } = Register
 const loading = ref(false)
 const error = ref<AlertInterface | null>()
-let form: Register.RegisterForm = getDefaultForm()
+let form: RegisterForm = getDefaultForm()
 
 /**
  * TODO :

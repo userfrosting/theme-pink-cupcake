@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import type { AlertInterface } from '@userfrosting/sprinkle-core/types'
+import type { AlertInterface } from '@userfrosting/sprinkle-core/interfaces'
 import { forgotPassword } from '@userfrosting/sprinkle-account/composables'
 
 // Variables

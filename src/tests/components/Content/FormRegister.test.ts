@@ -3,8 +3,8 @@ import { describe, test, expect, vi, afterEach } from 'vitest'
 import FormRegister from '../../../components/Content/FormRegister.vue'
 import UFAlert from '../../../components/UFAlert.vue'
 import UIkit from 'uikit'
-import type { UserInterface } from '@userfrosting/sprinkle-account/types'
-import type { AlertInterface } from '@userfrosting/sprinkle-core/types'
+import type { UserInterface, RegisterForm } from '@userfrosting/sprinkle-account/interfaces'
+import type { AlertInterface } from '@userfrosting/sprinkle-core/interfaces'
 import { Register } from '@userfrosting/sprinkle-account/composables'
 
 // Register the UFAlert component stub globally
@@ -12,7 +12,7 @@ config.global.stubs['UFAlert'] = UFAlert
 config.global.stubs['FontAwesomeIcon'] = { template: '<span></span>' }
 
 // Mock default form
-const defaultForm: Register.RegisterForm = {
+const defaultForm: RegisterForm = {
     first_name: '',
     last_name: '',
     email: '',
@@ -61,7 +61,7 @@ const testUser: UserInterface = {
 }
 
 // Completed form data
-const testForm: Register.RegisterForm = {
+const testForm: RegisterForm = {
     first_name: 'John',
     last_name: 'Doe',
     email: 'john.doe@example.com',

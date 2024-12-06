@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import { useUserApi } from '@userfrosting/sprinkle-admin/composable/useUserApi'
-import UserInfo from '@/components/Pages/Admin/User/UserInfo.vue'
-import UserActivities from '@/components/Pages/Admin/User/UserActivities.vue'
-import UserRoles from '@/components/Pages/Admin/User/UserRoles.vue'
-import UserPermissions from '@/components/Pages/Admin/User/UserPermissions.vue'
+import { useUserApi } from '@userfrosting/sprinkle-admin/composables'
+import UserInfo from '../../components/Pages/Admin/User/UserInfo.vue'
+import UserActivities from '../../components/Pages/Admin/User/UserActivities.vue'
+import UserRoles from '../../components/Pages/Admin/User/UserRoles.vue'
+import UserPermissions from '../../components/Pages/Admin/User/UserPermissions.vue'
 
 const route = useRoute()
 const { user, error } = useUserApi(route)

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { Sprunjer } from '@userfrosting/sprinkle-core/sprunjer'
 import { inject, computed } from 'vue'
+import type { Sprunjer } from '@userfrosting/sprinkle-core/interfaces'
 
 const sprunjer = inject('sprunjer') as Sprunjer
 const { data, filters } = sprunjer

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { defineEmits, defineModel } from 'vue'
-
 /**
  * Interface
  */

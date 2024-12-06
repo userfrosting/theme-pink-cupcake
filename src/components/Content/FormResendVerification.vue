@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import type { AlertInterface } from '@userfrosting/sprinkle-core/types'
+import type { AlertInterface } from '@userfrosting/sprinkle-core/interfaces'
 import { resendVerification } from '@userfrosting/sprinkle-account/composables'
 
 // Variables
@@ -13,10 +13,10 @@ async function sendForm() {
     loading.value = true
     alert.value = null
     await resendVerification(email)
-        .then((success) => {
+        .then((success: AlertInterface) => {
             alert.value = success
         })
-        .catch((err) => {
+        .catch((err: AlertInterface) => {
             alert.value = err
         })
         .finally(() => {

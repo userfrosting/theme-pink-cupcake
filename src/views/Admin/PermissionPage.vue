@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import { usePermissionApi } from '@userfrosting/sprinkle-admin/composable/usePermissionApi'
-import PermissionInfo from '@/components/Pages/Admin/Permission/PermissionInfo.vue'
-import PermissionUsers from '@/components/Pages/Admin/Permission/PermissionUsers.vue'
+import { usePermissionApi } from '@userfrosting/sprinkle-admin/composables'
+import PermissionInfo from '../../components/Pages/Admin/Permission/PermissionInfo.vue'
+import PermissionUsers from '../../components/Pages/Admin/Permission/PermissionUsers.vue'
 
 const route = useRoute()
 const { permission, error } = usePermissionApi(route)

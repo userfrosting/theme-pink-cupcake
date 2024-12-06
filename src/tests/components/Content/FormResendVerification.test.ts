@@ -2,7 +2,7 @@ import { mount, config } from '@vue/test-utils'
 import { describe, test, expect, vi, afterEach } from 'vitest'
 import FormResendVerification from '../../../components/Content/FormResendVerification.vue'
 import UFAlert from '../../../components/UFAlert.vue'
-import { Severity, type AlertInterface } from '@userfrosting/sprinkle-core/types'
+import { Severity, type AlertInterface } from '@userfrosting/sprinkle-core/interfaces'
 import { resendVerification } from '@userfrosting/sprinkle-account/composables'
 
 // Register the UFAlert component stub globally

@@ -23,25 +23,15 @@
     "bugs": {
         "url": "https://github.com/userfrosting/UserFrosting/issues"
     },
-    "main": "./dist/plugin.cjs",
-    "module": "./dist/plugins.js",
-    "types": "./dist/plugins.d.ts",
     "exports": {
-        ".": {
-            "import": "./dist/plugins.js",
-            "require": "./dist/plugins.cjs",
-            "types": "./dist/plugins.d.ts"
-        },
-        "./components": {
-            "import": "./dist/components.js",
-            "require": "./dist/components.cjs",
-            "types": "./dist/components.d.ts"
-        },
-        "./*": "./src/*"
+        ".": "./src/index.ts",
+        "./components": "./src/components/index.ts",
+        "./plugins": "./src/plugins/index.ts",
+        "./views": "./src/views/index.ts",
+        "./less/*": "./src/less/*"
     },
     "files": [
-        "src/",
-        "dist/"
+        "src/"
     ],
     "dependencies": {
         "@fontsource/montserrat": "^5.0.8",
@@ -73,7 +63,7 @@
         "@vue/tsconfig": "^0.5.1",
         "eslint": "^8.57.0",
         "eslint-plugin-vue": "^9.23.0",
-        "happy-dom": "^15.10.2",
+        "happy-dom": "^15.11.6",
         "less": "^4.2.0",
         "npm-run-all2": "^6.1.2",
         "prettier": "^3.2.5",
@@ -82,12 +72,12 @@
         "vitest": "^1.6.0",
         "vue": "^3.4.21",
         "vue-router": "^4.2.4",
-        "vue-tsc": "^2.0.11"
+        "vue-tsc": "^2.1.10"
     },
     "scripts": {
         "dev": "vite",
+        "typecheck": "vue-tsc --noEmit",
         "build": "vue-tsc && vite build",
-        "watch": "vue-tsc && vite build --watch",
         "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
         "format": "prettier --write src/",
         "test": "vitest",

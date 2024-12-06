@@ -4,41 +4,37 @@
  */
 import type { App } from 'vue'
 
-import UFAlert from './components/UFAlert.vue'
-import UFLabel from './components/UFLabel.vue'
-import UFModal from './components/Modals/UFModal.vue'
-import UFModalAlert from './components/Modals/UFModalAlert.vue'
-import UFModalConfirmation from './components/Modals/UFModalConfirmation.vue'
-import UFModalPrompt from './components/Modals/UFModalPrompt.vue'
-import AppLink from './components/Content/AppLink.vue'
-import InfoBox from './components/Content/InfoBox.vue'
-import CardBox from './components/Content/CardBox.vue'
-import CardBoxBig from './components/Content/CardBoxBig.vue'
-import MainContent from './components/Content/MainContent.vue'
-import HeaderPage from './components/Content/HeaderPage.vue'
-import FooterContent from './components/Content/FooterContent.vue'
-import FormLogin from './components/Content/FormLogin.vue'
-import FormRegister from './components/Content/FormRegister.vue'
-import FormForgotPassword from './components/Content/FormForgotPassword.vue'
-import NavBar from './components/NavBar/NavBar.vue'
-import NavBarDropdown from './components/NavBar/NavBarDropdown.vue'
-import NavBarDropdownSeparator from './components/NavBar/NavBarDropdownSeparator.vue'
-import NavBarItem from './components/NavBar/NavBarItem.vue'
-import NavBarLogin from './components/NavBar/NavBarLogin.vue'
-import NavBarUserCard from './components/NavBar/NavBarUserCard.vue'
-import NavBarUserCardButton from './components/NavBar/NavBarUserCardButton.vue'
-import PageLogin from './views/PageLogin.vue'
-import PageRegister from './views/PageRegister.vue'
-import PageForgotPassword from './views/PageForgotPassword.vue'
-import PageResendVerification from './views/PageResendVerification.vue'
-import SideBar from './components/SideBar/SideBar.vue'
-import SideBarDropdown from './components/SideBar/SideBarDropdown.vue'
-import SideBarItem from './components/SideBar/SideBarItem.vue'
-import SideBarLabel from './components/SideBar/SideBarLabel.vue'
-import SprunjeColumn from './components/Sprunjer/SprunjeColumn.vue'
-import SprunjeHeader from './components/Sprunjer/SprunjeHeader.vue'
-import SprunjePaginator from './components/Sprunjer/SprunjePaginator.vue'
-import SprunjeTable from './components/Sprunjer/SprunjeTable.vue'
+import UFAlert from './UFAlert.vue'
+import UFLabel from './UFLabel.vue'
+import UFModal from './Modals/UFModal.vue'
+import UFModalAlert from './Modals/UFModalAlert.vue'
+import UFModalConfirmation from './Modals/UFModalConfirmation.vue'
+import UFModalPrompt from './Modals/UFModalPrompt.vue'
+import AppLink from './Content/AppLink.vue'
+import InfoBox from './Content/InfoBox.vue'
+import CardBox from './Content/CardBox.vue'
+import CardBoxBig from './Content/CardBoxBig.vue'
+import MainContent from './Content/MainContent.vue'
+import HeaderPage from './Content/HeaderPage.vue'
+import FooterContent from './Content/FooterContent.vue'
+import FormLogin from './Content/FormLogin.vue'
+import FormRegister from './Content/FormRegister.vue'
+import FormForgotPassword from './Content/FormForgotPassword.vue'
+import NavBar from './NavBar/NavBar.vue'
+import NavBarDropdown from './NavBar/NavBarDropdown.vue'
+import NavBarDropdownSeparator from './NavBar/NavBarDropdownSeparator.vue'
+import NavBarItem from './NavBar/NavBarItem.vue'
+import NavBarLogin from './NavBar/NavBarLogin.vue'
+import NavBarUserCard from './NavBar/NavBarUserCard.vue'
+import NavBarUserCardButton from './NavBar/NavBarUserCardButton.vue'
+import SideBar from './SideBar/SideBar.vue'
+import SideBarDropdown from './SideBar/SideBarDropdown.vue'
+import SideBarItem from './SideBar/SideBarItem.vue'
+import SideBarLabel from './SideBar/SideBarLabel.vue'
+import SprunjeColumn from './Sprunjer/SprunjeColumn.vue'
+import SprunjeHeader from './Sprunjer/SprunjeHeader.vue'
+import SprunjePaginator from './Sprunjer/SprunjePaginator.vue'
+import SprunjeTable from './Sprunjer/SprunjeTable.vue'
 
 export {
     UFAlert,
@@ -64,10 +60,6 @@ export {
     NavBarLogin,
     NavBarUserCard,
     NavBarUserCardButton,
-    PageLogin,
-    PageRegister,
-    PageForgotPassword,
-    PageResendVerification,
     SideBar,
     SideBarDropdown,
     SideBarItem,
@@ -103,10 +95,6 @@ export default {
             .component('UFNavBarLogin', NavBarLogin)
             .component('UFNavBarUserCard', NavBarUserCard)
             .component('UFNavBarUserCardButton', NavBarUserCardButton)
-            .component('UFPageLogin', PageLogin)
-            .component('UFPageRegister', PageRegister)
-            .component('UFPageForgotPassword', PageForgotPassword)
-            .component('UFPageResendVerification', PageResendVerification)
             .component('UFSideBar', SideBar)
             .component('UFSideBarDropdown', SideBarDropdown)
             .component('UFSideBarItem', SideBarItem)
@@ -143,10 +131,6 @@ declare module 'vue' {
         UFNavBarItem: typeof NavBarItem
         UFNavBarUserCard: typeof NavBarUserCard
         UFNavBarUserCardButton: typeof NavBarUserCardButton
-        UFPageLogin: typeof PageLogin
-        UFPageRegister: typeof PageRegister
-        UFPageForgotPassword: typeof PageForgotPassword
-        UFPageResendVerification: typeof PageResendVerification
         UFSideBar: typeof SideBar
         UFSideBarDropdown: typeof SideBarDropdown
         UFSideBarItem: typeof SideBarItem

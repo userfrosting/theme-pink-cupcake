@@ -1,5 +1,4 @@
 import type { App } from 'vue'
-
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
     FontAwesomeIcon,

@@ -1,5 +1,4 @@
 /// <reference types="vitest" />
-import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
@@ -12,12 +11,12 @@ export default defineConfig({
         outDir: './dist',
         lib: {
             entry: {
-                plugins: 'src/plugins.ts',
+                plugins: 'src/index.ts',
                 components: 'src/components.ts'
             }
         },
         rollupOptions: {
-            external: ['vue', 'vue-router', 'pinia', '@userfrosting/sprinkle-core/sprunjer'],
+            external: ['vue', 'vue-router', 'pinia', '@userfrosting/sprinkle-core'],
             output: {
                 exports: 'named',
                 globals: {
@@ -30,7 +29,6 @@ export default defineConfig({
     // Add UIKit alias : https://stackoverflow.com/a/75264118/445757
     resolve: {
         alias: {
-            '@': fileURLToPath(new URL('./src', import.meta.url)),
             '../../images/backgrounds': 'uikit/src/images/backgrounds',
             '../../images/components': 'uikit/src/images/components',
             '../../images/icons': 'uikit/src/images/icons'

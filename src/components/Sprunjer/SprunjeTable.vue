@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { provide, ref } from 'vue'
-import { useSprunjer } from '@userfrosting/sprinkle-core/sprunjer'
+import { useSprunjer } from '@userfrosting/sprinkle-core/composables'
 import SprunjePaginator from './SprunjePaginator.vue'
 import SprunjeSearch from './SprunjeSearch.vue'
 import SprunjeFilters from './SprunjeFilters.vue'

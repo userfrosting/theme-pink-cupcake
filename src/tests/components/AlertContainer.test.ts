@@ -1,7 +1,7 @@
 import { mount, config } from '@vue/test-utils'
 import { describe, test, expect } from 'vitest'
 import UFAlert from '../../components/UFAlert.vue'
-import { Severity, type AlertInterface } from '@userfrosting/sprinkle-core/types'
+import { Severity, type AlertInterface } from '@userfrosting/sprinkle-core/interfaces'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'

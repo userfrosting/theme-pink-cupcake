@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { Sprunjer } from '@userfrosting/sprinkle-core/sprunjer'
 import { inject } from 'vue'
+import type { Sprunjer } from '@userfrosting/sprinkle-core/interfaces'
 
 interface Props {
     rowsPerPageOptions?: number[]

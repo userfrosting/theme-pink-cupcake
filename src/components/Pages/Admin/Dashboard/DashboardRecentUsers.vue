@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { UserInterface } from '@userfrosting/sprinkle-account/types'
+import type { UserInterface } from '@userfrosting/sprinkle-account/interfaces'
 import moment from 'moment'
 
 defineProps<{

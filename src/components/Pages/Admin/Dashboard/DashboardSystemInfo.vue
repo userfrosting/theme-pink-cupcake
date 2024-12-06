@@ -1,8 +1,5 @@
 <script lang="ts" setup>
-import type {
-    SystemInfo,
-    SprinkleList
-} from '@userfrosting/sprinkle-admin/composable/useDashboardApi'
+import type { SystemInfo, SprinkleList } from '@userfrosting/sprinkle-admin/interfaces'
 
 defineProps<{
     info: SystemInfo

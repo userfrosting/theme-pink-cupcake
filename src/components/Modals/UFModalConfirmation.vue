@@ -3,7 +3,7 @@
  * Modal Confirmation Component
  */
 import { defineProps } from 'vue'
-import { Severity } from '@userfrosting/sprinkle-core/types'
+import { Severity } from '@userfrosting/sprinkle-core/interfaces'
 
 /**
  * Emits - Events emitted by the component buttons. Note closing the modal with

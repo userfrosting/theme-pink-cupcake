@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import UIkit from 'uikit'
 import { defineEmits } from 'vue'
-import { useGroupDeleteApi } from '@userfrosting/sprinkle-admin/composable/useGroupDeleteApi'
-import type { GroupInterface } from '@userfrosting/sprinkle-account/types'
-import { Severity } from '@userfrosting/sprinkle-core/types'
+import { useGroupDeleteApi } from '@userfrosting/sprinkle-admin/composables'
+import type { GroupInterface } from '@userfrosting/sprinkle-account/interfaces'
+import { Severity } from '@userfrosting/sprinkle-core/interfaces'
 
 // Variables
 const { deleteGroup } = useGroupDeleteApi()

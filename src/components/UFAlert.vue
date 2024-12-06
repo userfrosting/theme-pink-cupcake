@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
-import { type AlertInterface, Severity } from '@userfrosting/sprinkle-core/types'
+import { type AlertInterface, Severity } from '@userfrosting/sprinkle-core/interfaces'
 
 const emit = defineEmits(['close'])
 

@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import { useDashboardApi } from '@userfrosting/sprinkle-admin/composable/useDashboardApi'
-import DashboardStats from '@/components/Pages/Admin/Dashboard/DashboardStats.vue'
-import DashboardRecentUsers from '@/components/Pages/Admin/Dashboard/DashboardRecentUsers.vue'
-import DashboardSystemInfo from '@/components/Pages/Admin/Dashboard/DashboardSystemInfo.vue'
-import DashboardActivities from '@/components/Pages/Admin/Dashboard/DashboardActivities.vue'
+import { useDashboardApi } from '@userfrosting/sprinkle-admin/composables'
+import DashboardStats from '../../components/Pages/Admin/Dashboard/DashboardStats.vue'
+import DashboardRecentUsers from '../../components/Pages/Admin/Dashboard/DashboardRecentUsers.vue'
+import DashboardSystemInfo from '../../components/Pages/Admin/Dashboard/DashboardSystemInfo.vue'
+import DashboardActivities from '../../components/Pages/Admin/Dashboard/DashboardActivities.vue'
 
 const dashboard = useDashboardApi()
 dashboard.load()
