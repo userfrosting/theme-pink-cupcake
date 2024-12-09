@@ -1,6 +1,6 @@
 import { describe, expect, test, vi } from 'vitest'
 import { createApp } from 'vue'
-import plugins from '../'
+import plugins from '..'
 import Components from '../components'
 
 describe('plugins.ts', () => {
